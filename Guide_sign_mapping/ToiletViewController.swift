@@ -2,8 +2,11 @@ import UIKit
 import ARKit
 import SafariServices
 
-class ViewController: UIViewController {
-    @IBOutlet var sceneView: ARSCNView!
+class ToiletViewController: UIViewController {
+    //@IBOutlet var sceneView2: ARSCNView!
+    //新規VCをつけるときは適宜変える。
+    //weakが必要？？
+    @IBOutlet weak var sceneView2: ARSCNView!
     
     // NOTE: The imageConfiguration is better for tracking images,
     // but it has less features,
@@ -32,10 +35,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sceneView.delegate = self
+        sceneView2.delegate = self
         
         //scn読み込み
-        buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Parking", recursively: false)
+        buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Toilet", recursively: false)
         
         /*
         オブジェクトに画像を挿入する
@@ -47,12 +50,12 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        sceneView.session.run(imageConfiguration)
+        sceneView2.session.run(imageConfiguration)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        sceneView.session.pause()
+        sceneView2.session.pause()
     }
     
     /*
@@ -78,7 +81,7 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: ARSCNViewDelegate {
+extension ToiletViewController: ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let imageAnchor = anchor as? ARImageAnchor else {

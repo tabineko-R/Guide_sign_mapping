@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Landmark-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" userLabel="Landmark" customClass="ViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -35,22 +35,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="86"/>
+            <point key="canvasLocation" x="236" y="-541"/>
         </scene>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="gyb-9j-X8k">
             <objects>
-                <viewController id="gEA-9S-ftG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="s" id="gEA-9S-ftG" userLabel="First View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5mR-dc-0fq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnJ-pT-pdl">
-                                <rect key="frame" x="211" y="345" width="46" height="30"/>
+                                <rect key="frame" x="184" y="180" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="Wxq-ID-TLS"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="YDv-H1-hz8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzh-VN-mR3">
+                                <rect key="frame" x="184" y="301" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="wXC-F7-cf4" kind="show" id="e9H-6n-Msh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,6 +69,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhC-zZ-kWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-686" y="86"/>
+        </scene>
+        <!--Toilet-->
+        <scene sceneID="GZo-dy-TE2">
+            <objects>
+                <viewController id="wXC-F7-cf4" userLabel="Toilet" customClass="ToiletViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vzc-Ol-j0d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WmX-se-EjY" userLabel="Scene View 2">
+                                <rect key="frame" x="0.0" y="17" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ZdB-K8-ZKt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PNJ-4u-89r"/>
+                    <connections>
+                        <outlet property="sceneView2" destination="WmX-se-EjY" id="qhM-ho-eQP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QeB-DE-8ZT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260.86956521739131" y="291.96428571428572"/>
         </scene>
     </scenes>
 </document>
