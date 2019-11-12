@@ -40,7 +40,7 @@
         <!--First View Controller-->
         <scene sceneID="gyb-9j-X8k">
             <objects>
-                <viewController storyboardIdentifier="s" id="gEA-9S-ftG" userLabel="First View Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="s" id="gEA-9S-ftG" userLabel="First View Controller" customClass="FirstViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5mR-dc-0fq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,9 +57,11 @@
                                 <rect key="frame" x="184" y="301" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="wXC-F7-cf4" kind="show" id="e9H-6n-Msh"/>
-                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXP-Z5-pGW">
+                                <rect key="frame" x="184" y="399" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -75,7 +77,7 @@
             <objects>
                 <viewController id="wXC-F7-cf4" userLabel="Toilet" customClass="ToiletViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vzc-Ol-j0d">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WmX-se-EjY" userLabel="Scene View 2">
