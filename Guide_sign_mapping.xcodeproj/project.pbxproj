@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		391F8A8E237C02C1008EA052 /* memo in Resources */ = {isa = PBXBuildFile; fileRef = 391F8A8D237C02C1008EA052 /* memo */; };
 		39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E935282379E5FE008167E4 /* AppDelegate.swift */; };
 		39E9352B2379E5FE008167E4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E9352A2379E5FE008167E4 /* art.scnassets */; };
 		39E9352D2379E5FE008167E4 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		391F8A8D237C02C1008EA052 /* memo */ = {isa = PBXFileReference; lastKnownFileType = text; path = memo; sourceTree = "<group>"; };
 		39E935252379E5FE008167E4 /* Guide_sign_mapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guide_sign_mapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E935282379E5FE008167E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39E9352A2379E5FE008167E4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -116,14 +118,13 @@
 				39E935282379E5FE008167E4 /* AppDelegate.swift */,
 				39E9352A2379E5FE008167E4 /* art.scnassets */,
 				39E9355E237A58B6008167E4 /* FirstViewController.swift */,
-				39E93562237BC3AF008167E4 /* SelectToiletController.swift */,
-				39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */,
-				39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */,
-				39E9355A2379F206008167E4 /* ToiletViewController.swift */,
+				39E9356C237BFCB6008167E4 /* SelectFacilitiesViewControllers */,
+				39E9356E237BFCF4008167E4 /* MappingFacilitiesViewControllers */,
 				39E9352E2379E5FE008167E4 /* Main.storyboard */,
 				39E935312379E5FF008167E4 /* Assets.xcassets */,
 				39E935332379E5FF008167E4 /* LaunchScreen.storyboard */,
 				39E935362379E5FF008167E4 /* Info.plist */,
+				391F8A8D237C02C1008EA052 /* memo */,
 			);
 			path = Guide_sign_mapping;
 			sourceTree = "<group>";
@@ -144,6 +145,24 @@
 				39E9354C2379E600008167E4 /* Info.plist */,
 			);
 			path = Guide_sign_mappingUITests;
+			sourceTree = "<group>";
+		};
+		39E9356C237BFCB6008167E4 /* SelectFacilitiesViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				39E93562237BC3AF008167E4 /* SelectToiletController.swift */,
+				39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */,
+			);
+			path = SelectFacilitiesViewControllers;
+			sourceTree = "<group>";
+		};
+		39E9356E237BFCF4008167E4 /* MappingFacilitiesViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */,
+				39E9355A2379F206008167E4 /* ToiletViewController.swift */,
+			);
+			path = MappingFacilitiesViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +275,7 @@
 				39E9352B2379E5FE008167E4 /* art.scnassets in Resources */,
 				39E935352379E5FF008167E4 /* LaunchScreen.storyboard in Resources */,
 				39E935322379E5FF008167E4 /* Assets.xcassets in Resources */,
+				391F8A8E237C02C1008EA052 /* memo in Resources */,
 				39E935302379E5FE008167E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

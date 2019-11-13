@@ -41,14 +41,20 @@ class ToiletViewController: UIViewController {
         sceneView2.delegate = self
         
         //scn読み込み
-        buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Toilet", recursively: false)
+        //最初にscnの読み込みを指定（テスト）
+        buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode
         
-        /*
-        オブジェクトに画像を挿入する
-        let thumbnailNode = buttonNode.childNode(withName: "plane", recursively: true)
-        thumbnailNode?.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "art.scnassets/FarFromHome.jpeg")
-        feedback.prepare()
-         */
+        switch number {
+        case 1:
+            buttonNode = buttonNode.childNode(withName: "Toilet/1", recursively: false)
+        case 2:
+            buttonNode = buttonNode.childNode(withName: "Toilet/2", recursively: false)
+        case 3:
+            buttonNode = buttonNode.childNode(withName: "Toilet/3", recursively: false)
+        default:
+            break
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,26 +66,6 @@ class ToiletViewController: UIViewController {
         super.viewWillDisappear(animated)
         sceneView2.session.pause()
     }
-    
-    /*
-    //オブジェクトにURL挿入
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let location = touches.first?.location(in: sceneView),
-            let result = sceneView.hitTest(location, options: nil).first else {
-                return
-        }
-        let node = result.node
-        
-        switch node.name {
-        case "cylinder_1":
-            let safariVC = SFSafariViewController(url: URL(string: "https://ja.wikipedia.org/wiki/10%E6%9C%881%E6%97%A5")!)
-            self.present(safariVC, animated: true, completion: nil)
-        
-        default: break
-        }
-
-    }
-    */
     
 }
 

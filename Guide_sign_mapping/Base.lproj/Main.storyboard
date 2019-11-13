@@ -69,12 +69,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="IpU-hb-h8R" firstAttribute="leading" secondItem="KEN-ri-QEM" secondAttribute="leading" constant="127" id="6B1-wH-huo"/>
-                            <constraint firstItem="GFq-nz-yry" firstAttribute="top" secondItem="x4u-L5-j5u" secondAttribute="top" constant="304" id="Enh-Ed-1sr"/>
-                            <constraint firstItem="GFq-nz-yry" firstAttribute="leading" secondItem="vJH-Ju-VXz" secondAttribute="leading" id="Tiz-dM-zWH"/>
-                            <constraint firstItem="IpU-hb-h8R" firstAttribute="top" secondItem="KEN-ri-QEM" secondAttribute="top" constant="172" id="bhX-sS-k1E"/>
-                            <constraint firstItem="KEN-ri-QEM" firstAttribute="bottom" secondItem="vJH-Ju-VXz" secondAttribute="bottom" constant="333" id="iHp-i5-CPz"/>
-                            <constraint firstItem="IpU-hb-h8R" firstAttribute="leading" secondItem="GFq-nz-yry" secondAttribute="leading" id="wgk-Ya-ATQ"/>
+                            <constraint firstItem="IpU-hb-h8R" firstAttribute="leading" secondItem="GFq-nz-yry" secondAttribute="leading" id="LGd-qx-81G"/>
+                            <constraint firstItem="IpU-hb-h8R" firstAttribute="top" secondItem="KEN-ri-QEM" secondAttribute="top" constant="172" id="Ovt-ns-evZ"/>
+                            <constraint firstItem="GFq-nz-yry" firstAttribute="top" secondItem="x4u-L5-j5u" secondAttribute="top" constant="304" id="QVR-37-52v"/>
+                            <constraint firstItem="GFq-nz-yry" firstAttribute="leading" secondItem="vJH-Ju-VXz" secondAttribute="leading" id="c8K-eT-NgN"/>
+                            <constraint firstItem="IpU-hb-h8R" firstAttribute="leading" secondItem="KEN-ri-QEM" secondAttribute="leading" constant="127" id="fO5-YA-EBo"/>
+                            <constraint firstItem="KEN-ri-QEM" firstAttribute="bottom" secondItem="vJH-Ju-VXz" secondAttribute="bottom" constant="333" id="sd0-fH-9x7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KEN-ri-QEM"/>
                     </view>
@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnJ-pT-pdl">
-                                <rect key="frame" x="176" y="172" width="62" height="30"/>
+                                <rect key="frame" x="173" y="172" width="62" height="30"/>
                                 <state key="normal" title="観光施設"/>
                                 <connections>
                                     <segue destination="Ewd-z3-uUu" kind="show" id="Mv2-ZR-1MU"/>

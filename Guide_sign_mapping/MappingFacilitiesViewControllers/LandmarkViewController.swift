@@ -7,6 +7,7 @@ class LandmarkViewController: UIViewController {
     
     // ①引数宣言
        var number = 0
+    
     // NOTE: The imageConfiguration is better for tracking images,
     // but it has less features,
     // for example it does not have the plane detection.
@@ -38,14 +39,17 @@ class LandmarkViewController: UIViewController {
         print(number)
         
         //scn読み込み
-        buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Parking", recursively: false)
+        switch number {
+        case 1:
+            buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Landmark/1", recursively: false)
+        case 2:
+            buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Landmark/2", recursively: false)
+        case 3:
+            buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Landmark/3", recursively: false)
+        default:
+            break
+        }
         
-        /*
-        オブジェクトに画像を挿入する
-        let thumbnailNode = buttonNode.childNode(withName: "plane", recursively: true)
-        thumbnailNode?.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "art.scnassets/FarFromHome.jpeg")
-        feedback.prepare()
-         */
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,27 +61,6 @@ class LandmarkViewController: UIViewController {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
     }
-    
-    /*
-    //オブジェクトにURL挿入
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let location = touches.first?.location(in: sceneView),
-            let result = sceneView.hitTest(location, options: nil).first else {
-                return
-        }
-        let node = result.node
-        
-        switch node.name {
-        case "cylinder_1":
-            let safariVC = SFSafariViewController(url: URL(string: "https://ja.wikipedia.org/wiki/10%E6%9C%881%E6%97%A5")!)
-            self.present(safariVC, animated: true, completion: nil)
-        
-        default: break
-        }
-
-    }
-    */
-    
 }
 
 
@@ -100,7 +83,6 @@ extension LandmarkViewController: ARSCNViewDelegate {
             return nil
         }
     }
-
 }
 
 
