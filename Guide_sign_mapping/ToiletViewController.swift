@@ -8,6 +8,9 @@ class ToiletViewController: UIViewController {
     //weakが必要？？
     @IBOutlet weak var sceneView2: ARSCNView!
     
+    // ①引数宣言
+       var number = 0
+    
     // NOTE: The imageConfiguration is better for tracking images,
     // but it has less features,
     // for example it does not have the plane detection.

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E935282379E5FE008167E4 /* AppDelegate.swift */; };
 		39E9352B2379E5FE008167E4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E9352A2379E5FE008167E4 /* art.scnassets */; };
-		39E9352D2379E5FE008167E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9352C2379E5FE008167E4 /* ViewController.swift */; };
+		39E9352D2379E5FE008167E4 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */; };
 		39E935302379E5FE008167E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E9352E2379E5FE008167E4 /* Main.storyboard */; settings = {ASSET_TAGS = ("First View Controller", ); }; };
 		39E935322379E5FF008167E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E935312379E5FF008167E4 /* Assets.xcassets */; };
 		39E935352379E5FF008167E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E935332379E5FF008167E4 /* LaunchScreen.storyboard */; };
@@ -17,13 +17,14 @@
 		39E9354B2379E600008167E4 /* Guide_sign_mappingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9354A2379E600008167E4 /* Guide_sign_mappingUITests.swift */; };
 		39E9355B2379F206008167E4 /* ToiletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9355A2379F206008167E4 /* ToiletViewController.swift */; };
 		39E9355F237A58B6008167E4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9355E237A58B6008167E4 /* FirstViewController.swift */; };
-		39E93563237BC3AF008167E4 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E93562237BC3AF008167E4 /* ReceiveViewController.swift */; };
-		39E93564237BE7A6008167E4 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E93562237BC3AF008167E4 /* ReceiveViewController.swift */; };
+		39E93563237BC3AF008167E4 /* SelectToiletController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E93562237BC3AF008167E4 /* SelectToiletController.swift */; };
+		39E93564237BE7A6008167E4 /* SelectToiletController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E93562237BC3AF008167E4 /* SelectToiletController.swift */; };
 		39E93565237BE88F008167E4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9355E237A58B6008167E4 /* FirstViewController.swift */; };
-		39E93566237BE895008167E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9352C2379E5FE008167E4 /* ViewController.swift */; };
+		39E93566237BE895008167E4 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */; };
 		39E93567237BE897008167E4 /* ToiletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9355A2379F206008167E4 /* ToiletViewController.swift */; };
 		39E93568237BECE8008167E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E9352E2379E5FE008167E4 /* Main.storyboard */; settings = {ASSET_TAGS = ("First View Controller", ); }; };
 		39E93569237BF42F008167E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E935282379E5FE008167E4 /* AppDelegate.swift */; };
+		39E9356B237BF961008167E4 /* SelectLandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,7 @@
 		39E935252379E5FE008167E4 /* Guide_sign_mapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guide_sign_mapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E935282379E5FE008167E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39E9352A2379E5FE008167E4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		39E9352C2379E5FE008167E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkViewController.swift; sourceTree = "<group>"; };
 		39E9352F2379E5FE008167E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39E935312379E5FF008167E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39E935342379E5FF008167E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,7 +61,8 @@
 		39E9354C2379E600008167E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E9355A2379F206008167E4 /* ToiletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletViewController.swift; sourceTree = "<group>"; };
 		39E9355E237A58B6008167E4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		39E93562237BC3AF008167E4 /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
+		39E93562237BC3AF008167E4 /* SelectToiletController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectToiletController.swift; sourceTree = "<group>"; };
+		39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLandmarkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +116,9 @@
 				39E935282379E5FE008167E4 /* AppDelegate.swift */,
 				39E9352A2379E5FE008167E4 /* art.scnassets */,
 				39E9355E237A58B6008167E4 /* FirstViewController.swift */,
-				39E93562237BC3AF008167E4 /* ReceiveViewController.swift */,
-				39E9352C2379E5FE008167E4 /* ViewController.swift */,
+				39E93562237BC3AF008167E4 /* SelectToiletController.swift */,
+				39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */,
+				39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */,
 				39E9355A2379F206008167E4 /* ToiletViewController.swift */,
 				39E9352E2379E5FE008167E4 /* Main.storyboard */,
 				39E935312379E5FF008167E4 /* Assets.xcassets */,
@@ -279,10 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39E9352D2379E5FE008167E4 /* ViewController.swift in Sources */,
+				39E9352D2379E5FE008167E4 /* LandmarkViewController.swift in Sources */,
 				39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */,
+				39E9356B237BF961008167E4 /* SelectLandmarkViewController.swift in Sources */,
 				39E9355B2379F206008167E4 /* ToiletViewController.swift in Sources */,
-				39E93563237BC3AF008167E4 /* ReceiveViewController.swift in Sources */,
+				39E93563237BC3AF008167E4 /* SelectToiletController.swift in Sources */,
 				39E9355F237A58B6008167E4 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,8 +297,8 @@
 			files = (
 				39E93569237BF42F008167E4 /* AppDelegate.swift in Sources */,
 				39E93565237BE88F008167E4 /* FirstViewController.swift in Sources */,
-				39E93564237BE7A6008167E4 /* ReceiveViewController.swift in Sources */,
-				39E93566237BE895008167E4 /* ViewController.swift in Sources */,
+				39E93564237BE7A6008167E4 /* SelectToiletController.swift in Sources */,
+				39E93566237BE895008167E4 /* LandmarkViewController.swift in Sources */,
 				39E935402379E5FF008167E4 /* Guide_sign_mappingTests.swift in Sources */,
 				39E93567237BE897008167E4 /* ToiletViewController.swift in Sources */,
 			);

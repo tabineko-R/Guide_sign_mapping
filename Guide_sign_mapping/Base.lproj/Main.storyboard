@@ -10,7 +10,7 @@
         <!--Landmark-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" userLabel="Landmark" customClass="ViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" userLabel="Landmark" customClass="LandmarkViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -35,23 +35,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-499" y="-1167"/>
+            <point key="canvasLocation" x="-500" y="-1621"/>
         </scene>
-        <!--Receive View Controller-->
+        <!--Select Landmark View Controller-->
         <scene sceneID="nE4-vo-xh6">
             <objects>
-                <viewController id="Ewd-z3-uUu" customClass="ReceiveViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ewd-z3-uUu" customClass="SelectLandmarkViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x4u-L5-j5u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFq-nz-yry">
+                                <rect key="frame" x="127" y="304" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="2" id="eGz-LX-201"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJH-Ju-VXz">
+                                <rect key="frame" x="127" y="445" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="3" id="I8V-cU-u3L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpU-hb-h8R">
+                                <rect key="frame" x="127" y="172" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="1" id="KSK-nG-QB5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IpU-hb-h8R" firstAttribute="leading" secondItem="KEN-ri-QEM" secondAttribute="leading" constant="127" id="6B1-wH-huo"/>
+                            <constraint firstItem="GFq-nz-yry" firstAttribute="top" secondItem="x4u-L5-j5u" secondAttribute="top" constant="304" id="Enh-Ed-1sr"/>
+                            <constraint firstItem="GFq-nz-yry" firstAttribute="leading" secondItem="vJH-Ju-VXz" secondAttribute="leading" id="Tiz-dM-zWH"/>
+                            <constraint firstItem="IpU-hb-h8R" firstAttribute="top" secondItem="KEN-ri-QEM" secondAttribute="top" constant="172" id="bhX-sS-k1E"/>
+                            <constraint firstItem="KEN-ri-QEM" firstAttribute="bottom" secondItem="vJH-Ju-VXz" secondAttribute="bottom" constant="333" id="iHp-i5-CPz"/>
+                            <constraint firstItem="IpU-hb-h8R" firstAttribute="leading" secondItem="GFq-nz-yry" secondAttribute="leading" id="wgk-Ya-ATQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KEN-ri-QEM"/>
                     </view>
                     <navigationItem key="navigationItem" id="rNW-0P-mGR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMQ-R6-YNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1778" y="64"/>
+            <point key="canvasLocation" x="-1639" y="-1621"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="gyb-9j-X8k">
@@ -61,46 +92,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnJ-pT-pdl">
-                                <rect key="frame" x="184" y="180" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="i10-3s-RHa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzh-VN-mR3">
-                                <rect key="frame" x="184" y="301" width="46" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzh-VN-mR3">
+                                <rect key="frame" x="184" y="337" width="46" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="U9d-Ne-FlV"/>
+                                    <constraint firstAttribute="height" constant="21" id="3gd-nx-3nM"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="トイレ"/>
                                 <connections>
-                                    <segue destination="wXC-F7-cf4" kind="show" id="vPr-cz-nAV"/>
+                                    <segue destination="XjW-PE-K0B" kind="show" id="wGI-lB-g7b"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXP-Z5-pGW">
-                                <rect key="frame" x="192" y="393" width="30" height="30"/>
-                                <state key="normal" title="1"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnJ-pT-pdl">
+                                <rect key="frame" x="176" y="172" width="62" height="30"/>
+                                <state key="normal" title="観光施設"/>
                                 <connections>
-                                    <segue destination="Ewd-z3-uUu" kind="show" identifier="toReceive" id="Smq-lc-uCy"/>
+                                    <segue destination="Ewd-z3-uUu" kind="show" id="Mv2-ZR-1MU"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="centerX" secondItem="5mR-dc-0fq" secondAttribute="centerX" id="3eg-B5-2gy"/>
-                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="top" secondItem="nZl-Ld-Wkh" secondAttribute="top" constant="136" id="6xl-yl-Bdo"/>
-                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="leading" secondItem="kzh-VN-mR3" secondAttribute="leading" id="EL9-bD-69W"/>
-                            <constraint firstItem="SXP-Z5-pGW" firstAttribute="top" secondItem="kzh-VN-mR3" secondAttribute="bottom" constant="71" id="c1Q-QQ-kuP"/>
-                            <constraint firstItem="kzh-VN-mR3" firstAttribute="top" secondItem="CnJ-pT-pdl" secondAttribute="bottom" constant="91" id="ghF-kL-K0X"/>
-                            <constraint firstItem="kzh-VN-mR3" firstAttribute="centerX" secondItem="SXP-Z5-pGW" secondAttribute="centerX" id="wft-Sa-dcI"/>
+                            <constraint firstItem="nZl-Ld-Wkh" firstAttribute="bottom" secondItem="kzh-VN-mR3" secondAttribute="bottom" constant="491" id="05k-DN-LXR"/>
+                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="top" secondItem="nZl-Ld-Wkh" secondAttribute="top" constant="136" id="1wC-mc-PaO"/>
+                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="centerX" secondItem="5mR-dc-0fq" secondAttribute="centerX" id="JtP-HQ-C6o"/>
+                            <constraint firstItem="kzh-VN-mR3" firstAttribute="leading" secondItem="nZl-Ld-Wkh" secondAttribute="leading" constant="209" id="zVU-aZ-nrJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nZl-Ld-Wkh"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhC-zZ-kWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1778" y="-806"/>
+            <point key="canvasLocation" x="-2754" y="-1219"/>
+        </scene>
+        <!--Select Toilet Controller-->
+        <scene sceneID="Vzn-WQ-6Rr">
+            <objects>
+                <viewController id="XjW-PE-K0B" customClass="SelectToiletController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c7H-oy-Ozd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a80-J9-fAD">
+                                <rect key="frame" x="116" y="140" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="wXC-F7-cf4" kind="show" identifier="1" id="XgR-rT-YOi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbn-ZE-iYz">
+                                <rect key="frame" x="116" y="272" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="wXC-F7-cf4" kind="show" identifier="2" id="xaQ-U7-Ktv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3A6-bF-efy">
+                                <rect key="frame" x="116" y="413" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="wXC-F7-cf4" kind="show" identifier="3" id="LrO-vF-bzu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dFK-0n-D1m"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Inq-V6-crG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TaS-JF-neS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1639" y="-822"/>
         </scene>
         <!--Toilet-->
         <scene sceneID="GZo-dy-TE2">
@@ -125,7 +189,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeB-DE-8ZT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-499" y="-443"/>
+            <point key="canvasLocation" x="-500" y="-822"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LrO-vF-bzu"/>
+        <segue reference="I8V-cU-u3L"/>
+    </inferredMetricsTieBreakers>
 </document>
