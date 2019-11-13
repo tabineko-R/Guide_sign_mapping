@@ -10,13 +10,27 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
-
+    override func viewDidLoad() {
+           super.viewDidLoad()
+       }
+    
+    // ①セグエ実行前処理
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          // ②遷移先ViewCntrollerの取得
+          let nextView = segue.destination as! ReceiveViewController
+          // ③Segueの識別子確認
+          switch segue.identifier {
+              case "toReceive" :
+                  //④値の設定
+                  nextView.number = 5
+              default:
+                  break
+          }
+      }
+    }
+      
+    
     /*
     // MARK: - Navigation
 
@@ -27,4 +41,3 @@ class FirstViewController: UIViewController {
     }
     */
 
-}

@@ -35,7 +35,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="-541"/>
+            <point key="canvasLocation" x="-499" y="-1167"/>
+        </scene>
+        <!--Receive View Controller-->
+        <scene sceneID="nE4-vo-xh6">
+            <objects>
+                <viewController id="Ewd-z3-uUu" customClass="ReceiveViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x4u-L5-j5u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="KEN-ri-QEM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rNW-0P-mGR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMQ-R6-YNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1778" y="64"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="gyb-9j-X8k">
@@ -45,39 +61,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnJ-pT-pdl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnJ-pT-pdl">
                                 <rect key="frame" x="184" y="180" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="YDv-H1-hz8"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="i10-3s-RHa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzh-VN-mR3">
-                                <rect key="frame" x="184" y="301" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzh-VN-mR3">
+                                <rect key="frame" x="184" y="301" width="46" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="U9d-Ne-FlV"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="wXC-F7-cf4" kind="show" id="vPr-cz-nAV"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXP-Z5-pGW">
-                                <rect key="frame" x="184" y="399" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXP-Z5-pGW">
+                                <rect key="frame" x="192" y="393" width="30" height="30"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <segue destination="Ewd-z3-uUu" kind="show" identifier="toReceive" id="Smq-lc-uCy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="centerX" secondItem="5mR-dc-0fq" secondAttribute="centerX" id="3eg-B5-2gy"/>
+                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="top" secondItem="nZl-Ld-Wkh" secondAttribute="top" constant="136" id="6xl-yl-Bdo"/>
+                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="leading" secondItem="kzh-VN-mR3" secondAttribute="leading" id="EL9-bD-69W"/>
+                            <constraint firstItem="SXP-Z5-pGW" firstAttribute="top" secondItem="kzh-VN-mR3" secondAttribute="bottom" constant="71" id="c1Q-QQ-kuP"/>
+                            <constraint firstItem="kzh-VN-mR3" firstAttribute="top" secondItem="CnJ-pT-pdl" secondAttribute="bottom" constant="91" id="ghF-kL-K0X"/>
+                            <constraint firstItem="kzh-VN-mR3" firstAttribute="centerX" secondItem="SXP-Z5-pGW" secondAttribute="centerX" id="wft-Sa-dcI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nZl-Ld-Wkh"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhC-zZ-kWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-686" y="86"/>
+            <point key="canvasLocation" x="-1778" y="-806"/>
         </scene>
         <!--Toilet-->
         <scene sceneID="GZo-dy-TE2">
             <objects>
                 <viewController id="wXC-F7-cf4" userLabel="Toilet" customClass="ToiletViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vzc-Ol-j0d">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WmX-se-EjY" userLabel="Scene View 2">
@@ -95,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeB-DE-8ZT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260.86956521739131" y="291.96428571428572"/>
+            <point key="canvasLocation" x="-499" y="-443"/>
         </scene>
     </scenes>
 </document>
