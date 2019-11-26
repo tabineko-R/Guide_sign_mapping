@@ -10,7 +10,11 @@ import UIKit
 import ARKit
 import SafariServices
 
-class LandmarkViewController: UIViewController {
+class MultipleToiletViewController: UIViewController {
+
+        //@IBOutlet var sceneView2: ARSCNView!
+    //新規VCをつけるときは適宜変える。
+    //weakが必要？？
     @IBOutlet var sceneView: ARSCNView!
     
     // ①引数宣言
@@ -47,35 +51,21 @@ class LandmarkViewController: UIViewController {
         
         //scn読み込み
         //最初にscnの読み込みを指定（テスト）
-        buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Landmark", recursively: false)
+        buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "MultipleToilet", recursively: false)
         
         switch number {
         case 1:
-            buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+            buttonNode = buttonNode?.childNode(withName: "MT_1", recursively: false)
         case 2:
-            buttonNode = buttonNode?.childNode(withName: "L_2", recursively: false)
+            buttonNode = buttonNode?.childNode(withName: "MT_2", recursively: false)
         case 3:
-            buttonNode = buttonNode?.childNode(withName: "L_3", recursively: false)
+            buttonNode = buttonNode?.childNode(withName: "MT_3", recursively: false)
         default:
             break
-            }
-    }
-    
-    //オブジェクトにURL挿入
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let location = touches.first?.location(in: sceneView),
-            let result = sceneView.hitTest(location, options: nil).first else {
-                return
         }
-        let node = result.node
         
-        switch node.name {
-        case "1":
-            let safariVC = SFSafariViewController(url: URL(string: "https://ja.wikipedia.org/wiki/10%E6%9C%881%E6%97%A5")!)
-            self.present(safariVC, animated: true, completion: nil)
+
         
-        default: break
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,13 +77,12 @@ class LandmarkViewController: UIViewController {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
     }
-    
+
 }
 
 
 
-
-extension LandmarkViewController: ARSCNViewDelegate {
+extension MultipleToiletViewController: ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let imageAnchor = anchor as? ARImageAnchor else {
@@ -112,7 +101,5 @@ extension LandmarkViewController: ARSCNViewDelegate {
             return nil
         }
     }
+
 }
-
-
-

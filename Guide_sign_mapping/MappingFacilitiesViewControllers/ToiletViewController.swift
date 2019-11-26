@@ -1,12 +1,19 @@
+//
+//  MultipleToiletViewController.swift
+//  Guide_sign_mapping
+//
+//  Created by yuya on 2019/11/25.
+//  Copyright © 2019 yuya. All rights reserved.
+//
+
 import UIKit
 import ARKit
 import SafariServices
 
 class ToiletViewController: UIViewController {
-    //@IBOutlet var sceneView2: ARSCNView!
-    //新規VCをつけるときは適宜変える。
-    //weakが必要？？
-    @IBOutlet weak var sceneView2: ARSCNView!
+    //@IBOutlet var sceneView3: ARSCNView!
+    
+    @IBOutlet var sceneView: ARSCNView!
     
     // ①引数宣言
        var number = 0
@@ -38,19 +45,19 @@ class ToiletViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sceneView2.delegate = self
+        sceneView.delegate = self
         
         //scn読み込み
         //最初にscnの読み込みを指定（テスト）
-        buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode
+        buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Toilet", recursively: false)
         
         switch number {
         case 1:
-            buttonNode = buttonNode.childNode(withName: "Toilet/1", recursively: false)
+            buttonNode = buttonNode?.childNode(withName: "T_1", recursively: false)
         case 2:
-            buttonNode = buttonNode.childNode(withName: "Toilet/2", recursively: false)
+            buttonNode = buttonNode?.childNode(withName: "T_2", recursively: false)
         case 3:
-            buttonNode = buttonNode.childNode(withName: "Toilet/3", recursively: false)
+            buttonNode = buttonNode?.childNode(withName: "T_3", recursively: false)
         default:
             break
         }
@@ -59,12 +66,12 @@ class ToiletViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        sceneView2.session.run(imageConfiguration)
+        sceneView.session.run(imageConfiguration)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        sceneView2.session.pause()
+        sceneView.session.pause()
     }
     
 }
@@ -89,7 +96,6 @@ extension ToiletViewController: ARSCNViewDelegate {
             return nil
         }
     }
-
 }
 
 

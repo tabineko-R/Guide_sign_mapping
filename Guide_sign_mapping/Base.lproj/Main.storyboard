@@ -2,11 +2,67 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gEA-9S-ftG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--First View Controller-->
+        <scene sceneID="gyb-9j-X8k">
+            <objects>
+                <viewController storyboardIdentifier="s" id="gEA-9S-ftG" userLabel="First View Controller" customClass="FirstViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5mR-dc-0fq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnJ-pT-pdl">
+                                <rect key="frame" x="176" y="180" width="62" height="30"/>
+                                <state key="normal" title="観光施設"/>
+                                <connections>
+                                    <segue destination="n4A-Jy-UbJ" kind="show" id="xWD-wA-cDG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9x-NX-ZOe">
+                                <rect key="frame" x="176" y="297" width="46" height="30"/>
+                                <state key="normal" title="駐車場"/>
+                                <connections>
+                                    <segue destination="R0b-FK-JBw" kind="show" id="Nv8-n4-jCX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xo4-3j-ocJ">
+                                <rect key="frame" x="153" y="627" width="92" height="30"/>
+                                <state key="normal" title="多目的トイレ"/>
+                                <connections>
+                                    <segue destination="njo-wc-ert" kind="show" id="I9o-XY-EJT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzh-VN-mR3">
+                                <rect key="frame" x="176" y="455" width="46" height="30"/>
+                                <state key="normal" title="トイレ"/>
+                                <connections>
+                                    <segue destination="hnN-jo-0Zd" kind="show" id="eH6-Gn-Qcf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="top" secondItem="nZl-Ld-Wkh" secondAttribute="top" constant="136" id="NlU-tG-Gd1"/>
+                            <constraint firstItem="P9x-NX-ZOe" firstAttribute="leading" secondItem="kzh-VN-mR3" secondAttribute="leading" id="VTW-7L-eo1"/>
+                            <constraint firstItem="P9x-NX-ZOe" firstAttribute="top" secondItem="CnJ-pT-pdl" secondAttribute="bottom" constant="87" id="WqN-t1-Ss3"/>
+                            <constraint firstAttribute="bottom" secondItem="kzh-VN-mR3" secondAttribute="bottom" constant="411" id="bKY-Sz-kvs"/>
+                            <constraint firstItem="kzh-VN-mR3" firstAttribute="centerX" secondItem="xo4-3j-ocJ" secondAttribute="centerX" id="kgV-Ij-vLU"/>
+                            <constraint firstItem="nZl-Ld-Wkh" firstAttribute="bottom" secondItem="xo4-3j-ocJ" secondAttribute="bottom" constant="205" id="nYe-zO-Esy"/>
+                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="leading" secondItem="P9x-NX-ZOe" secondAttribute="leading" id="vhv-nZ-UOY"/>
+                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="centerX" secondItem="5mR-dc-0fq" secondAttribute="centerX" id="xjL-eA-IF1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nZl-Ld-Wkh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HtF-9A-ao4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhC-zZ-kWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3220.289855072464" y="-1481.25"/>
+        </scene>
         <!--Landmark-->
         <scene sceneID="tXr-a1-R10">
             <objects>
@@ -35,165 +91,346 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500" y="-1621"/>
+            <point key="canvasLocation" x="467" y="-3147"/>
         </scene>
-        <!--Select Landmark View Controller-->
-        <scene sceneID="nE4-vo-xh6">
+        <!--Item 2-->
+        <scene sceneID="qZQ-32-4u8">
             <objects>
-                <viewController id="Ewd-z3-uUu" customClass="SelectLandmarkViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="x4u-L5-j5u">
+                <viewController id="cIH-ai-W5g" customClass="SelectLandmarkViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="goB-2p-Qjt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFq-nz-yry">
-                                <rect key="frame" x="127" y="304" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZD-Wg-LyG" userLabel="3">
+                                <rect key="frame" x="192" y="406" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3"/>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" identifier="2" id="eGz-LX-201"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJH-Ju-VXz">
-                                <rect key="frame" x="127" y="445" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" identifier="3" id="I8V-cU-u3L"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpU-hb-h8R">
-                                <rect key="frame" x="127" y="172" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" identifier="1" id="KSK-nG-QB5"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="3" id="Fce-Q2-7Gj"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="IpU-hb-h8R" firstAttribute="leading" secondItem="GFq-nz-yry" secondAttribute="leading" id="LGd-qx-81G"/>
-                            <constraint firstItem="IpU-hb-h8R" firstAttribute="top" secondItem="KEN-ri-QEM" secondAttribute="top" constant="172" id="Ovt-ns-evZ"/>
-                            <constraint firstItem="GFq-nz-yry" firstAttribute="top" secondItem="x4u-L5-j5u" secondAttribute="top" constant="304" id="QVR-37-52v"/>
-                            <constraint firstItem="GFq-nz-yry" firstAttribute="leading" secondItem="vJH-Ju-VXz" secondAttribute="leading" id="c8K-eT-NgN"/>
-                            <constraint firstItem="IpU-hb-h8R" firstAttribute="leading" secondItem="KEN-ri-QEM" secondAttribute="leading" constant="127" id="fO5-YA-EBo"/>
-                            <constraint firstItem="KEN-ri-QEM" firstAttribute="bottom" secondItem="vJH-Ju-VXz" secondAttribute="bottom" constant="333" id="sd0-fH-9x7"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="KEN-ri-QEM"/>
+                        <viewLayoutGuide key="safeArea" id="Aht-Al-jsW"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rNW-0P-mGR"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="eyR-il-Vae"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JMQ-R6-YNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUK-rf-G4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1639" y="-1621"/>
+            <point key="canvasLocation" x="-684" y="-2916"/>
         </scene>
-        <!--First View Controller-->
-        <scene sceneID="gyb-9j-X8k">
+        <!--Select Multiple Toilet Controller-->
+        <scene sceneID="1nD-lP-RIp">
             <objects>
-                <viewController storyboardIdentifier="s" id="gEA-9S-ftG" userLabel="First View Controller" customClass="FirstViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5mR-dc-0fq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="hnN-jo-0Zd" customClass="SelectMultipleToiletController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rls-ac-71W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzh-VN-mR3">
-                                <rect key="frame" x="184" y="337" width="46" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="3gd-nx-3nM"/>
-                                </constraints>
-                                <state key="normal" title="トイレ"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4M-rq-BYX">
+                                <rect key="frame" x="191" y="334" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="2"/>
                                 <connections>
-                                    <segue destination="XjW-PE-K0B" kind="show" id="wGI-lB-g7b"/>
+                                    <segue destination="fMc-Ru-RcK" kind="show" identifier="2" id="KOx-Me-y90"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnJ-pT-pdl">
-                                <rect key="frame" x="173" y="172" width="62" height="30"/>
-                                <state key="normal" title="観光施設"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oly-hJ-aV9">
+                                <rect key="frame" x="193" y="477" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3"/>
                                 <connections>
-                                    <segue destination="Ewd-z3-uUu" kind="show" id="Mv2-ZR-1MU"/>
+                                    <segue destination="fMc-Ru-RcK" kind="show" identifier="3" id="c4i-Tg-CUz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9z-8a-u23">
+                                <rect key="frame" x="184" y="213" width="46" height="30.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <segue destination="fMc-Ru-RcK" kind="show" identifier="1" id="SQu-8e-z7N"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="nZl-Ld-Wkh" firstAttribute="bottom" secondItem="kzh-VN-mR3" secondAttribute="bottom" constant="491" id="05k-DN-LXR"/>
-                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="top" secondItem="nZl-Ld-Wkh" secondAttribute="top" constant="136" id="1wC-mc-PaO"/>
-                            <constraint firstItem="CnJ-pT-pdl" firstAttribute="centerX" secondItem="5mR-dc-0fq" secondAttribute="centerX" id="JtP-HQ-C6o"/>
-                            <constraint firstItem="kzh-VN-mR3" firstAttribute="leading" secondItem="nZl-Ld-Wkh" secondAttribute="leading" constant="209" id="zVU-aZ-nrJ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="nZl-Ld-Wkh"/>
+                        <viewLayoutGuide key="safeArea" id="JHD-8J-LyF"/>
                     </view>
+                    <navigationItem key="navigationItem" id="q9t-La-RXt"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hhC-zZ-kWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z21-Ql-wi0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2754" y="-1219"/>
+            <point key="canvasLocation" x="-684" y="-708"/>
         </scene>
-        <!--Select Toilet Controller-->
-        <scene sceneID="Vzn-WQ-6Rr">
+        <!--Item 1-->
+        <scene sceneID="gcR-fn-XGp">
             <objects>
-                <viewController id="XjW-PE-K0B" customClass="SelectToiletController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c7H-oy-Ozd">
+                <viewController id="esg-w9-nGf" customClass="SelectLandmarkViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bw1-WW-eGO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a80-J9-fAD">
-                                <rect key="frame" x="116" y="140" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuG-ni-FU4" userLabel="2">
+                                <rect key="frame" x="192" y="406" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="2"/>
                                 <connections>
-                                    <segue destination="wXC-F7-cf4" kind="show" identifier="1" id="XgR-rT-YOi"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="2" id="OWV-Bf-np5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbn-ZE-iYz">
-                                <rect key="frame" x="116" y="272" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vlv-Zh-Zaq">
+                                <rect key="frame" x="192" y="294" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="1"/>
                                 <connections>
-                                    <segue destination="wXC-F7-cf4" kind="show" identifier="2" id="xaQ-U7-Ktv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3A6-bF-efy">
-                                <rect key="frame" x="116" y="413" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="wXC-F7-cf4" kind="show" identifier="3" id="LrO-vF-bzu"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="1" id="KAG-m8-9Xn"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="dFK-0n-D1m"/>
+                        <viewLayoutGuide key="safeArea" id="Zou-vU-blK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Inq-V6-crG"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="hFF-VF-VoE"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TaS-JF-neS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uD2-1v-gaj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1639" y="-822"/>
+            <point key="canvasLocation" x="-684" y="-3566"/>
         </scene>
-        <!--Toilet-->
-        <scene sceneID="GZo-dy-TE2">
+        <!--Tab Bar Controller-->
+        <scene sceneID="7b6-bW-ChI">
             <objects>
-                <viewController id="wXC-F7-cf4" userLabel="Toilet" customClass="ToiletViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vzc-Ol-j0d">
+                <tabBarController id="n4A-Jy-UbJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="w18-f3-mqg"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RZz-7F-bo5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="esg-w9-nGf" kind="relationship" relationship="viewControllers" id="N5R-5v-iaj"/>
+                        <segue destination="cIH-ai-W5g" kind="relationship" relationship="viewControllers" id="B7B-pL-ySM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UL8-9O-r9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1671" y="-3147"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="2V7-GH-p50">
+            <objects>
+                <viewController id="w3K-8J-PFS" customClass="SelectParkingController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hct-uv-Hdy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WmX-se-EjY" userLabel="Scene View 2">
-                                <rect key="frame" x="0.0" y="17" width="414" height="808"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8t-cY-PlI">
+                                <rect key="frame" x="175" y="219" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="2"/>
+                                <connections>
+                                    <segue destination="bWK-TV-F8T" kind="show" identifier="2" id="V1d-O4-poG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHq-7a-6zA">
+                                <rect key="frame" x="175" y="406" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3"/>
+                                <connections>
+                                    <segue destination="bWK-TV-F8T" kind="show" identifier="3" id="F2l-vM-MiL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7iZ-D0-y2U"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="DCP-w9-sDv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZY-Mv-pWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-684" y="-1481"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="ESU-EJ-itB">
+            <objects>
+                <viewController id="XyS-OT-grL" customClass="SelectParkingController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q3d-XF-9uP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPZ-zB-GBL">
+                                <rect key="frame" x="165" y="379" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <segue destination="bWK-TV-F8T" kind="show" identifier="1" id="AKz-qy-8vo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="8fo-C4-mfc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="4hp-WM-U0e"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Kb-14-PGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-684" y="-2142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4Q4-uk-21a">
+            <objects>
+                <tabBarController id="R0b-FK-JBw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Wqr-sc-qa5"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RK6-98-LTh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XyS-OT-grL" kind="relationship" relationship="viewControllers" id="ecl-Rx-IdV"/>
+                        <segue destination="w3K-8J-PFS" kind="relationship" relationship="viewControllers" id="QSh-FM-5oc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x25-GA-nmf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1671" y="-1819"/>
+        </scene>
+        <!--Landmark-->
+        <scene sceneID="v5F-mK-FKK">
+            <objects>
+                <viewController id="fMc-Ru-RcK" userLabel="Landmark" customClass="ToiletViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8yz-e8-Yfd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIk-Sq-Ytp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </arscnView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="ZdB-K8-ZKt"/>
+                        <constraints>
+                            <constraint firstItem="FIk-Sq-Ytp" firstAttribute="top" secondItem="8yz-e8-Yfd" secondAttribute="top" id="Q1y-19-uTT"/>
+                            <constraint firstItem="FIk-Sq-Ytp" firstAttribute="bottom" secondItem="oa1-QA-3k0" secondAttribute="bottom" id="SLV-01-If9"/>
+                            <constraint firstItem="FIk-Sq-Ytp" firstAttribute="trailing" secondItem="oa1-QA-3k0" secondAttribute="trailing" id="fGf-Ss-qiC"/>
+                            <constraint firstItem="FIk-Sq-Ytp" firstAttribute="leading" secondItem="oa1-QA-3k0" secondAttribute="leading" id="v7Q-pq-s0U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oa1-QA-3k0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PNJ-4u-89r"/>
+                    <navigationItem key="navigationItem" id="AtD-Az-gcT"/>
                     <connections>
-                        <outlet property="sceneView2" destination="WmX-se-EjY" id="qhM-ho-eQP"/>
+                        <outlet property="sceneView" destination="FIk-Sq-Ytp" id="zrX-Mq-ljO"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QeB-DE-8ZT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k5q-Q3-ptG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500" y="-822"/>
+            <point key="canvasLocation" x="467" y="-708"/>
+        </scene>
+        <!--Select Multiple Toilet Controller-->
+        <scene sceneID="ncq-O7-FxU">
+            <objects>
+                <viewController id="njo-wc-ert" customClass="SelectMultipleToiletController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vdX-AU-czu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9h-RK-ZWP">
+                                <rect key="frame" x="210" y="226" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="1ov-zf-ms9" kind="show" identifier="1" id="zwF-ww-hvv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8i-bs-cso">
+                                <rect key="frame" x="184" y="517" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="1ov-zf-ms9" kind="show" identifier="3" id="Ufx-RH-ohN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1m-LI-CBD">
+                                <rect key="frame" x="184" y="387" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="1ov-zf-ms9" kind="show" identifier="2" id="3P8-ez-RCX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="a7q-KA-Zwf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gvh-yr-Uud"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDu-QQ-EGt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-661" y="81"/>
+        </scene>
+        <!--Landmark-->
+        <scene sceneID="HJA-Vv-QTG">
+            <objects>
+                <viewController id="1ov-zf-ms9" userLabel="Landmark" customClass="MultipleToiletViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ml-BQ-CNA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WT7-xk-DgF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WT7-xk-DgF" firstAttribute="trailing" secondItem="Vlk-yp-lYw" secondAttribute="trailing" id="28S-7R-iFU"/>
+                            <constraint firstItem="WT7-xk-DgF" firstAttribute="top" secondItem="4ml-BQ-CNA" secondAttribute="top" id="6oZ-8A-LjQ"/>
+                            <constraint firstItem="WT7-xk-DgF" firstAttribute="leading" secondItem="Vlk-yp-lYw" secondAttribute="leading" id="TdX-cM-QtX"/>
+                            <constraint firstItem="WT7-xk-DgF" firstAttribute="bottom" secondItem="Vlk-yp-lYw" secondAttribute="bottom" id="lLa-Cn-2ra"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vlk-yp-lYw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J7u-ra-ZtY"/>
+                    <connections>
+                        <outlet property="sceneView" destination="WT7-xk-DgF" id="cae-bZ-mln"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SEr-mY-kep" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="76"/>
+        </scene>
+        <!--Landmark-->
+        <scene sceneID="XSM-S7-KI4">
+            <objects>
+                <viewController id="bWK-TV-F8T" userLabel="Landmark" customClass="ParkingViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HxI-HM-Ksd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8t-oK-MH5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="M8t-oK-MH5" firstAttribute="top" secondItem="HxI-HM-Ksd" secondAttribute="top" id="PS3-MG-VhP"/>
+                            <constraint firstItem="M8t-oK-MH5" firstAttribute="leading" secondItem="5vP-I4-qtR" secondAttribute="leading" id="VUE-va-cJ3"/>
+                            <constraint firstItem="M8t-oK-MH5" firstAttribute="trailing" secondItem="5vP-I4-qtR" secondAttribute="trailing" id="VnE-M9-4Gw"/>
+                            <constraint firstItem="M8t-oK-MH5" firstAttribute="bottom" secondItem="5vP-I4-qtR" secondAttribute="bottom" id="jdq-lr-BuN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5vP-I4-qtR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yql-Gb-gF0"/>
+                    <connections>
+                        <outlet property="sceneView" destination="M8t-oK-MH5" id="xBI-0r-MHC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2QL-SQ-MHA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="-1819"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LrO-vF-bzu"/>
-        <segue reference="I8V-cU-u3L"/>
+        <segue reference="F2l-vM-MiL"/>
+        <segue reference="Ufx-RH-ohN"/>
+        <segue reference="c4i-Tg-CUz"/>
+        <segue reference="Fce-Q2-7Gj"/>
     </inferredMetricsTieBreakers>
 </document>

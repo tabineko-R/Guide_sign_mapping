@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SelectToiletController: UIViewController {
+class SelectMultipleToiletController: UIViewController {
     
        override func viewDidLoad() {
            super.viewDidLoad()
@@ -17,7 +17,7 @@ class SelectToiletController: UIViewController {
     // ①セグエ実行前処理
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
              // ②遷移先ViewCntrollerの取得
-             let nextView = segue.destination as! ToiletViewController
+             let nextView = segue.destination as! MultipleToiletViewController
              // ③Segueの識別子確認
              switch segue.identifier {
                 case "1" :

@@ -1,5 +1,5 @@
 //
-//  SelectLandmarkViewController.swift
+//  receiveViewController.swift
 //  Guide_sign_mapping
 //
 //  Created by yuya on 2019/11/13.
@@ -8,31 +8,29 @@
 
 import UIKit
 
-class SelectLandmarkViewController: UIViewController {
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-        }
+class SelectToiletViewController: UIViewController {
+    
+       override func viewDidLoad() {
+           super.viewDidLoad()
+       }
     
     // ①セグエ実行前処理
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
              // ②遷移先ViewCntrollerの取得
-             let nextView = segue.destination as! LandmarkViewController
+             let nextView = segue.destination as! ToiletViewController
              // ③Segueの識別子確認
              switch segue.identifier {
-                //④値の設定
-                 case "1" :
-                     nextView.number = 1
-                 case "2" :
-                     nextView.number = 2
-                 case "3" :
-                     nextView.number = 3
-                 default:
+                case "1" :
+                    nextView.number = 1
+                case "2" :
+                    nextView.number = 2
+                case "3" :
+                    nextView.number = 3
+                default:
                      break
              }
          }
     
-
     /*
     // MARK: - Navigation
 
