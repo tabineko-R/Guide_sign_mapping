@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		391F8A8E237C02C1008EA052 /* memo in Resources */ = {isa = PBXBuildFile; fileRef = 391F8A8D237C02C1008EA052 /* memo */; };
+		3923C54D238CE3F200D53F4A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3923C54C238CE3F200D53F4A /* DetailsViewController.swift */; };
+		3923C54E238CE3F200D53F4A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3923C54C238CE3F200D53F4A /* DetailsViewController.swift */; };
+		3923C550238CE43800D53F4A /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3923C54F238CE43800D53F4A /* DirectionsViewController.swift */; };
+		3923C551238CE43800D53F4A /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3923C54F238CE43800D53F4A /* DirectionsViewController.swift */; };
 		3945B766238BE15F00336EE1 /* SelectParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945B765238BE15F00336EE1 /* SelectParkingViewController.swift */; };
 		3945B767238BE15F00336EE1 /* SelectParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945B765238BE15F00336EE1 /* SelectParkingViewController.swift */; };
 		3945B769238BE17700336EE1 /* SelectMultipleToiletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945B768238BE17700336EE1 /* SelectMultipleToiletViewController.swift */; };
@@ -55,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		391F8A8D237C02C1008EA052 /* memo */ = {isa = PBXFileReference; lastKnownFileType = text; path = memo; sourceTree = "<group>"; };
+		3923C54C238CE3F200D53F4A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		3923C54F238CE43800D53F4A /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		3945B765238BE15F00336EE1 /* SelectParkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectParkingViewController.swift; sourceTree = "<group>"; };
 		3945B768238BE17700336EE1 /* SelectMultipleToiletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMultipleToiletViewController.swift; sourceTree = "<group>"; };
 		3945B76B238BE1D100336EE1 /* ParkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +138,8 @@
 				39E9355E237A58B6008167E4 /* FirstViewController.swift */,
 				39E9356C237BFCB6008167E4 /* SelectFacilitiesViewControllers */,
 				39E9356E237BFCF4008167E4 /* MappingFacilitiesViewControllers */,
+				3923C54C238CE3F200D53F4A /* DetailsViewController.swift */,
+				3923C54F238CE43800D53F4A /* DirectionsViewController.swift */,
 				39E9352E2379E5FE008167E4 /* Main.storyboard */,
 				39E935312379E5FF008167E4 /* Assets.xcassets */,
 				39E935332379E5FF008167E4 /* LaunchScreen.storyboard */,
@@ -321,6 +329,8 @@
 				39E9352D2379E5FE008167E4 /* LandmarkViewController.swift in Sources */,
 				39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */,
 				39E9356B237BF961008167E4 /* SelectLandmarkViewController.swift in Sources */,
+				3923C54D238CE3F200D53F4A /* DetailsViewController.swift in Sources */,
+				3923C550238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
 				39E9355B2379F206008167E4 /* ToiletViewController.swift in Sources */,
 				39E93563237BC3AF008167E4 /* SelectToiletViewController.swift in Sources */,
 				3945B766238BE15F00336EE1 /* SelectParkingViewController.swift in Sources */,
@@ -338,6 +348,8 @@
 				39E93569237BF42F008167E4 /* AppDelegate.swift in Sources */,
 				39E93565237BE88F008167E4 /* FirstViewController.swift in Sources */,
 				39E93564237BE7A6008167E4 /* SelectToiletViewController.swift in Sources */,
+				3923C54E238CE3F200D53F4A /* DetailsViewController.swift in Sources */,
+				3923C551238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
 				39E93566237BE895008167E4 /* LandmarkViewController.swift in Sources */,
 				39E935402379E5FF008167E4 /* Guide_sign_mappingTests.swift in Sources */,
 				3945B767238BE15F00336EE1 /* SelectParkingViewController.swift in Sources */,

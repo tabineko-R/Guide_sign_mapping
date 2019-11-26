@@ -93,6 +93,22 @@
             </objects>
             <point key="canvasLocation" x="467" y="-3147"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="fqx-yy-8aO">
+            <objects>
+                <viewController storyboardIdentifier="details" id="Avk-dA-lAf" customClass="DetailsViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SKb-ep-cFV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Nvr-qR-vee"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Myq-d2-Pjj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLp-gO-tmz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874" y="-3147"/>
+        </scene>
         <!--Item 2-->
         <scene sceneID="qZQ-32-4u8">
             <objects>

@@ -61,22 +61,34 @@ class LandmarkViewController: UIViewController {
             }
     }
     
-    //オブジェクトにURL挿入
+    //画面遷移の関数
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let location = touches.first?.location(in: sceneView),
             let result = sceneView.hitTest(location, options: nil).first else {
                 return
         }
+        
         let node = result.node
+        
+        // ①storyboardのインスタンス取得
+        let storyboard: UIStoryboard = self.storyboard!
+        // ②遷移先ViewControllerのインスタンス取得(identifierの名前を間違うとフリーズ起こす)
+        let toDetails = storyboard.instantiateViewController(withIdentifier: "details") as! DetailsViewController
         
         switch node.name {
         case "1":
-            let safariVC = SFSafariViewController(url: URL(string: "https://ja.wikipedia.org/wiki/10%E6%9C%881%E6%97%A5")!)
-            self.present(safariVC, animated: true, completion: nil)
-        
+            // ③画面遷移
+            toDetails.number = 1
+            self.present(toDetails, animated: true, completion: nil)
+            
+        case "2":
+            toDetails.number = 2
+            self.present(toDetails, animated: true, completion: nil)
+            
         default: break
         }
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
