@@ -12,10 +12,12 @@ class DetailsViewController: UIViewController {
     
     var number = 0
    
-
     override func viewDidLoad() {
+        
         super.viewDidLoad()
- print(number)
+        
+
+        
         // Do any additional setup after loading the view.
     }
     
