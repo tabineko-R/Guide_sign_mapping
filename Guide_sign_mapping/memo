@@ -20,5 +20,117 @@
      default: break
      }
  }
+ 
+ 
+ 
+class DirectionsViewController: UIViewController {
+    
+    var present_latitude = 0 //緯度
+    var present_longitude = 0 //経度
+    var destination_latitude = 0
+    var destination_longtude = 0
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        GMSServices.provideAPIKey("AIzaSyCUAnxANAd4CADFuJQEA_NqZvehGfRrMKs")
+        
+        /* //緯度、経度の変数設定
+         switch number{
+         case 1
+         //いど軽度の関数
+         case 2
+         case 3
+         }
+         */
+        
+        // google map
+        let camera = GMSCameraPosition.camera(withLatitude: 41.764183, longitude: 140.716228, zoom: 15.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+
+        // Creates a marker in the center of the map.
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+        marker.title = "Sydney"
+        marker.snippet = "Australia"
+        marker.map = mapView
+
+    }
+}
 
 
+
+class ViewController: UIViewController, GMSMapViewDelegate {
+
+    var mapView:GMSMapView!
+    var coordinates: [CLLocationCoordinate2D] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    GMSServices.provideAPIKey("AIzaSyCUAnxANAd4CADFuJQEA_NqZvehGfRrMKs")
+        
+        let camera = GMSCameraPosition.camera(withLatitude: 35.690144, longitude: 139.70004, zoom: 14.0)
+        self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        self.mapView.isMyLocationEnabled = true
+        self.mapView.delegate = self
+        view = self.mapView
+        
+        let direction = Direction(from:"35.6775602107869,139.692658446729",to: "35.707848364433,139.701456092298")
+        let fromMarker = CLLocationCoordinate2D(latitude:35.6775602107869, longitude:139.692658446729)
+        let toMarker = CLLocationCoordinate2D(latitude:35.707848364433, longitude:139.701456092298)
+        coordinates.append(fromMarker)
+        coordinates.append(toMarker)
+        self.directionMarker(location: fromMarker)
+        self.directionMarker(location: toMarker)
+        
+        direction.directionCompletion(handler: { (route) in
+            print (route)
+            for route in route.routes {
+                self.mapView.addDirection(path: (route?.overviewPolyline?.points)!)
+            }
+            
+        }) { (error) in
+            print (error)
+        }
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        
+        if coordinates.count >= 2 {
+            coordinates.removeAll()
+            self.mapView.clear()
+        }
+        
+        directionMarker(location: coordinate)
+        coordinates.append(coordinate)
+        
+        if coordinates.count == 2 {
+            
+            let direction = Direction(from: coordinates[0], to: coordinates[1], alternative: true, mode: .walking)
+            
+            direction.directionCompletion(handler: { (route) in
+                for route in route.routes {
+                    self.mapView.addDirection(path: (route?.overviewPolyline?.points)!)
+                }
+            }) { (error) in
+                print (error)
+            }
+        }
+    }
+    
+    func directionMarker (location: CLLocationCoordinate2D){
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+        marker.title = "start Direction"
+        marker.snippet = "Hi! What's up!"
+        marker.map = mapView
+    }
+}

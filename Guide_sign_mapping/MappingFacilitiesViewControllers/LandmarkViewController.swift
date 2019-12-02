@@ -13,8 +13,8 @@ import SafariServices
 class LandmarkViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
     
-    // ①引数宣言
-       var number = 0
+    // ①引数宣言　前画面の値
+       var landmarkText:String = ""
     
     // NOTE: The imageConfiguration is better for tracking images,
     // but it has less features,
@@ -44,21 +44,59 @@ class LandmarkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
-        
         //scn読み込み
         //最初にscnの読み込みを指定（テスト）
         buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Landmark", recursively: false)
         
-        switch number {
-        case 1:
-            buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
-        case 2:
-            buttonNode = buttonNode?.childNode(withName: "L_2", recursively: false)
-        case 3:
-            buttonNode = buttonNode?.childNode(withName: "L_3", recursively: false)
+        switch landmarkText{
+        case "旧ロシア領事館":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "太刀川家住宅（重要文化財）":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "中草会館":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "新島襄海外渡航の地碑":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "旧函館区公会堂（重要文化財）":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "旧北海道庁 函館支庁庁舎・旧":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "旧開拓使書籍庫":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "旧イギリス領事館（開港記念館）":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "ペリー提督来航記念碑":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "北方民族資料間":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "日本基督教団函館教会":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "郷土資料館（旧金森洋物店）":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "金森美術館（バカラコレクション）":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "北海道第一歩の地碑":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "遊覧船のりば":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "北方歴史資料間":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "函館高田屋嘉兵衛資料館":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "函館明治館（旧函館郵便局）":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "カトリック元町教会":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "ハリストス正教会（重要文化財）":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "聖ヨハネ教会":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "東本願寺函館別院（重要文化財）":
+        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
         default:
             break
-            }
+        }
+
     }
     
     //画面遷移の関数
@@ -75,18 +113,12 @@ class LandmarkViewController: UIViewController {
         // ②遷移先ViewControllerのインスタンス取得(identifierの名前を間違うとフリーズ起こす)
         let toDetails = storyboard.instantiateViewController(withIdentifier: "details") as! DetailsViewController
         
-        switch node.name {
-        case "1":
-            // ③画面遷移
-            toDetails.number = 1
-            self.present(toDetails, animated: true, completion: nil)
-            
-        case "2":
-            toDetails.number = 2
-            self.present(toDetails, animated: true, completion: nil)
-            
-        default: break
-        }
+        toDetails.landmarkText = landmarkText
+        self.present(toDetails, animated: true, completion: nil)
+
+        
+        
+
     }
     
     
