@@ -50,17 +50,17 @@ class LandmarkViewController: UIViewController {
         
         switch landmarkText{
         case "旧ロシア領事館":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "旧ロシア領事館", recursively: false)
         case "太刀川家住宅（重要文化財）":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "太刀川家住宅（重要文化財）", recursively: false)
         case "中草会館":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "中草会館", recursively: false)
         case "新島襄海外渡航の地碑":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "新島襄海外渡航の地碑", recursively: false)
         case "旧函館区公会堂（重要文化財）":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "旧函館区公会堂（重要文化財）", recursively: false)
         case "旧北海道庁 函館支庁庁舎・旧":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "旧北海道庁 函館支庁庁舎・旧", recursively: false)
         case "旧開拓使書籍庫":
         buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
         case "旧イギリス領事館（開港記念館）":
@@ -106,7 +106,7 @@ class LandmarkViewController: UIViewController {
                 return
         }
         
-        let node = result.node
+        let node = result.node //switch文用
         
         // ①storyboardのインスタンス取得
         let storyboard: UIStoryboard = self.storyboard!
@@ -114,10 +114,7 @@ class LandmarkViewController: UIViewController {
         let toDetails = storyboard.instantiateViewController(withIdentifier: "details") as! DetailsViewController
         
         toDetails.landmarkText = landmarkText
-        self.present(toDetails, animated: true, completion: nil)
-
-        
-        
+        self.present(toDetails, animated: true, completion: nil)    
 
     }
     

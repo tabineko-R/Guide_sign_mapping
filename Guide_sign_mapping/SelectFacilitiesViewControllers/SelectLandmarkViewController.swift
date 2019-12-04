@@ -1,21 +1,21 @@
 import UIKit
 
 class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-
+    
     @IBOutlet weak var TableView: UITableView!
     var selectText:String?
     
     //配列landmarksを設定
     let landmarks = [
-    "旧ロシア領事館",
-    "太刀川家住宅（重要文化財）",
-    "中草会館",
-    "新島襄海外渡航の地碑",
-    "旧函館区公会堂（重要文化財）",
-    "旧北海道庁 函館支庁庁舎・旧",
-    "旧開拓使書籍庫",
-    "旧イギリス領事館（開港記念館）"]
-
+        "旧ロシア領事館",
+        "太刀川家住宅（重要文化財）",
+        "中草会館",
+        "新島襄海外渡航の地碑",
+        "旧函館区公会堂（重要文化財）",
+        "旧北海道庁 函館支庁庁舎・旧",
+        "旧開拓使書籍庫",
+        "旧イギリス領事館（開港記念館）"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,48 +42,47 @@ class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITab
         
         // タップされたセルの行番号を出力
         print("\(landmarks[indexPath.row])番目の行が選択されました。")
-        
-       // セルの選択を解除
+        // セルの選択を解除
         tableView.deselectRow(at: indexPath, animated: true)
         selectText = landmarks[indexPath.row]
-       // 別の画面に遷移
-       performSegue(withIdentifier: "toLandmarkViewController", sender: nil)
-       }
+        // 別の画面に遷移
+        performSegue(withIdentifier: "toLandmarkViewController", sender: nil)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toLandmarkViewController") {
             let nextVC: LandmarkViewController = (segue.destination as? LandmarkViewController)!
-             nextVC.landmarkText = selectText!
+            nextVC.landmarkText = selectText!
             //switch文も使用可能
         }
     }
-    
     
 }
 
 
 
 class SelectLandmarkViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource{
-
+    
     @IBOutlet weak var TableView2: UITableView!
     
     var selectText:String?
     //配列landmarksを設定
     let landmarks2 = [
-    "ペリー提督来航記念碑",
-     "北方民族資料間",
-     "日本基督教団函館教会",
-     "郷土資料館（旧金森洋物店）",
-     "金森美術館（バカラコレクション）",
-     "北海道第一歩の地碑",
-     "遊覧船のりば",
-     "北方歴史資料間",
-     "函館高田屋嘉兵衛資料館",
-     "函館明治館（旧函館郵便局）",
-     "カトリック元町教会",
-     "ハリストス正教会（重要文化財）",
-     "聖ヨハネ教会",
-     "東本願寺函館別院（重要文化財）"]
+        "ペリー提督来航記念碑",
+        "北方民族資料間",
+        "日本基督教団函館教会",
+        "郷土資料館（旧金森洋物店）",
+        "金森美術館（バカラコレクション）",
+        "北海道第一歩の地碑",
+        "遊覧船のりば",
+        "北方歴史資料間",
+        "函館高田屋嘉兵衛資料館",
+        "函館明治館（旧函館郵便局）",
+        "カトリック元町教会",
+        "ハリストス正教会（重要文化財）",
+        "聖ヨハネ教会",
+        "東本願寺函館別院（重要文化財）"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,13 +112,13 @@ class SelectLandmarkViewController2: UIViewController, UITableViewDelegate, UITa
         selectText = landmarks2[indexPath.row]
         // 別の画面に遷移
         performSegue(withIdentifier: "toLandmarkViewController", sender: nil)
-       }
+    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toLandmarkViewController") {
             let nextVC: LandmarkViewController = (segue.destination as? LandmarkViewController)!
-             nextVC.landmarkText = selectText!
+            nextVC.landmarkText = selectText!
             //switch文も使用可能
         }
     }
