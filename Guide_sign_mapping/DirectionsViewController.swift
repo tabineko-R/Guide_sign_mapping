@@ -1,8 +1,11 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import MapKit
 
 class DirectionsViewController: UIViewController {
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     //緯度経度はDouble型で記述
     var present_latitude = 0.0 //緯度
@@ -31,25 +34,15 @@ class DirectionsViewController: UIViewController {
             break
         }
         
+        print(landmarkText)
+    
+        let coordinate = CLLocationCoordinate2DMake(41.764183, 140.716228)
         
-        // google map
-        let camera = GMSCameraPosition.camera(withLatitude: 41.764183, longitude: 140.716228, zoom: 16.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
+        let span = MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04)
         
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 41.764183, longitude: 140.716228)
-        marker.title = "現在地"
-        marker.snippet = "現在地"
-        marker.map = mapView
+        let region = MKCoordinateRegion(center: coordinate, span: span)
         
-        
-        let marker2 = GMSMarker()
-        marker2.position = CLLocationCoordinate2D(latitude: destination_latitude, longitude: destination_longtude)
-        marker2.title = landmarkText
-        marker2.snippet = landmarkText
-        marker2.map = mapView
+        mapView.setRegion(region, animated:true)
         
     }
 }
