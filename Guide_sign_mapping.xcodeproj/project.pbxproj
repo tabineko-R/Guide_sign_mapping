@@ -15,14 +15,6 @@
 		3923C551238CE43800D53F4A /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3923C54F238CE43800D53F4A /* DirectionsViewController.swift */; };
 		3923C553238CEBBA00D53F4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3923C552238CEBBA00D53F4A /* Podfile */; };
 		3923C554238CEBBA00D53F4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3923C552238CEBBA00D53F4A /* Podfile */; };
-		3945B766238BE15F00336EE1 /* SelectParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945B765238BE15F00336EE1 /* SelectParkingViewController.swift */; };
-		3945B767238BE15F00336EE1 /* SelectParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945B765238BE15F00336EE1 /* SelectParkingViewController.swift */; };
-		3945B769238BE17700336EE1 /* SelectMultipleToiletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945B768238BE17700336EE1 /* SelectMultipleToiletViewController.swift */; };
-		3945B76A238BE17700336EE1 /* SelectMultipleToiletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945B768238BE17700336EE1 /* SelectMultipleToiletViewController.swift */; };
-		3945B76C238BE1D100336EE1 /* ParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945B76B238BE1D100336EE1 /* ParkingViewController.swift */; };
-		3945B76D238BE1D100336EE1 /* ParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945B76B238BE1D100336EE1 /* ParkingViewController.swift */; };
-		3945B76F238BE1E000336EE1 /* MultipleToiletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945B76E238BE1E000336EE1 /* MultipleToiletViewController.swift */; };
-		3945B770238BE1E000336EE1 /* MultipleToiletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945B76E238BE1E000336EE1 /* MultipleToiletViewController.swift */; };
 		39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E935282379E5FE008167E4 /* AppDelegate.swift */; };
 		39E9352B2379E5FE008167E4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E9352A2379E5FE008167E4 /* art.scnassets */; };
 		39E9352D2379E5FE008167E4 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */; };
@@ -31,17 +23,14 @@
 		39E935352379E5FF008167E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E935332379E5FF008167E4 /* LaunchScreen.storyboard */; };
 		39E935402379E5FF008167E4 /* Guide_sign_mappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9353F2379E5FF008167E4 /* Guide_sign_mappingTests.swift */; };
 		39E9354B2379E600008167E4 /* Guide_sign_mappingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9354A2379E600008167E4 /* Guide_sign_mappingUITests.swift */; };
-		39E9355B2379F206008167E4 /* ToiletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9355A2379F206008167E4 /* ToiletViewController.swift */; };
 		39E9355F237A58B6008167E4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9355E237A58B6008167E4 /* FirstViewController.swift */; };
-		39E93563237BC3AF008167E4 /* SelectToiletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E93562237BC3AF008167E4 /* SelectToiletViewController.swift */; };
-		39E93564237BE7A6008167E4 /* SelectToiletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E93562237BC3AF008167E4 /* SelectToiletViewController.swift */; };
 		39E93565237BE88F008167E4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9355E237A58B6008167E4 /* FirstViewController.swift */; };
 		39E93566237BE895008167E4 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */; };
-		39E93567237BE897008167E4 /* ToiletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9355A2379F206008167E4 /* ToiletViewController.swift */; };
 		39E93568237BECE8008167E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E9352E2379E5FE008167E4 /* Main.storyboard */; settings = {ASSET_TAGS = ("First View Controller", ); }; };
 		39E93569237BF42F008167E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E935282379E5FE008167E4 /* AppDelegate.swift */; };
 		39E9356B237BF961008167E4 /* SelectLandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */; };
 		39FE26032397EFF900422B82 /* SelectPictgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FE26022397EFF900422B82 /* SelectPictgramsViewController.swift */; };
+		39FE26052398AA7200422B82 /* PictgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FE26042398AA7200422B82 /* PictgramsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,10 +55,6 @@
 		3923C54C238CE3F200D53F4A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		3923C54F238CE43800D53F4A /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		3923C552238CEBBA00D53F4A /* Podfile */ = {isa = PBXFileReference; explicitFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		3945B765238BE15F00336EE1 /* SelectParkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectParkingViewController.swift; sourceTree = "<group>"; };
-		3945B768238BE17700336EE1 /* SelectMultipleToiletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMultipleToiletViewController.swift; sourceTree = "<group>"; };
-		3945B76B238BE1D100336EE1 /* ParkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingViewController.swift; sourceTree = "<group>"; };
-		3945B76E238BE1E000336EE1 /* MultipleToiletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleToiletViewController.swift; sourceTree = "<group>"; };
 		39E935252379E5FE008167E4 /* Guide_sign_mapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guide_sign_mapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E935282379E5FE008167E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39E9352A2379E5FE008167E4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -84,11 +69,10 @@
 		39E935462379E600008167E4 /* Guide_sign_mappingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Guide_sign_mappingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E9354A2379E600008167E4 /* Guide_sign_mappingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guide_sign_mappingUITests.swift; sourceTree = "<group>"; };
 		39E9354C2379E600008167E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39E9355A2379F206008167E4 /* ToiletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletViewController.swift; sourceTree = "<group>"; };
 		39E9355E237A58B6008167E4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		39E93562237BC3AF008167E4 /* SelectToiletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectToiletViewController.swift; sourceTree = "<group>"; };
 		39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLandmarkViewController.swift; sourceTree = "<group>"; };
 		39FE26022397EFF900422B82 /* SelectPictgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPictgramsViewController.swift; sourceTree = "<group>"; };
+		39FE26042398AA7200422B82 /* PictgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictgramsViewController.swift; sourceTree = "<group>"; };
 		74D1F39209250EEDB64B3575 /* libPods-Guide_sign_mapping.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Guide_sign_mapping.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF065F65FE79600A7BCD64D9 /* Pods-Guide_sign_mapping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guide_sign_mapping.debug.xcconfig"; path = "Target Support Files/Pods-Guide_sign_mapping/Pods-Guide_sign_mapping.debug.xcconfig"; sourceTree = "<group>"; };
 		E0811BB574423BD5834067BF /* Pods-Guide_sign_mapping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guide_sign_mapping.release.xcconfig"; path = "Target Support Files/Pods-Guide_sign_mapping/Pods-Guide_sign_mapping.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,9 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */,
-				3945B765238BE15F00336EE1 /* SelectParkingViewController.swift */,
-				39E93562237BC3AF008167E4 /* SelectToiletViewController.swift */,
-				3945B768238BE17700336EE1 /* SelectMultipleToiletViewController.swift */,
 				39FE26022397EFF900422B82 /* SelectPictgramsViewController.swift */,
 			);
 			path = SelectFacilitiesViewControllers;
@@ -204,9 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */,
-				3945B76B238BE1D100336EE1 /* ParkingViewController.swift */,
-				39E9355A2379F206008167E4 /* ToiletViewController.swift */,
-				3945B76E238BE1E000336EE1 /* MultipleToiletViewController.swift */,
+				39FE26042398AA7200422B82 /* PictgramsViewController.swift */,
 			);
 			path = MappingFacilitiesViewControllers;
 			sourceTree = "<group>";
@@ -404,18 +383,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E9352D2379E5FE008167E4 /* LandmarkViewController.swift in Sources */,
+				39FE26052398AA7200422B82 /* PictgramsViewController.swift in Sources */,
 				39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */,
 				39E9356B237BF961008167E4 /* SelectLandmarkViewController.swift in Sources */,
 				3923C54D238CE3F200D53F4A /* DetailsViewController.swift in Sources */,
 				3923C550238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
-				39E9355B2379F206008167E4 /* ToiletViewController.swift in Sources */,
-				39E93563237BC3AF008167E4 /* SelectToiletViewController.swift in Sources */,
-				3945B766238BE15F00336EE1 /* SelectParkingViewController.swift in Sources */,
 				39E9355F237A58B6008167E4 /* FirstViewController.swift in Sources */,
 				39FE26032397EFF900422B82 /* SelectPictgramsViewController.swift in Sources */,
-				3945B769238BE17700336EE1 /* SelectMultipleToiletViewController.swift in Sources */,
-				3945B76C238BE1D100336EE1 /* ParkingViewController.swift in Sources */,
-				3945B76F238BE1E000336EE1 /* MultipleToiletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,16 +399,10 @@
 			files = (
 				39E93569237BF42F008167E4 /* AppDelegate.swift in Sources */,
 				39E93565237BE88F008167E4 /* FirstViewController.swift in Sources */,
-				39E93564237BE7A6008167E4 /* SelectToiletViewController.swift in Sources */,
 				3923C54E238CE3F200D53F4A /* DetailsViewController.swift in Sources */,
 				3923C551238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
 				39E93566237BE895008167E4 /* LandmarkViewController.swift in Sources */,
 				39E935402379E5FF008167E4 /* Guide_sign_mappingTests.swift in Sources */,
-				3945B767238BE15F00336EE1 /* SelectParkingViewController.swift in Sources */,
-				39E93567237BE897008167E4 /* ToiletViewController.swift in Sources */,
-				3945B76A238BE17700336EE1 /* SelectMultipleToiletViewController.swift in Sources */,
-				3945B76D238BE1D100336EE1 /* ParkingViewController.swift in Sources */,
-				3945B770238BE1E000336EE1 /* MultipleToiletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
