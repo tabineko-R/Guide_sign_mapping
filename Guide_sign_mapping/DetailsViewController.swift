@@ -19,7 +19,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var detailsTableView: UITableView!
     @IBOutlet weak var LandmarkImage: UIImageView!
     
-    var details: [String] = [titleText, overviewText, ""]
+    var details: [String] = [titleText, overviewText, "", ""]
     var landmarkText:String = ""
     
     override func viewDidLoad() {
@@ -39,6 +39,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+        //セルの高さを自動設定
         cell.textLabel?.numberOfLines=0
         
         
@@ -53,7 +54,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             break
         }
         
-        details = ["名称 : " + landmarkText,"概要 : \n" + overviewText, "はこぶらで詳細を見る"]
+        details = ["名称 : " + landmarkText,"概要 : \n" + overviewText, "地図で確認する", "はこぶらで詳細を見る"]
         cell.textLabel!.text = details[indexPath.row]
         
         return cell

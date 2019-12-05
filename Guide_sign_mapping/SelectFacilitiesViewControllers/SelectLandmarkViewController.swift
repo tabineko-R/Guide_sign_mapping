@@ -2,7 +2,7 @@ import UIKit
 
 class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    @IBOutlet weak var TableView: UITableView!
+    var TableView: UITableView!
     var selectText:String?
     
     //配列landmarksを設定
@@ -19,8 +19,12 @@ class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        TableView = UITableView(frame: self.view.frame, style: UITableView.Style.grouped)
         TableView.delegate = self
         TableView.dataSource = self
+        TableView.estimatedRowHeight = 100
+        TableView.rowHeight = UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,11 +32,14 @@ class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         // セルを取得する
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
+        reuseIdentifier:"cell")
         
         // セルに表示する値を設定する
         cell.textLabel!.text = landmarks[indexPath.row]
+        cell.imageView?.image = UIImage(named: "information.png")
         
         return cell
     }
@@ -64,7 +71,7 @@ class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITab
 
 class SelectLandmarkViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    @IBOutlet weak var TableView2: UITableView!
+    var TableView2: UITableView!
     
     var selectText:String?
     //配列landmarksを設定
@@ -86,8 +93,11 @@ class SelectLandmarkViewController2: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        TableView2 = UITableView(frame: self.view.frame, style: UITableView.Style.grouped)
         TableView2.delegate = self
         TableView2.dataSource = self
+        TableView2.estimatedRowHeight = 100
+        TableView2.rowHeight = UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,7 +106,8 @@ class SelectLandmarkViewController2: UIViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // セルを取得する
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
+        reuseIdentifier:"cell")
         // セルに表示する値を設定する
         cell.textLabel!.text = landmarks2[indexPath.row]
         

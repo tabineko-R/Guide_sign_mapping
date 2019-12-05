@@ -1,6 +1,4 @@
 import UIKit
-import GoogleMaps
-import GooglePlaces
 import MapKit
 
 class DirectionsViewController: UIViewController {
@@ -19,8 +17,6 @@ class DirectionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        GMSServices.provideAPIKey("AIzaSyCUAnxANAd4CADFuJQEA_NqZvehGfRrMKs")
         
         //緯度、経度の変数設定
         switch landmarkText{
@@ -41,6 +37,13 @@ class DirectionsViewController: UIViewController {
         let span = MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04)
         
         let region = MKCoordinateRegion(center: coordinate, span: span)
+        
+        //地図にピンを立てる。
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2DMake(41.7676953, 140.7016394)
+        annotation.title = landmarkText
+        annotation.subtitle = landmarkText
+        mapView.addAnnotation(annotation)
         
         mapView.setRegion(region, animated:true)
         
