@@ -3,6 +3,7 @@ import UIKit
 class SelectPictgramViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var myTableView1: UITableView!
+    var selectText:String?
     let pictgrams: [String] = ["観光案内所",
                                "駐車場",
                                "トイレ",
@@ -38,19 +39,16 @@ class SelectPictgramViewController: UIViewController, UITableViewDelegate, UITab
         //self.view.addSubview(myTableView1)
     }
     
-    //④セクション数を指定
+    //セクション数を指定
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    //④セクションタイトルを指定
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "第\(section)セクション"
-    }
-    //④セル数を指定
+    
+    //セル数を指定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pictgrams.count
     }
-    //④セルを生成
+    //セルを生成
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
@@ -86,6 +84,27 @@ class SelectPictgramViewController: UIViewController, UITableViewDelegate, UITab
             break
         }
         return cell
+    }
+    
+    //タップされた時
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // タップされたセルの行番号を出力
+        print("\(pictgrams[indexPath.row])番目の行が選択されました。")
+        // セルの選択を解除
+        tableView.deselectRow(at: indexPath, animated: true)
+        selectText = pictgrams[indexPath.row]
+        // 別の画面に遷移
+        performSegue(withIdentifier: "toPictgramsViewController", sender: nil)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toPictgramsViewController") {
+            let nextVC: PictgramsViewController = (segue.destination as? PictgramsViewController)!
+            nextVC.pictgramText = selectText!
+            //switch文も使用可能
+        }
     }
     
     
