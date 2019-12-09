@@ -31,6 +31,7 @@
 		39E9356B237BF961008167E4 /* SelectLandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */; };
 		39FE26032397EFF900422B82 /* SelectPictgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FE26022397EFF900422B82 /* SelectPictgramsViewController.swift */; };
 		39FE26052398AA7200422B82 /* PictgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FE26042398AA7200422B82 /* PictgramsViewController.swift */; };
+		39FE2607239E139E00422B82 /* RootSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FE2606239E139E00422B82 /* RootSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLandmarkViewController.swift; sourceTree = "<group>"; };
 		39FE26022397EFF900422B82 /* SelectPictgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPictgramsViewController.swift; sourceTree = "<group>"; };
 		39FE26042398AA7200422B82 /* PictgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictgramsViewController.swift; sourceTree = "<group>"; };
+		39FE2606239E139E00422B82 /* RootSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootSelectViewController.swift; sourceTree = "<group>"; };
 		74D1F39209250EEDB64B3575 /* libPods-Guide_sign_mapping.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Guide_sign_mapping.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF065F65FE79600A7BCD64D9 /* Pods-Guide_sign_mapping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guide_sign_mapping.debug.xcconfig"; path = "Target Support Files/Pods-Guide_sign_mapping/Pods-Guide_sign_mapping.debug.xcconfig"; sourceTree = "<group>"; };
 		E0811BB574423BD5834067BF /* Pods-Guide_sign_mapping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guide_sign_mapping.release.xcconfig"; path = "Target Support Files/Pods-Guide_sign_mapping/Pods-Guide_sign_mapping.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */,
 				39FE26022397EFF900422B82 /* SelectPictgramsViewController.swift */,
+				39FE2606239E139E00422B82 /* RootSelectViewController.swift */,
 			);
 			path = SelectFacilitiesViewControllers;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */,
 				39E9356B237BF961008167E4 /* SelectLandmarkViewController.swift in Sources */,
 				3923C54D238CE3F200D53F4A /* DetailsViewController.swift in Sources */,
+				39FE2607239E139E00422B82 /* RootSelectViewController.swift in Sources */,
 				3923C550238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
 				39E9355F237A58B6008167E4 /* FirstViewController.swift in Sources */,
 				39FE26032397EFF900422B82 /* SelectPictgramsViewController.swift in Sources */,
