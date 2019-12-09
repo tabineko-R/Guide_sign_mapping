@@ -96,6 +96,11 @@ class LandmarkViewController: UIViewController {
         default:
             break
         }
+        
+        let thumbnailNode = buttonNode.childNode(withName: "旧ロシア領事館", recursively: true)?.childNode(withName: "image", recursively: false)
+        thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "russian")
+       let thumbnailNode2 = buttonNode.childNode(withName: "太刀川家住宅（重要文化財）", recursively: true)?.childNode(withName: "image", recursively: false)
+              thumbnailNode2?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "tachikawa")
 
     }
     
@@ -117,6 +122,8 @@ class LandmarkViewController: UIViewController {
         self.present(toDetails, animated: true, completion: nil)    
 
     }
+    
+
     
     
     override func viewWillAppear(_ animated: Bool) {
