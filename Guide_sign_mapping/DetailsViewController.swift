@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 private var titleText = ""
 private var overviewText = ""
@@ -21,6 +22,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var details: [String] = [titleText, overviewText, "", ""]
     var landmarkText:String = ""
+    var pictgramText:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,8 +64,15 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.row == 2 {
+        
+        switch indexPath.row {
+        case 2:
+            let safariVC = SFSafariViewController(url: URL(string: "https://ja.wikipedia.org/wiki/10%E6%9C%881%E6%97%A5")!)
+            self.present(safariVC, animated: true, completion: nil)
+        case 3:
             performSegue(withIdentifier: "toDirections", sender: nil)
+        default:
+            break
         }
     }
     
