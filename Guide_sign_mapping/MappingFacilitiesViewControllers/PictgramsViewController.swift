@@ -49,6 +49,8 @@ class PictgramsViewController: UIViewController {
         switch pictgramText{
         case "駐車場":
             buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Parking", recursively: false)
+            let thumbnailNode = buttonNode.childNode(withName: "Toilet", recursively: true)?.childNode(withName: "T_[1-9]", recursively: false)?.childNode(withName: "image", recursively: false)
+            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
         case "トイレ":
             buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Toilet", recursively: false)
         case "車いす対応トイレ":

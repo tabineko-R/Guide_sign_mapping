@@ -53,21 +53,19 @@ class LandmarkViewController: UIViewController {
         buttonNode = buttonNode?.childNode(withName: "旧ロシア領事館", recursively: false)
         case "太刀川家住宅（重要文化財）":
         buttonNode = buttonNode?.childNode(withName: "太刀川家住宅（重要文化財）", recursively: false)
-        case "中草会館":
-        buttonNode = buttonNode?.childNode(withName: "中草会館", recursively: false)
+        case "中華会館":
+        buttonNode = buttonNode?.childNode(withName: "中華会館", recursively: false)
         case "新島襄海外渡航の地碑":
         buttonNode = buttonNode?.childNode(withName: "新島襄海外渡航の地碑", recursively: false)
         case "旧函館区公会堂（重要文化財）":
         buttonNode = buttonNode?.childNode(withName: "旧函館区公会堂（重要文化財）", recursively: false)
-        case "旧北海道庁 函館支庁庁舎・旧":
-        buttonNode = buttonNode?.childNode(withName: "旧北海道庁 函館支庁庁舎・旧", recursively: false)
-        case "旧開拓使書籍庫":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        case "旧北海道庁 函館支庁庁舎・旧開拓使書籍庫(観光案内所・写真歴史館)":
+        buttonNode = buttonNode?.childNode(withName: "旧北海道庁 函館支庁庁舎・旧開拓使書籍庫(観光案内所・写真歴史館)", recursively: false)
         case "旧イギリス領事館（開港記念館）":
         buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
         case "ペリー提督来航記念碑":
         buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
-        case "北方民族資料間":
+        case "北方民族資料館":
         buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
         case "日本基督教団函館教会":
         buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
@@ -79,7 +77,7 @@ class LandmarkViewController: UIViewController {
         buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
         case "遊覧船のりば":
         buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
-        case "北方歴史資料間":
+        case "北方歴史資料館":
         buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
         case "函館高田屋嘉兵衛資料館":
         buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
