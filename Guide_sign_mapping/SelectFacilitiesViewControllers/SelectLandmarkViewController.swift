@@ -7,31 +7,22 @@ class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITab
     var selectText:String?
     
     //配列landmarksを設定
-    var landmarks2 = ["遊覧船のりば",
-                      "太刀川家住宅（重要文化財）",
-                      "旧函館区公会堂（重要文化財）",
-                      "中華会館",
-                      "金森美術館（バカラコレクション）",
+    var landmarks = ["遊覧船のりば",
+                     "函館明治館（旧函館郵便局）",
+                     "",
+                    "中華会館",
+                    "金森美術館（バカラコレクション）",
     ]
     
     //landmarksと数を一致させる
     let photos = ["russian","tachikawa","","","",""]
     
-    var landmarks = ["旧北海道庁 函館支庁庁舎・旧開拓使書籍庫(観光案内所・写真歴史館)",
-                     "函館明治館（旧函館郵便局）",
+    var landmarks2 = ["旧北海道庁 函館支庁庁舎・旧開拓使書籍庫(観光案内所・写真歴史館)",
+
                      "旧ロシア領事館",
-                     "旧イギリス領事館（開港記念館）"]
-    
-    
-    var landmarks5 = ["新島襄海外渡航の地碑",
-                      "北海道第一歩の地碑",
-                      "ペリー提督来航記念碑"
-    ]
-    
-    var landmarks4 = ["北方歴史資料館",
-                      "函館高田屋嘉兵衛資料館",
-                      "北方民族資料館",
-                      "郷土資料館（旧金森洋物店）",]
+                     "旧イギリス領事館（開港記念館）",
+    "太刀川家住宅（重要文化財）",
+    "旧函館区公会堂（重要文化財）"]
     
     var landmarks3 = ["ハリストス正教会（重要文化財）",
                       "東本願寺函館別院（重要文化財）",
@@ -39,6 +30,21 @@ class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITab
                       "カトリック元町教会",
                       "聖ヨハネ教会"
                       ]
+    
+    var landmarks4 = ["新島襄海外渡航の地碑",
+                      "北海道第一歩の地碑",
+                      "ペリー提督来航記念碑",
+                      "",
+                      ""
+    ]
+    
+    var landmarks5 = ["北方歴史資料館",
+                      "函館高田屋嘉兵衛資料館",
+                      "北方民族資料館",
+                      "郷土資料館（旧金森洋物店）",
+    ""]
+    
+
     
     
     override func viewDidLoad() {
@@ -53,11 +59,24 @@ class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITab
     
     //セクション数を指定
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 5
     }
     //セクションタイトルを指定
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "函館"
+        switch section{
+        case 0:
+            return "函館"
+        case 1:
+            return ""
+        case 2:
+            return "教会・寺院"
+        case 3:
+            return "記念碑"
+        case 4:
+            return "資料館"
+        default:
+            return nil
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,7 +97,20 @@ class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITab
         case 1:
             // セルに表示する値を設定する
             cell.textLabel!.text = landmarks2[indexPath.row]
-            cell.imageView?.image = UIImage(named: "noimage.png")
+            cell.imageView?.image = UIImage(named: photos[indexPath.row])
+        case 2:
+            // セルに表示する値を設定する
+            cell.textLabel!.text = landmarks3[indexPath.row]
+            cell.imageView?.image = UIImage(named: photos[indexPath.row])
+        case 3:
+            // セルに表示する値を設定する
+            cell.textLabel!.text = landmarks4[indexPath.row]
+            cell.imageView?.image = UIImage(named: photos[indexPath.row])
+        case 4:
+            // セルに表示する値を設定する
+            cell.textLabel!.text = landmarks5[indexPath.row]
+            cell.imageView?.image = UIImage(named: photos[indexPath.row])
+
         default:
             break
         }

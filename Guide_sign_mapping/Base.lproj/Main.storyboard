@@ -193,7 +193,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="WjT-jT-bQr"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ホーム" id="ReW-Z4-xfj"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="house.fill" catalog="system" id="ReW-Z4-xfj"/>
                     <connections>
                         <outlet property="collectionView" destination="W3x-Xp-QRU" id="3hv-Qi-V2V"/>
                         <segue destination="426-qf-PkZ" kind="show" identifier="toFavoriteViewController" id="0fb-l2-8lw"/>
@@ -203,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92p-2b-di7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3668" y="-3646"/>
+            <point key="canvasLocation" x="-3668" y="-2863"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iUb-jC-fGd">
@@ -228,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Oj-Eu-VnW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1924" y="-4424"/>
+            <point key="canvasLocation" x="-813" y="-3652"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="B3Q-83-36E">
@@ -253,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYh-Kg-dVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1880" y="-3651"/>
+            <point key="canvasLocation" x="-1900" y="-3652"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TMf-CP-oY3">
@@ -278,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mE-Zi-TH9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1900" y="-2871"/>
+            <point key="canvasLocation" x="-2791" y="-3652"/>
         </scene>
         <!--エリアで探す-->
         <scene sceneID="gBD-8K-zGa">
@@ -288,10 +288,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hakodate_park" translatesAutoresizingMaskIntoConstraints="NO" id="eq0-HM-NVq">
-                                <rect key="frame" x="0.0" y="89" width="414" height="235"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="motomachi_park" translatesAutoresizingMaskIntoConstraints="NO" id="7pm-lP-iz6">
                                 <rect key="frame" x="-1" y="308" width="414" height="308"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -328,30 +324,46 @@
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kl-rY-DNu">
+                                <rect key="frame" x="183" y="447" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hakodate_park" translatesAutoresizingMaskIntoConstraints="NO" id="eq0-HM-NVq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="235"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0Ae-X1-8gS"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="エリアで探す" id="Mka-5k-wVH"/>
+                    <tabBarItem key="tabBarItem" title="エリアで探す" image="star" id="Mka-5k-wVH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suZ-3N-XVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3668.115942028986" y="-325.44642857142856"/>
+            <point key="canvasLocation" x="-3668" y="-473"/>
         </scene>
-        <!--View Controller-->
+        <!--Landmark View Controller-->
         <scene sceneID="nXr-eB-H4E">
             <objects>
-                <viewController id="x2N-Tp-FOI" sceneMemberID="viewController">
+                <viewController id="x2N-Tp-FOI" customClass="LandmarkViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5AQ-rD-r6G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yD1-Ft-ce7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="DyX-8J-MyD"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lHo-6R-G4f"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MIg-Yi-KgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1900" y="-325"/>
+            <point key="canvasLocation" x="-988" y="-473"/>
         </scene>
         <!--SelectPictgramVC-->
         <scene sceneID="dUc-Nk-YPB">
@@ -420,14 +432,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-813" y="-2056"/>
+            <point key="canvasLocation" x="-987" y="-2056"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="fqx-yy-8aO">
             <objects>
                 <viewController storyboardIdentifier="details" id="Avk-dA-lAf" customClass="DetailsViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SKb-ep-cFV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r2P-wC-ary">
@@ -507,7 +519,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TkQ-DW-xLA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="-2" y="0.0" width="415" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Google map" id="bZL-5N-Hvw">
@@ -517,6 +529,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="←詳細画面に戻る"/>
                                             </button>
+                                            <connections>
+                                                <segue destination="Avk-dA-lAf" kind="show" id="M3V-Av-ojz"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -573,13 +588,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRq-2O-o1V" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-812" y="-1289"/>
+            <point key="canvasLocation" x="-988" y="-1289"/>
         </scene>
         <!--施設を探す-->
         <scene sceneID="nWJ-ua-Ney">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PV3-do-eFp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="施設を探す" id="10c-If-gqg"/>
+                    <tabBarItem key="tabBarItem" title="施設を探す" image="arrow.up.doc.fill" catalog="system" id="10c-If-gqg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tNq-4t-wI1">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -597,7 +612,13 @@
     </scenes>
     <resources>
         <image name="akarengas" width="753" height="407"/>
+        <image name="arrow.up.doc.fill" catalog="system" width="56" height="64"/>
         <image name="hakodate_park" width="738" height="415"/>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="motomachi_park" width="661" height="464"/>
+        <image name="star" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="M3V-Av-ojz"/>
+    </inferredMetricsTieBreakers>
 </document>

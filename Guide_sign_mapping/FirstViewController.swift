@@ -42,9 +42,9 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let horizontalSpace : CGFloat = 20
+        let horizontalSpace : CGFloat = 5
         let cellSize : CGFloat = self.view.bounds.width / 3 - horizontalSpace
-        return CGSize(width: cellSize, height: cellSize + 15)
+        return CGSize(width: cellSize, height: cellSize + 30)
     }
     
     //タップされた時
