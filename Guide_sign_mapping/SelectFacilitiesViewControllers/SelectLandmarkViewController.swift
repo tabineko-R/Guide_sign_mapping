@@ -9,40 +9,28 @@ class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITab
     //配列landmarksを設定
     var landmarks = ["遊覧船のりば",
                      "函館明治館（旧函館郵便局）",
-                     "",
-                    "中華会館",
-                    "金森美術館（バカラコレクション）",
-    ]
-    
-    //landmarksと数を一致させる
-    let photos = ["russian","tachikawa","","","",""]
-    
-    var landmarks2 = ["旧北海道庁 函館支庁庁舎・旧開拓使書籍庫(観光案内所・写真歴史館)",
-
+                     "中華会館",
+                     "金森美術館（バカラコレクション）",
+                     "旧北海道庁 函館支庁庁舎・旧開拓使書籍庫(観光案内所・写真歴史館)",
                      "旧ロシア領事館",
                      "旧イギリス領事館（開港記念館）",
-    "太刀川家住宅（重要文化財）",
-    "旧函館区公会堂（重要文化財）"]
+                     "太刀川家住宅（重要文化財）",
+                     "旧函館区公会堂（重要文化財）",
+                     "ハリストス正教会（重要文化財）",
+                     "東本願寺函館別院（重要文化財）",
+                     "日本基督教団函館教会",
+                     "カトリック元町教会",
+                     "聖ヨハネ教会",
+                     "新島襄海外渡航の地碑",
+                     "北海道第一歩の地碑",
+                     "ペリー提督来航記念碑",
+                     "北方歴史資料館",
+                     "函館高田屋嘉兵衛資料館",
+                     "北方民族資料館",
+                     "郷土資料館（旧金森洋物店）",
+                     "函館市文学館"]
     
-    var landmarks3 = ["ハリストス正教会（重要文化財）",
-                      "東本願寺函館別院（重要文化財）",
-                      "日本基督教団函館教会",
-                      "カトリック元町教会",
-                      "聖ヨハネ教会"
-                      ]
-    
-    var landmarks4 = ["新島襄海外渡航の地碑",
-                      "北海道第一歩の地碑",
-                      "ペリー提督来航記念碑",
-                      "",
-                      ""
-    ]
-    
-    var landmarks5 = ["北方歴史資料館",
-                      "函館高田屋嘉兵衛資料館",
-                      "北方民族資料館",
-                      "郷土資料館（旧金森洋物店）",
-    ""]
+    //    //landmarksと数を一致させる let photos = ["russian","tachikawa","","","",""]
     
 
     
@@ -66,14 +54,6 @@ class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITab
         switch section{
         case 0:
             return "函館"
-        case 1:
-            return ""
-        case 2:
-            return "教会・寺院"
-        case 3:
-            return "記念碑"
-        case 4:
-            return "資料館"
         default:
             return nil
         }
@@ -93,23 +73,7 @@ class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITab
         case 0:
             // セルに表示する値を設定する
             cell.textLabel!.text = landmarks[indexPath.row]
-            cell.imageView?.image = UIImage(named: photos[indexPath.row])
-        case 1:
-            // セルに表示する値を設定する
-            cell.textLabel!.text = landmarks2[indexPath.row]
-            cell.imageView?.image = UIImage(named: photos[indexPath.row])
-        case 2:
-            // セルに表示する値を設定する
-            cell.textLabel!.text = landmarks3[indexPath.row]
-            cell.imageView?.image = UIImage(named: photos[indexPath.row])
-        case 3:
-            // セルに表示する値を設定する
-            cell.textLabel!.text = landmarks4[indexPath.row]
-            cell.imageView?.image = UIImage(named: photos[indexPath.row])
-        case 4:
-            // セルに表示する値を設定する
-            cell.textLabel!.text = landmarks5[indexPath.row]
-            cell.imageView?.image = UIImage(named: photos[indexPath.row])
+            //cell.imageView?.image = UIImage(named: photos[indexPath.row])
 
         default:
             break
@@ -125,7 +89,14 @@ class SelectLandmarkViewController: UIViewController, UITableViewDelegate, UITab
         print("\(landmarks[indexPath.row])番目の行が選択されました。")
         // セルの選択を解除
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch indexPath.section {
+         case 0:
         selectText = landmarks[indexPath.row]
+         default:
+             break
+         }
+        
         // 別の画面に遷移
         performSegue(withIdentifier: "toLandmarkViewController", sender: nil)
     }

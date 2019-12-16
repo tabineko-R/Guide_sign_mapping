@@ -51,6 +51,8 @@ class LandmarkViewController: UIViewController {
         switch landmarkText{
         case "旧ロシア領事館":
         buttonNode = buttonNode?.childNode(withName: "旧ロシア領事館", recursively: false)
+        let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
+        thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
         case "太刀川家住宅（重要文化財）":
         buttonNode = buttonNode?.childNode(withName: "太刀川家住宅（重要文化財）", recursively: false)
         case "中華会館":
@@ -62,43 +64,43 @@ class LandmarkViewController: UIViewController {
         case "旧北海道庁 函館支庁庁舎・旧開拓使書籍庫(観光案内所・写真歴史館)":
         buttonNode = buttonNode?.childNode(withName: "旧北海道庁 函館支庁庁舎・旧開拓使書籍庫(観光案内所・写真歴史館)", recursively: false)
         case "旧イギリス領事館（開港記念館）":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "旧イギリス領事館（開港記念館）", recursively: false)
         case "ペリー提督来航記念碑":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "ペリー提督来航記念碑", recursively: false)
         case "北方民族資料館":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "北方民族資料館", recursively: false)
         case "日本基督教団函館教会":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "日本基督教団函館教会", recursively: false)
         case "郷土資料館（旧金森洋物店）":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "郷土資料館（旧金森洋物店）", recursively: false)
+        case "函館市文学館":
+            buttonNode = buttonNode?.childNode(withName: "函館市文学館", recursively: false)
         case "金森美術館（バカラコレクション）":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "金森美術館（バカラコレクション）", recursively: false)
         case "北海道第一歩の地碑":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "北海道第一歩の地碑", recursively: false)
         case "遊覧船のりば":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "遊覧船のりば", recursively: false)
         case "北方歴史資料館":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "北方歴史資料館", recursively: false)
         case "函館高田屋嘉兵衛資料館":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "函館高田屋嘉兵衛資料館", recursively: false)
         case "函館明治館（旧函館郵便局）":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "函館明治館（旧函館郵便局）", recursively: false)
         case "カトリック元町教会":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "カトリック元町教会", recursively: false)
         case "ハリストス正教会（重要文化財）":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "ハリストス正教会（重要文化財）", recursively: false)
         case "聖ヨハネ教会":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "聖ヨハネ教会", recursively: false)
         case "東本願寺函館別院（重要文化財）":
-        buttonNode = buttonNode?.childNode(withName: "L_1", recursively: false)
+        buttonNode = buttonNode?.childNode(withName: "東本願寺函館別院（重要文化財）", recursively: false)
         default:
             break
         }
-        
-        let thumbnailNode = buttonNode.childNode(withName: "旧ロシア領事館", recursively: true)?.childNode(withName: "image", recursively: false)
-        thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "russian")
-       let thumbnailNode2 = buttonNode.childNode(withName: "太刀川家住宅（重要文化財）", recursively: true)?.childNode(withName: "image", recursively: false)
-              thumbnailNode2?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "tachikawa")
+
+
+
 
     }
     
