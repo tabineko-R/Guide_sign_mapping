@@ -5,13 +5,15 @@ class SearchAreaViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var myTableView1: UITableView!
     
     var selectText:String?
-    let Facilities: [String] = ["函館公園周辺",
+    let Facilities: [String] = ["周辺施設",
+                                "函館公園周辺",
                                 "ロープウェイ山麓駅周辺",
                                 "元町公園周辺",
                                 "赤レンガ倉庫周辺",
                                 "函館駅周辺"]
     
-    let Facilities_en: [String] = ["Hakodate Park\n\n\n\n\n",
+    let Facilities_en: [String] = ["Around Facilities\n\n\n\n\n",
+                                   "Hakodate Park\n\n\n\n\n",
                                    "Roopway Station\n\n\n\n\n",
                                    "Motomachi Park\n\n\n\n\n",
                                    "Aka-renga\n\n\n\n\n",

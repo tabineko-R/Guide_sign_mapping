@@ -51,6 +51,14 @@ class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch selectText{
+                    case "周辺施設":
+            Facilities = ["周辺施設01",
+                                        "周辺施設02",
+                                        "周辺施設03",
+                                        "周辺施設04",
+                                        "周辺施設05"]
+            
+
         case "函館公園周辺":
             Facilities = ["函館公園周辺01",
                           "函館公園周辺02",

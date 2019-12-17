@@ -4,9 +4,8 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
     
     var myTableView1: UITableView!
     var selectText:String?
-    let Facilities: [String] = ["観光施設を探す",
-                                "エリア別検索",
-                                "周辺施設検索",
+    let Facilities: [String] = ["エリア別で探す",
+                                "観光施設",
                                 "観光案内所",
                                 "駐車場",
                                 "トイレ",
@@ -19,9 +18,8 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
                                 "学校",
                                 "駅・電停"]
     
-    let Facilities_en: [String] = ["Search Landmarks",
-                                   "Search Area",
-                                   "Search Near",
+    let Facilities_en: [String] = ["Search Area",
+                                   "Tourist facilities",
                                    "Information",
                                    "Parking",
                                    "Toilet",
@@ -101,12 +99,10 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
         tableView.deselectRow(at: indexPath, animated: true)
         selectText = Facilities[indexPath.row]
         // 別の画面に遷移
-        if indexPath.row == 0 {
-        performSegue(withIdentifier: "toSelectLandmarksVC", sender: nil)
-        }else if indexPath.row == 1 {
+        if Facilities[indexPath.row] == "エリア別で探す" {
         performSegue(withIdentifier: "toSearchAreaVC", sender: nil)
-        }else if indexPath.row == 2 {
-        performSegue(withIdentifier: "toSelectNearVC", sender: nil)
+        }else if Facilities[indexPath.row] == "観光施設" {
+        performSegue(withIdentifier: "toSelectLandmarksVC", sender: nil)
         }else{
         performSegue(withIdentifier: "toPictgramsViewController", sender: nil)
         }
