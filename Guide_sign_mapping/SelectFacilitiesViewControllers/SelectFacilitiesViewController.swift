@@ -65,13 +65,13 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
         
         switch Facilities[indexPath.row]{
         case "観光案内所":
-            cell.imageView?.image = UIImage(named: "information.png")
+            cell.imageView?.image = UIImage(named: "noimage.png")
         case "駐車場":
-            cell.imageView?.image = UIImage(named: "parking.png")
+            cell.imageView?.image = UIImage(named: "noimage.png")
         case "トイレ":
-            cell.imageView?.image = UIImage(named: "toilet.png")
+            cell.imageView?.image = UIImage(named: "noimage.png")
         case "車いす対応トイレ":
-            cell.imageView?.image = UIImage(named: "multiporpose_toilet.png")
+            cell.imageView?.image = UIImage(named: "noimage.png")
         case "郵便局":
             cell.imageView?.image = UIImage(named: "noimage.png")
         case "ホテル":
@@ -101,8 +101,12 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
         tableView.deselectRow(at: indexPath, animated: true)
         selectText = Facilities[indexPath.row]
         // 別の画面に遷移
-        if indexPath.row <= 2 {
+        if indexPath.row == 0 {
         performSegue(withIdentifier: "toSelectLandmarksVC", sender: nil)
+        }else if indexPath.row == 1 {
+        performSegue(withIdentifier: "toSearchAreaVC", sender: nil)
+        }else if indexPath.row == 2 {
+        performSegue(withIdentifier: "toSelectNearVC", sender: nil)
         }else{
         performSegue(withIdentifier: "toPictgramsViewController", sender: nil)
         }

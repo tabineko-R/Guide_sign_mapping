@@ -104,13 +104,16 @@ class PictgramsViewController: UIViewController {
         
         let node = result.node //switch文用
         
+        
         // ①storyboardのインスタンス取得
         let storyboard: UIStoryboard = self.storyboard!
         // ②遷移先ViewControllerのインスタンス取得(identifierの名前を間違うとフリーズ起こす)
         let toDetails = storyboard.instantiateViewController(withIdentifier: "details") as! DetailsViewController
         
-        toDetails.pictgramText = pictgramText
+        toDetails.landmarkText = node.name!
         self.present(toDetails, animated: true, completion: nil)
+        
+        print(node.name!)
         
     }
     

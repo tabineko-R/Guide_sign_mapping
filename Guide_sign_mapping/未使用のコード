@@ -1,4 +1,28 @@
-//google map 使う場合の基本のコード
+
+ オブジェクトに画像を挿入する
+ let thumbnailNode = buttonNode.childNode(withName: "plane", recursively: true)
+ thumbnailNode?.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "art.scnassets/FarFromHome.jpeg")
+ feedback.prepare()
+ 
+ //オブジェクトにURL挿入
+ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+     guard let location = touches.first?.location(in: sceneView),
+         let result = sceneView.hitTest(location, options: nil).first else {
+             return
+     }
+     let node = result.node
+     
+     switch node.name {
+     case "cylinder_1":
+         let safariVC = SFSafariViewController(url: URL(string: "https://ja.wikipedia.org/wiki/10%E6%9C%881%E6%97%A5")!)
+         self.present(safariVC, animated: true, completion: nil)
+     
+     default: break
+     }
+ }
+ 
+ 
+ //google map 使う場合の基本のコード
 class DirectionsViewController: UIViewController {
     
     var present_latitude = 0 //緯度

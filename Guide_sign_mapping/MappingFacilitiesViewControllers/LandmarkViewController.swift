@@ -1,11 +1,3 @@
-//
-//  MultipleToiletViewController.swift
-//  Guide_sign_mapping
-//
-//  Created by yuya on 2019/11/25.
-//  Copyright © 2019 yuya. All rights reserved.
-//
-
 import UIKit
 import ARKit
 import SafariServices

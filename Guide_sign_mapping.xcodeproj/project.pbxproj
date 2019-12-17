@@ -16,6 +16,14 @@
 		3923C553238CEBBA00D53F4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3923C552238CEBBA00D53F4A /* Podfile */; };
 		3923C554238CEBBA00D53F4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3923C552238CEBBA00D53F4A /* Podfile */; };
 		39DF075D23A7771C002CD040 /* 開発の範囲について in Resources */ = {isa = PBXBuildFile; fileRef = 39DF075C23A7771C002CD040 /* 開発の範囲について */; };
+		39DF075F23A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */; };
+		39DF076023A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */; };
+		39DF076223A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */; };
+		39DF076323A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */; };
+		39DF076523A7D8CD002CD040 /* SelectNearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076423A7D8CD002CD040 /* SelectNearViewController.swift */; };
+		39DF076623A7D8CD002CD040 /* SelectNearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076423A7D8CD002CD040 /* SelectNearViewController.swift */; };
+		39DF076823A7E11E002CD040 /* FacilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076723A7E11E002CD040 /* FacilitiesViewController.swift */; };
+		39DF076923A7E11E002CD040 /* FacilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076723A7E11E002CD040 /* FacilitiesViewController.swift */; };
 		39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E935282379E5FE008167E4 /* AppDelegate.swift */; };
 		39E9352B2379E5FE008167E4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E9352A2379E5FE008167E4 /* art.scnassets */; };
 		39E9352D2379E5FE008167E4 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */; };
@@ -55,6 +63,10 @@
 		3923C54F238CE43800D53F4A /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		3923C552238CEBBA00D53F4A /* Podfile */ = {isa = PBXFileReference; explicitFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		39DF075C23A7771C002CD040 /* 開発の範囲について */ = {isa = PBXFileReference; lastKnownFileType = text; path = "開発の範囲について"; sourceTree = "<group>"; };
+		39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAreaViewController.swift; sourceTree = "<group>"; };
+		39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFacilitiesInAreaViewController.swift; sourceTree = "<group>"; };
+		39DF076423A7D8CD002CD040 /* SelectNearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNearViewController.swift; sourceTree = "<group>"; };
+		39DF076723A7E11E002CD040 /* FacilitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesViewController.swift; sourceTree = "<group>"; };
 		39E935252379E5FE008167E4 /* Guide_sign_mapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guide_sign_mapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E935282379E5FE008167E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39E9352A2379E5FE008167E4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -176,6 +188,9 @@
 			children = (
 				39FE26022397EFF900422B82 /* SelectFacilitiesViewController.swift */,
 				39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */,
+				39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */,
+				39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */,
+				39DF076423A7D8CD002CD040 /* SelectNearViewController.swift */,
 			);
 			path = SelectFacilitiesViewControllers;
 			sourceTree = "<group>";
@@ -185,6 +200,7 @@
 			children = (
 				39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */,
 				39FE26042398AA7200422B82 /* PictgramsViewController.swift */,
+				39DF076723A7E11E002CD040 /* FacilitiesViewController.swift */,
 			);
 			path = MappingFacilitiesViewControllers;
 			sourceTree = "<group>";
@@ -386,9 +402,13 @@
 				39FE26052398AA7200422B82 /* PictgramsViewController.swift in Sources */,
 				39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */,
 				39E9356B237BF961008167E4 /* SelectLandmarkViewController.swift in Sources */,
+				39DF076523A7D8CD002CD040 /* SelectNearViewController.swift in Sources */,
 				3923C54D238CE3F200D53F4A /* DetailsViewController.swift in Sources */,
 				3923C550238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
+				39DF076823A7E11E002CD040 /* FacilitiesViewController.swift in Sources */,
 				39FE26032397EFF900422B82 /* SelectFacilitiesViewController.swift in Sources */,
+				39DF075F23A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */,
+				39DF076223A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,9 +418,13 @@
 			files = (
 				39E93569237BF42F008167E4 /* AppDelegate.swift in Sources */,
 				3923C54E238CE3F200D53F4A /* DetailsViewController.swift in Sources */,
+				39DF076323A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */,
+				39DF076923A7E11E002CD040 /* FacilitiesViewController.swift in Sources */,
 				3923C551238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
 				39E93566237BE895008167E4 /* LandmarkViewController.swift in Sources */,
 				39E935402379E5FF008167E4 /* Guide_sign_mappingTests.swift in Sources */,
+				39DF076623A7D8CD002CD040 /* SelectNearViewController.swift in Sources */,
+				39DF076023A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
