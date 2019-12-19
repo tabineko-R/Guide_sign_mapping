@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		316E660CEF847AAF9B3C14B2 /* libPods-Guide_sign_mapping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D1F39209250EEDB64B3575 /* libPods-Guide_sign_mapping.a */; };
+		3917AB8123AB57F400C6AEB0 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3917AB7E23AB57F400C6AEB0 /* LandmarkViewController.swift */; };
+		3917AB8223AB57F400C6AEB0 /* SelectFacilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3917AB7F23AB57F400C6AEB0 /* SelectFacilitiesViewController.swift */; };
+		3917AB8323AB57F400C6AEB0 /* SelectLandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3917AB8023AB57F400C6AEB0 /* SelectLandmarkViewController.swift */; };
 		391F8A8E237C02C1008EA052 /* 未使用のコード in Resources */ = {isa = PBXBuildFile; fileRef = 391F8A8D237C02C1008EA052 /* 未使用のコード */; };
 		3923C54D238CE3F200D53F4A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3923C54C238CE3F200D53F4A /* DetailsViewController.swift */; };
 		3923C54E238CE3F200D53F4A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3923C54C238CE3F200D53F4A /* DetailsViewController.swift */; };
@@ -24,17 +27,13 @@
 		39DF076923A7E11E002CD040 /* FacilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076723A7E11E002CD040 /* FacilitiesViewController.swift */; };
 		39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E935282379E5FE008167E4 /* AppDelegate.swift */; };
 		39E9352B2379E5FE008167E4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E9352A2379E5FE008167E4 /* art.scnassets */; };
-		39E9352D2379E5FE008167E4 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */; };
 		39E935302379E5FE008167E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E9352E2379E5FE008167E4 /* Main.storyboard */; settings = {ASSET_TAGS = ("First View Controller", ); }; };
 		39E935322379E5FF008167E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E935312379E5FF008167E4 /* Assets.xcassets */; };
 		39E935352379E5FF008167E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E935332379E5FF008167E4 /* LaunchScreen.storyboard */; };
 		39E935402379E5FF008167E4 /* Guide_sign_mappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9353F2379E5FF008167E4 /* Guide_sign_mappingTests.swift */; };
 		39E9354B2379E600008167E4 /* Guide_sign_mappingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9354A2379E600008167E4 /* Guide_sign_mappingUITests.swift */; };
-		39E93566237BE895008167E4 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */; };
 		39E93568237BECE8008167E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E9352E2379E5FE008167E4 /* Main.storyboard */; settings = {ASSET_TAGS = ("First View Controller", ); }; };
 		39E93569237BF42F008167E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E935282379E5FE008167E4 /* AppDelegate.swift */; };
-		39E9356B237BF961008167E4 /* SelectLandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */; };
-		39FE26032397EFF900422B82 /* SelectFacilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FE26022397EFF900422B82 /* SelectFacilitiesViewController.swift */; };
 		39FE26052398AA7200422B82 /* PictgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FE26042398AA7200422B82 /* PictgramsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3917AB7E23AB57F400C6AEB0 /* LandmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkViewController.swift; sourceTree = "<group>"; };
+		3917AB7F23AB57F400C6AEB0 /* SelectFacilitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectFacilitiesViewController.swift; path = Landmark/SelectFacilitiesViewController.swift; sourceTree = "<group>"; };
+		3917AB8023AB57F400C6AEB0 /* SelectLandmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectLandmarkViewController.swift; sourceTree = "<group>"; };
 		391F8A8D237C02C1008EA052 /* 未使用のコード */ = {isa = PBXFileReference; lastKnownFileType = text; path = "未使用のコード"; sourceTree = "<group>"; };
 		3923C54C238CE3F200D53F4A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		3923C54F238CE43800D53F4A /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +69,6 @@
 		39E935252379E5FE008167E4 /* Guide_sign_mapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guide_sign_mapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E935282379E5FE008167E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39E9352A2379E5FE008167E4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkViewController.swift; sourceTree = "<group>"; };
 		39E9352F2379E5FE008167E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39E935312379E5FF008167E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39E935342379E5FF008167E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,8 +79,6 @@
 		39E935462379E600008167E4 /* Guide_sign_mappingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Guide_sign_mappingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E9354A2379E600008167E4 /* Guide_sign_mappingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guide_sign_mappingUITests.swift; sourceTree = "<group>"; };
 		39E9354C2379E600008167E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLandmarkViewController.swift; sourceTree = "<group>"; };
-		39FE26022397EFF900422B82 /* SelectFacilitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFacilitiesViewController.swift; sourceTree = "<group>"; };
 		39FE26042398AA7200422B82 /* PictgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictgramsViewController.swift; sourceTree = "<group>"; };
 		74D1F39209250EEDB64B3575 /* libPods-Guide_sign_mapping.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Guide_sign_mapping.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF065F65FE79600A7BCD64D9 /* Pods-Guide_sign_mapping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guide_sign_mapping.debug.xcconfig"; path = "Target Support Files/Pods-Guide_sign_mapping/Pods-Guide_sign_mapping.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +119,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3917AB7D23AB57F400C6AEB0 /* Landmark */ = {
+			isa = PBXGroup;
+			children = (
+				3917AB8023AB57F400C6AEB0 /* SelectLandmarkViewController.swift */,
+				3917AB7E23AB57F400C6AEB0 /* LandmarkViewController.swift */,
+			);
+			path = Landmark;
+			sourceTree = "<group>";
+		};
 		39E9351C2379E5FE008167E4 = {
 			isa = PBXGroup;
 			children = (
@@ -148,8 +156,10 @@
 			children = (
 				39E935282379E5FE008167E4 /* AppDelegate.swift */,
 				39E9352A2379E5FE008167E4 /* art.scnassets */,
-				39E9356C237BFCB6008167E4 /* SelectFacilitiesViewControllers */,
-				39E9356E237BFCF4008167E4 /* MappingFacilitiesViewControllers */,
+				3917AB7F23AB57F400C6AEB0 /* SelectFacilitiesViewController.swift */,
+				39F8F03023AB15100088F322 /* Area */,
+				3917AB7D23AB57F400C6AEB0 /* Landmark */,
+				39E9356E237BFCF4008167E4 /* Pictgram */,
 				3923C54C238CE3F200D53F4A /* DetailsViewController.swift */,
 				3923C54F238CE43800D53F4A /* DirectionsViewController.swift */,
 				39E9352E2379E5FE008167E4 /* Main.storyboard */,
@@ -180,25 +190,22 @@
 			path = Guide_sign_mappingUITests;
 			sourceTree = "<group>";
 		};
-		39E9356C237BFCB6008167E4 /* SelectFacilitiesViewControllers */ = {
+		39E9356E237BFCF4008167E4 /* Pictgram */ = {
 			isa = PBXGroup;
 			children = (
-				39FE26022397EFF900422B82 /* SelectFacilitiesViewController.swift */,
-				39E9356A237BF961008167E4 /* SelectLandmarkViewController.swift */,
-				39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */,
-				39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */,
+				39FE26042398AA7200422B82 /* PictgramsViewController.swift */,
 			);
-			path = SelectFacilitiesViewControllers;
+			path = Pictgram;
 			sourceTree = "<group>";
 		};
-		39E9356E237BFCF4008167E4 /* MappingFacilitiesViewControllers */ = {
+		39F8F03023AB15100088F322 /* Area */ = {
 			isa = PBXGroup;
 			children = (
-				39E9352C2379E5FE008167E4 /* LandmarkViewController.swift */,
-				39FE26042398AA7200422B82 /* PictgramsViewController.swift */,
+				39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */,
+				39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */,
 				39DF076723A7E11E002CD040 /* FacilitiesViewController.swift */,
 			);
-			path = MappingFacilitiesViewControllers;
+			path = Area;
 			sourceTree = "<group>";
 		};
 		3D4498E80B16AE9E856FA606 /* Pods */ = {
@@ -295,7 +302,7 @@
 				};
 			};
 			buildConfigurationList = 39E935202379E5FE008167E4 /* Build configuration list for PBXProject "Guide_sign_mapping" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -394,15 +401,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39E9352D2379E5FE008167E4 /* LandmarkViewController.swift in Sources */,
+				3917AB8323AB57F400C6AEB0 /* SelectLandmarkViewController.swift in Sources */,
+				3917AB8123AB57F400C6AEB0 /* LandmarkViewController.swift in Sources */,
 				39FE26052398AA7200422B82 /* PictgramsViewController.swift in Sources */,
 				39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */,
-				39E9356B237BF961008167E4 /* SelectLandmarkViewController.swift in Sources */,
 				3923C54D238CE3F200D53F4A /* DetailsViewController.swift in Sources */,
 				3923C550238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
 				39DF076823A7E11E002CD040 /* FacilitiesViewController.swift in Sources */,
-				39FE26032397EFF900422B82 /* SelectFacilitiesViewController.swift in Sources */,
 				39DF075F23A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */,
+				3917AB8223AB57F400C6AEB0 /* SelectFacilitiesViewController.swift in Sources */,
 				39DF076223A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +423,6 @@
 				39DF076323A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */,
 				39DF076923A7E11E002CD040 /* FacilitiesViewController.swift in Sources */,
 				3923C551238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
-				39E93566237BE895008167E4 /* LandmarkViewController.swift in Sources */,
 				39E935402379E5FF008167E4 /* Guide_sign_mappingTests.swift in Sources */,
 				39DF076023A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */,
 			);

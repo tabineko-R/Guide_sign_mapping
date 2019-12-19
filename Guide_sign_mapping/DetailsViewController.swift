@@ -135,7 +135,9 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.LandmarkImage.image = UIImage(named: "noimage")
             safariVC = SFSafariViewController(url: URL(string: "https://www.hakobura.jp/db/db-view/2010/10/post-77.html")!)
         default:
-            break
+            overviewText = "未設定"
+            self.LandmarkImage.image = UIImage(named: "noimage")
+            safariVC = SFSafariViewController(url: URL(string: "https://www.google.com")!)
         }
 
         

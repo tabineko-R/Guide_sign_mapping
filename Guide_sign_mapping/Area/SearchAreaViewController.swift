@@ -85,7 +85,7 @@ class SearchAreaViewController: UIViewController, UITableViewDelegate, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toSelectFacilitiesInArea") {
             let nextVC: SelectFacilitiesInAreaViewController = (segue.destination as? SelectFacilitiesInAreaViewController)!
-            nextVC.selectText = selectText!
+            nextVC.areaText = selectText
             //switch文も使用可能
         }
     }

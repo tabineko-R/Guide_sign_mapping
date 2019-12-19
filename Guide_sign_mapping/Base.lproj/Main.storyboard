@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ncZ-hG-o1s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HXu-o4-Phb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -12,15 +12,15 @@
             <objects>
                 <viewController storyboardIdentifier="SelectLandmarkVC" title="SelectLandmarkVC" id="pan-J3-R78" customClass="SelectLandmarkViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0wO-ay-Dyr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ULh-xF-dyZ">
-                                <rect key="frame" x="0.0" y="60" width="414" height="802"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Bju-0b-pYR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="landmarks_cells" id="Bju-0b-pYR">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bju-0b-pYR" id="AVK-fc-vM8">
@@ -34,41 +34,34 @@
                                     <outlet property="delegate" destination="pan-J3-R78" id="3fT-nO-UWt"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FlU-H9-pdc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="V0e-L1-tsL"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="K2X-XM-aXo"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Nsf-Wn-kfh"/>
-                    <navigationItem key="navigationItem" id="BFg-2B-kBD"/>
+                    <navigationItem key="navigationItem" title="観光施設選択" id="RGj-gc-z35"/>
                     <connections>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="toLandmarkViewController" id="sLN-Wv-sWA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S17-Xm-t2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="-2056"/>
+            <point key="canvasLocation" x="-729" y="-1289"/>
         </scene>
-        <!--Search Area View Controller-->
+        <!--エリア選択-->
         <scene sceneID="wPg-Da-4nh">
             <objects>
                 <viewController id="RTZ-3b-01M" customClass="SearchAreaViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9fU-ZD-cuJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Srd-yx-HoY">
-                                <rect key="frame" x="0.0" y="60" width="414" height="726"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="698"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="w3h-NA-gM5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="select_area_cells" id="w3h-NA-gM5">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w3h-NA-gM5" id="uZc-pg-GA0">
@@ -82,18 +75,11 @@
                                     <outlet property="delegate" destination="RTZ-3b-01M" id="rSC-WC-mkR"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TtP-jQ-bLI">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="Bqp-LD-Oma"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hjb-2V-bbG"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jKJ-zD-74d"/>
+                    <navigationItem key="navigationItem" title="エリア選択" id="jKJ-zD-74d"/>
                     <connections>
                         <outlet property="myTableView1" destination="Srd-yx-HoY" id="Rij-zT-Jzv"/>
                         <segue destination="hsp-as-sdA" kind="show" identifier="toSelectFacilitiesInArea" id="DdX-wI-q7r"/>
@@ -101,22 +87,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqF-TV-Ssj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-736" y="-1289"/>
+            <point key="canvasLocation" x="-728.98550724637687" y="-2056.4732142857142"/>
         </scene>
-        <!--Select Facilities In Area View Controller-->
+        <!--施設選択-->
         <scene sceneID="saH-TP-KHt">
             <objects>
                 <viewController id="hsp-as-sdA" customClass="SelectFacilitiesInAreaViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2qk-NQ-WEG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zrj-6g-t3q">
-                                <rect key="frame" x="0.0" y="60" width="414" height="748"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="720"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zxo-W3-OfH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="select_facilities_cells" id="zxo-W3-OfH">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zxo-W3-OfH" id="b8F-qK-GGc">
@@ -130,84 +116,72 @@
                                     <outlet property="delegate" destination="hsp-as-sdA" id="dWt-xr-JWu"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndv-2J-xlD">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="ajT-Nn-fIS"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="iZT-2Z-kv0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sl5-1p-6G3"/>
+                    <navigationItem key="navigationItem" title="施設選択" id="sl5-1p-6G3"/>
                     <connections>
+                        <outlet property="NB_title" destination="sl5-1p-6G3" id="QCn-Pd-Pkv"/>
                         <outlet property="myTableView1" destination="zrj-6g-t3q" id="xz1-Ry-gP8"/>
                         <segue destination="voE-MI-Rp5" kind="show" identifier="toFacilitiesVC" id="LJi-uc-L9g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eg4-kP-swP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="-1289"/>
+            <point key="canvasLocation" x="313.04347826086956" y="-2056.4732142857142"/>
         </scene>
-        <!--Facilities View Controller-->
+        <!--ARオブジェクト表示-->
         <scene sceneID="SeO-1k-Tif">
             <objects>
                 <viewController id="voE-MI-Rp5" customClass="FacilitiesViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LVz-Dl-6xz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eTn-Mg-V2P">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTn-Mg-V2P">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSC-wH-CsP">
-                                <rect key="frame" x="20" y="631" width="334" height="55"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aky-3x-gIG">
+                                <rect key="frame" x="53" y="714" width="308" height="103"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTp-6g-3bp">
-                                        <rect key="frame" x="11" y="-72" width="312" height="199"/>
-                                        <string key="text">表示されたオブジェクトをタップすると
-詳細画面に移動します</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表示されたARオブジェクトを タップして詳細画面に移動します" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeh-vn-LXO">
+                                        <rect key="frame" x="20" y="24" width="268" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
-                                        <size key="shadowOffset" width="2" height="-1"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
-                                    <constraint firstItem="KTp-6g-3bp" firstAttribute="centerY" secondItem="wSC-wH-CsP" secondAttribute="centerY" id="AEd-Qi-NC1"/>
-                                    <constraint firstItem="KTp-6g-3bp" firstAttribute="centerX" secondItem="wSC-wH-CsP" secondAttribute="centerX" id="eXO-2F-Rpb"/>
-                                    <constraint firstItem="KTp-6g-3bp" firstAttribute="leading" secondItem="wSC-wH-CsP" secondAttribute="leading" constant="11" id="gaX-zj-DUE"/>
-                                    <constraint firstItem="KTp-6g-3bp" firstAttribute="top" secondItem="wSC-wH-CsP" secondAttribute="top" constant="-72" id="vnG-OC-QAk"/>
+                                    <constraint firstItem="yeh-vn-LXO" firstAttribute="centerY" secondItem="Aky-3x-gIG" secondAttribute="centerY" id="6ew-gb-1EU"/>
+                                    <constraint firstItem="yeh-vn-LXO" firstAttribute="leading" secondItem="Aky-3x-gIG" secondAttribute="leading" constant="20" id="K0D-xu-vUm"/>
+                                    <constraint firstItem="yeh-vn-LXO" firstAttribute="centerX" secondItem="Aky-3x-gIG" secondAttribute="centerX" id="L0l-vy-ole"/>
+                                    <constraint firstItem="yeh-vn-LXO" firstAttribute="top" secondItem="Aky-3x-gIG" secondAttribute="top" constant="24" id="ME6-41-Mtj"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nhM-6K-wWB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="ARオブジェクトを表示" id="6LX-dY-ylJ"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="PLo-iA-oOR" firstAttribute="bottom" secondItem="wSC-wH-CsP" secondAttribute="bottom" constant="122" id="JPt-9d-bya"/>
-                            <constraint firstItem="wSC-wH-CsP" firstAttribute="top" secondItem="LVz-Dl-6xz" secondAttribute="top" constant="631" id="K6w-h4-xUt"/>
-                            <constraint firstItem="wSC-wH-CsP" firstAttribute="leading" secondItem="LVz-Dl-6xz" secondAttribute="leadingMargin" id="N54-S6-quz"/>
+                            <constraint firstItem="eTn-Mg-V2P" firstAttribute="top" secondItem="LVz-Dl-6xz" secondAttribute="topMargin" constant="-88" id="2Hl-lW-vjs"/>
+                            <constraint firstItem="Aky-3x-gIG" firstAttribute="leading" secondItem="PLo-iA-oOR" secondAttribute="leading" constant="53" id="DUE-M1-4G1"/>
+                            <constraint firstItem="eTn-Mg-V2P" firstAttribute="centerX" secondItem="Aky-3x-gIG" secondAttribute="centerX" id="Gmw-Eq-FLN"/>
+                            <constraint firstItem="Aky-3x-gIG" firstAttribute="top" secondItem="PLo-iA-oOR" secondAttribute="top" constant="626" id="KpL-ZV-fds"/>
+                            <constraint firstItem="eTn-Mg-V2P" firstAttribute="centerX" secondItem="LVz-Dl-6xz" secondAttribute="centerX" id="iXQ-qU-5Fi"/>
+                            <constraint firstItem="eTn-Mg-V2P" firstAttribute="leading" secondItem="PLo-iA-oOR" secondAttribute="leading" id="pGj-EG-eFv"/>
+                            <constraint firstItem="eTn-Mg-V2P" firstAttribute="bottom" secondItem="PLo-iA-oOR" secondAttribute="bottom" id="yNW-pt-QJi"/>
+                            <constraint firstItem="PLo-iA-oOR" firstAttribute="bottom" secondItem="Aky-3x-gIG" secondAttribute="bottom" constant="45" id="yUI-QF-lfS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PLo-iA-oOR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="O9m-dp-vee"/>
+                    <navigationItem key="navigationItem" title="ARオブジェクト表示" id="O9m-dp-vee"/>
                     <connections>
                         <outlet property="sceneView" destination="eTn-Mg-V2P" id="Mw6-fz-nhK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EsP-hB-UJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1432" y="-1289"/>
+            <point key="canvasLocation" x="1373.913043478261" y="-2056.4732142857142"/>
         </scene>
         <!--SelectFacilitiesVC-->
         <scene sceneID="dUc-Nk-YPB">
@@ -222,7 +196,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ggE-zn-iR3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="home_cells" id="ggE-zn-iR3">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ggE-zn-iR3" id="62I-yU-ist">
@@ -236,17 +210,13 @@
                                     <outlet property="delegate" destination="ncZ-hG-o1s" id="xed-vg-8S8"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lcM-ni-A8D">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="6gn-Yb-ruB"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gbZ-ys-hZ4"/>
                     </view>
+                    <navigationItem key="navigationItem" id="J3n-YG-9Mg">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="ggB-TE-AuT"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="NaI-7h-VLb" kind="show" identifier="toPictgramsViewController" id="DrP-ok-UcE"/>
                         <segue destination="pan-J3-R78" kind="show" identifier="toSelectLandmarksVC" id="CAT-SU-fJE"/>
@@ -255,68 +225,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jJ-3r-V1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1900.0000000000002" y="-1289.0625"/>
+            <point key="canvasLocation" x="-1820" y="-1289"/>
         </scene>
         <!--Landmark-->
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController storyboardIdentifier="landmark" id="BV1-FR-VrT" userLabel="Landmark" customClass="LandmarkViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6k0-ag-OAq">
-                                <rect key="frame" x="20" y="656" width="343" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JT-Qt-eGX">
+                                <rect key="frame" x="53" y="719" width="308" height="103"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtz-E9-5qF">
-                                        <rect key="frame" x="11" y="-72" width="320" height="199"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">表示されたオブジェクトをタップすると
-詳細画面に移動します</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表示されたARオブジェクトを タップして詳細画面に移動します" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHn-Al-Qw4">
+                                        <rect key="frame" x="20" y="24" width="268" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
-                                        <size key="shadowOffset" width="2" height="-1"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="rHn-Al-Qw4" firstAttribute="centerX" secondItem="5JT-Qt-eGX" secondAttribute="centerX" id="Bpj-mW-UXC"/>
+                                    <constraint firstItem="rHn-Al-Qw4" firstAttribute="centerY" secondItem="5JT-Qt-eGX" secondAttribute="centerY" id="Hmo-s6-MCQ"/>
+                                    <constraint firstItem="rHn-Al-Qw4" firstAttribute="top" secondItem="5JT-Qt-eGX" secondAttribute="top" constant="24" id="uod-Gv-aMS"/>
+                                    <constraint firstItem="rHn-Al-Qw4" firstAttribute="leading" secondItem="5JT-Qt-eGX" secondAttribute="leading" constant="20" id="yOa-ba-2j5"/>
+                                </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nng-X2-LKx">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="ARオブジェクトを表示" id="HTs-uD-3Cj"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="6bB-Gt-ncb"/>
+                            <constraint firstItem="5JT-Qt-eGX" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="53" id="AMf-vw-XV7"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="topMargin" constant="-88" id="L2s-5r-gY2"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="centerX" secondItem="5JT-Qt-eGX" secondAttribute="centerX" id="LgL-x3-Igq"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="PGd-8V-Kv9"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="5JT-Qt-eGX" secondAttribute="bottom" constant="40" id="XV2-NI-w7c"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="saS-BQ-NLG"/>
+                            <constraint firstItem="5JT-Qt-eGX" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="631" id="vbj-cO-DU5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="U3w-kZ-v13"/>
+                    <navigationItem key="navigationItem" title="ARオブジェクト表示" id="U3w-kZ-v13"/>
                     <connections>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1433" y="-2056"/>
+            <point key="canvasLocation" x="1374" y="-1289"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="fqx-yy-8aO">
             <objects>
                 <viewController storyboardIdentifier="details" id="Avk-dA-lAf" customClass="DetailsViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SKb-ep-cFV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r2P-wC-ary">
@@ -330,13 +298,6 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UpF-jW-e8A">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="詳細画面" id="u4c-42-9Kk"/>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="cell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6yA-rt-LX3">
                                 <rect key="frame" x="0.0" y="313" width="414" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -385,9 +346,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLp-gO-tmz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2771" y="-1289"/>
+            <point key="canvasLocation" x="4589.8550724637689" y="-1289.0625"/>
         </scene>
-        <!--Title-->
+        <!--Directions View Controller-->
         <scene sceneID="uDZ-PD-tUm">
             <objects>
                 <viewController storyboardIdentifier="directions" id="SyF-dB-pec" customClass="DirectionsViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
@@ -395,30 +356,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TkQ-DW-xLA">
-                                <rect key="frame" x="0.0" y="0.0" width="412" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Google map" id="bZL-5N-Hvw">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Ew1-ig-Lh6">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CxA-HX-2Jq">
-                                                <rect key="frame" x="20" y="13" width="121" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="←詳細画面に戻る"/>
-                                            </button>
-                                            <connections>
-                                                <segue destination="Avk-dA-lAf" kind="push" splitViewControllerTargetIndex="1" id="M3V-Av-ojz"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mun-63-jCV">
                                 <rect key="frame" x="0.0" y="44" width="414" height="764"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EAY-Ts-BTa">
-                                        <rect key="frame" x="0.0" y="8" width="414" height="756"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </mapView>
                                 </subviews>
@@ -428,71 +371,84 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Tuo-LI-kcp"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="PDA-JJ-qtc"/>
+                    <navigationItem key="navigationItem" id="yMR-d0-tap"/>
                     <connections>
                         <outlet property="mapView" destination="EAY-Ts-BTa" id="wVD-6O-DQH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="093-Zr-xfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3751" y="-1289"/>
+            <point key="canvasLocation" x="5571.0144927536239" y="-1289.0625"/>
         </scene>
         <!--Pictgram-->
         <scene sceneID="5ga-JY-SlM">
             <objects>
                 <viewController storyboardIdentifier="pictgram" id="NaI-7h-VLb" userLabel="Pictgram" customClass="PictgramsViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FI1-7g-Wxx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJK-Yy-XQk">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oez-tQ-rVr">
-                                <rect key="frame" x="20" y="657" width="343" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tk5-hY-MEm">
+                                <rect key="frame" x="53" y="720" width="308" height="103"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMQ-t4-njg">
-                                        <rect key="frame" x="11" y="-72" width="320" height="199"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">表示されたオブジェクトをタップすると
-詳細画面に移動します</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表示されたARオブジェクトを タップして詳細画面に移動します" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9I-q7-Eda">
+                                        <rect key="frame" x="20" y="24" width="268" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
-                                        <size key="shadowOffset" width="2" height="-1"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="W9I-q7-Eda" firstAttribute="centerY" secondItem="tk5-hY-MEm" secondAttribute="centerY" id="Wd7-tD-vue"/>
+                                    <constraint firstItem="W9I-q7-Eda" firstAttribute="centerX" secondItem="tk5-hY-MEm" secondAttribute="centerX" id="qf5-DV-TUt"/>
+                                    <constraint firstItem="W9I-q7-Eda" firstAttribute="leading" secondItem="tk5-hY-MEm" secondAttribute="leading" constant="20" id="uNh-qK-m6U"/>
+                                    <constraint firstItem="W9I-q7-Eda" firstAttribute="top" secondItem="tk5-hY-MEm" secondAttribute="top" constant="24" id="uYP-ci-X3L"/>
+                                </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jqm-CR-otv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="ARオブジェクトを表示" id="ZQu-iu-2II"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="gJK-Yy-XQk" firstAttribute="leading" secondItem="0lI-h1-6T6" secondAttribute="leading" id="8S9-P4-EB3"/>
-                            <constraint firstItem="gJK-Yy-XQk" firstAttribute="trailing" secondItem="0lI-h1-6T6" secondAttribute="trailing" id="92J-Lw-I1Y"/>
-                            <constraint firstItem="gJK-Yy-XQk" firstAttribute="bottom" secondItem="0lI-h1-6T6" secondAttribute="bottom" id="V6P-MX-5xn"/>
-                            <constraint firstItem="gJK-Yy-XQk" firstAttribute="top" secondItem="FI1-7g-Wxx" secondAttribute="top" id="z24-8d-C29"/>
+                            <constraint firstItem="tk5-hY-MEm" firstAttribute="leading" secondItem="0lI-h1-6T6" secondAttribute="leading" constant="53" id="3qM-eW-qdA"/>
+                            <constraint firstItem="tk5-hY-MEm" firstAttribute="top" secondItem="0lI-h1-6T6" secondAttribute="top" constant="632" id="ASa-QT-WZJ"/>
+                            <constraint firstItem="gJK-Yy-XQk" firstAttribute="centerX" secondItem="FI1-7g-Wxx" secondAttribute="centerX" id="Ctj-eg-mZX"/>
+                            <constraint firstItem="gJK-Yy-XQk" firstAttribute="centerX" secondItem="tk5-hY-MEm" secondAttribute="centerX" id="FJE-Sl-9A9"/>
+                            <constraint firstItem="gJK-Yy-XQk" firstAttribute="bottom" secondItem="0lI-h1-6T6" secondAttribute="bottom" id="FUK-SI-zaZ"/>
+                            <constraint firstItem="gJK-Yy-XQk" firstAttribute="leading" secondItem="0lI-h1-6T6" secondAttribute="leading" id="Iwl-vo-xVt"/>
+                            <constraint firstItem="gJK-Yy-XQk" firstAttribute="top" secondItem="FI1-7g-Wxx" secondAttribute="topMargin" constant="-88" id="ZDZ-Uf-JZn"/>
+                            <constraint firstItem="0lI-h1-6T6" firstAttribute="bottom" secondItem="tk5-hY-MEm" secondAttribute="bottom" constant="39" id="ydk-rD-9Zv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0lI-h1-6T6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wef-fD-Kyj"/>
+                    <navigationItem key="navigationItem" title="ARオブジェクト表示" id="wef-fD-Kyj"/>
                     <connections>
                         <outlet property="sceneView" destination="gJK-Yy-XQk" id="IfP-fq-vd6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRq-2O-o1V" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1432" y="-448"/>
+            <point key="canvasLocation" x="1374" y="-429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ncF-Ho-vmz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HXu-o4-Phb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7zr-3F-K0w">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ncZ-hG-o1s" kind="relationship" relationship="rootViewController" id="PfV-fZ-Bxf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fif-Y4-pgW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2943" y="-1289"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="8b3-HJ-WVr"/>
-    </inferredMetricsTieBreakers>
 </document>

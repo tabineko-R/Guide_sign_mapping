@@ -38,7 +38,7 @@ class LandmarkViewController: UIViewController {
         sceneView.delegate = self
         //scn読み込み
         //最初にscnの読み込みを指定（テスト）
-        buttonNode = SCNScene(named: "art.scnassets/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Landmark", recursively: false)
+        buttonNode = SCNScene(named: "art.scnassets/sign01/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Landmark", recursively: false)
         
         switch landmarkText{
         case "旧ロシア領事館":
@@ -111,7 +111,7 @@ class LandmarkViewController: UIViewController {
         let toDetails = storyboard.instantiateViewController(withIdentifier: "details") as! DetailsViewController
         
         toDetails.landmarkText = landmarkText
-        self.present(toDetails, animated: true, completion: nil)    
+        self.present(toDetails, animated: true, completion: nil)
 
     }
     
