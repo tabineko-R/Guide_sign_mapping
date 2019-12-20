@@ -89,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="-728.98550724637687" y="-2056.4732142857142"/>
         </scene>
-        <!--施設選択-->
+        <!--エリアタイトル-->
         <scene sceneID="saH-TP-KHt">
             <objects>
                 <viewController id="hsp-as-sdA" customClass="SelectFacilitiesInAreaViewController" customModule="Guide_sign_mapping" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,9 +120,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="iZT-2Z-kv0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="施設選択" id="sl5-1p-6G3"/>
+                    <navigationItem key="navigationItem" title="エリアタイトル" id="sl5-1p-6G3"/>
                     <connections>
-                        <outlet property="NB_title" destination="sl5-1p-6G3" id="QCn-Pd-Pkv"/>
+                        <outlet property="NB_title" destination="sl5-1p-6G3" id="JBu-hO-VfO"/>
                         <outlet property="myTableView1" destination="zrj-6g-t3q" id="xz1-Ry-gP8"/>
                         <segue destination="voE-MI-Rp5" kind="show" identifier="toFacilitiesVC" id="LJi-uc-L9g"/>
                     </connections>
@@ -139,39 +139,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTn-Mg-V2P">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eTn-Mg-V2P">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aky-3x-gIG">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aky-3x-gIG">
                                 <rect key="frame" x="53" y="714" width="308" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表示されたARオブジェクトを タップして詳細画面に移動します" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeh-vn-LXO">
-                                        <rect key="frame" x="20" y="24" width="268" height="55"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="表示されたARオブジェクトを タップして詳細画面に移動します" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeh-vn-LXO">
+                                        <rect key="frame" x="20" y="24" width="260" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstItem="yeh-vn-LXO" firstAttribute="centerY" secondItem="Aky-3x-gIG" secondAttribute="centerY" id="6ew-gb-1EU"/>
-                                    <constraint firstItem="yeh-vn-LXO" firstAttribute="leading" secondItem="Aky-3x-gIG" secondAttribute="leading" constant="20" id="K0D-xu-vUm"/>
-                                    <constraint firstItem="yeh-vn-LXO" firstAttribute="centerX" secondItem="Aky-3x-gIG" secondAttribute="centerX" id="L0l-vy-ole"/>
-                                    <constraint firstItem="yeh-vn-LXO" firstAttribute="top" secondItem="Aky-3x-gIG" secondAttribute="top" constant="24" id="ME6-41-Mtj"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="eTn-Mg-V2P" firstAttribute="top" secondItem="LVz-Dl-6xz" secondAttribute="topMargin" constant="-88" id="2Hl-lW-vjs"/>
-                            <constraint firstItem="Aky-3x-gIG" firstAttribute="leading" secondItem="PLo-iA-oOR" secondAttribute="leading" constant="53" id="DUE-M1-4G1"/>
-                            <constraint firstItem="eTn-Mg-V2P" firstAttribute="centerX" secondItem="Aky-3x-gIG" secondAttribute="centerX" id="Gmw-Eq-FLN"/>
-                            <constraint firstItem="Aky-3x-gIG" firstAttribute="top" secondItem="PLo-iA-oOR" secondAttribute="top" constant="626" id="KpL-ZV-fds"/>
-                            <constraint firstItem="eTn-Mg-V2P" firstAttribute="centerX" secondItem="LVz-Dl-6xz" secondAttribute="centerX" id="iXQ-qU-5Fi"/>
-                            <constraint firstItem="eTn-Mg-V2P" firstAttribute="leading" secondItem="PLo-iA-oOR" secondAttribute="leading" id="pGj-EG-eFv"/>
-                            <constraint firstItem="eTn-Mg-V2P" firstAttribute="bottom" secondItem="PLo-iA-oOR" secondAttribute="bottom" id="yNW-pt-QJi"/>
-                            <constraint firstItem="PLo-iA-oOR" firstAttribute="bottom" secondItem="Aky-3x-gIG" secondAttribute="bottom" constant="45" id="yUI-QF-lfS"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PLo-iA-oOR"/>
                     </view>
                     <navigationItem key="navigationItem" title="ARオブジェクト表示" id="O9m-dp-vee"/>

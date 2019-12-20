@@ -10,14 +10,20 @@ class SearchAreaViewController: UIViewController, UITableViewDelegate, UITableVi
                                 "ロープウェイ山麓駅周辺",
                                 "元町公園周辺",
                                 "赤レンガ倉庫周辺",
-                                "函館駅周辺"]
+                                "函館駅周辺",
+                                "函館山周辺",
+                                "船見公園周辺",
+                                "立待岬周辺"]
     
     let Facilities_en: [String] = ["Around Facilities\n\n\n\n\n",
                                    "Hakodate Park\n\n\n\n\n",
                                    "Roopway Station\n\n\n\n\n",
                                    "Motomachi Park\n\n\n\n\n",
-                                   "Aka-renga\n\n\n\n\n",
-                                   "St. Hakodate\n\n\n\n\n"]
+                                   "Red Brick Warehouse\n\n\n\n\n",
+                                   "St. Hakodate\n\n\n\n\n",
+                                   "Hakodate Mountain\n\n\n\n\n",
+                                   "Funami Park\n\n\n\n\n",
+                                   "Tachimachi Misaki\n\n\n\n\n"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +67,12 @@ class SearchAreaViewController: UIViewController, UITableViewDelegate, UITableVi
         case "赤レンガ倉庫周辺":
             cell.imageView?.image = UIImage(named: "noimage.png")
         case "函館駅周辺":
+            cell.imageView?.image = UIImage(named: "noimage.png")
+        case "立待岬周辺":
+            cell.imageView?.image = UIImage(named: "noimage.png")
+        case "船見公園周辺":
+            cell.imageView?.image = UIImage(named: "noimage.png")
+        case "函館山":
             cell.imageView?.image = UIImage(named: "noimage.png")
         default:
             break

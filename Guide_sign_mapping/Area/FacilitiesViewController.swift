@@ -3,7 +3,7 @@ import ARKit
 import SafariServices
 
 class FacilitiesViewController: UIViewController {
-
+    
     @IBOutlet weak var sceneView: ARSCNView!
     
     // ①引数宣言　前画面の値
@@ -41,58 +41,70 @@ class FacilitiesViewController: UIViewController {
         //scn読み込み
         //areaTextで表示するscnを変更（エリア判定）
         switch areaText{
-            case "函館公園周辺":
-             buttonNode = SCNScene(named: "art.scnassets/sign01/Hakodate_park.scn")!.rootNode
-            case "函館駅周辺":
-             buttonNode = SCNScene(named: "art.scnassets/sign01/Hakodate_Station.scn")!.rootNode
-            case "元町公園周辺":
-             buttonNode = SCNScene(named: "art.scnassets/sign01/Motomachi_park.scn")!.rootNode
-            case "周辺施設":
-             buttonNode = SCNScene(named: "art.scnassets/sign01/Nearby_Facilities.scn")!.rootNode
-            case "赤レンガ倉庫周辺":
-             buttonNode = SCNScene(named: "art.scnassets/sign01/Red_brick_warehouse.scn")!.rootNode
-            case "ロープウェイ山麓駅周辺":
-             buttonNode = SCNScene(named: "art.scnassets/sign01/Roopway_station.scn")!.rootNode
-            default:
+        case "船見公園周辺":
+            buttonNode = SCNScene(named: "art.scnassets/sign01/Hakodate_park.scn")!.rootNode
+        case "函館山周辺":
+            buttonNode = SCNScene(named: "art.scnassets/sign01/Hakodate_park.scn")!.rootNode
+        case "函館公園周辺":
+            buttonNode = SCNScene(named: "art.scnassets/sign01/Hakodate_park.scn")!.rootNode
+        case "函館駅周辺":
+            buttonNode = SCNScene(named: "art.scnassets/sign01/Hakodate_Station.scn")!.rootNode
+        case "元町公園周辺":
+            buttonNode = SCNScene(named: "art.scnassets/sign01/Motomachi_park.scn")!.rootNode
+        case "周辺施設":
+            buttonNode = SCNScene(named: "art.scnassets/sign01/Nearby_Facilities.scn")!.rootNode
+        case "赤レンガ倉庫周辺":
+            buttonNode = SCNScene(named: "art.scnassets/sign01/Red_brick_warehouse.scn")!.rootNode
+        case "ロープウェイ山麓駅周辺":
+            buttonNode = SCNScene(named: "art.scnassets/sign01/Roopway_station.scn")!.rootNode
+        case "立待岬":
+            buttonNode = SCNScene(named: "art.scnassets/sign01/Roopway_station.scn")!.rootNode
+        default:
             break
         }
-       
+        
+        
         //facilitiesTextで施設の判定
-         switch facilitiesText{
-               case "駐車場":
-                   buttonNode = buttonNode.childNode(withName: "Parking", recursively: false)
-                   let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
-                   thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
-               case "トイレ":
-                   buttonNode = buttonNode.childNode(withName: "Toilet", recursively: false)
-                   let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
-                   thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
-               case "車いす対応トイレ":
-                   buttonNode = buttonNode.childNode(withName: "MultipurposeToilet", recursively: false)
-                   let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
-                   thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
-                   /*
-               case "郵便局":
-
-               case "ホテル":
-                  
-               case "金融機関":
-
-               case "警察署・交番":
-
-               case "消防署":
-                  
-               case "学校":
-
-               case "駅・電停":
-                 
-               */
-               default:
-                   break
-               }
-
-
-
+        switch facilitiesText{
+        case "すべて表示する":
+            break
+        case "観光施設":
+            break
+        case "駐車場":
+            buttonNode = buttonNode.childNode(withName: "Parking", recursively: false)
+            let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
+            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
+        case "トイレ":
+            buttonNode = buttonNode.childNode(withName: "Toilet", recursively: false)
+            let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
+            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
+        case "車いす対応トイレ":
+            buttonNode = buttonNode.childNode(withName: "MultipurposeToilet", recursively: false)
+            let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
+            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
+            /*
+             case "郵便局":
+             
+             case "ホテル":
+             
+             case "金融機関":
+             
+             case "警察署・交番":
+             
+             case "消防署":
+             
+             case "学校":
+             
+             case "駅・電停":
+             
+             */
+        default:
+            break
+        }
+        
+        //施設の数をカウントする. これ実装できたのすごく嬉しい
+        let facilities_num:Int = buttonNode.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
+        print(facilities_num)
 
     }
     
@@ -112,10 +124,10 @@ class FacilitiesViewController: UIViewController {
         
         toDetails.landmarkText = facilitiesText
         self.present(toDetails, animated: true, completion: nil)
-
+        
     }
     
-
+    
     
     
     override func viewWillAppear(_ animated: Bool) {

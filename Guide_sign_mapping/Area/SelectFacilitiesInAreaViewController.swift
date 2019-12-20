@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import ARKit
 
 class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet var myTableView1: UITableView!
-    @IBOutlet weak var NB_title: UINavigationItem!
 
+    @IBOutlet weak var NB_title: UINavigationItem!
+    
     
     var selectText:String?
     var areaText:String?
@@ -30,7 +32,7 @@ class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegat
                                 "消防署",
                                 "学校",
                                 "駅・電停"]
-    
+ 
     let Facilities_en: [String] = ["Show All",
                                    "Tourist facilities",
                                    "Information",
@@ -55,8 +57,11 @@ class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegat
         myTableView1.estimatedRowHeight = 100
         myTableView1.rowHeight = UITableView.automaticDimension
         //self.view.addSubview(myTableView1)
-        NB_title.title = selectText
-    }
+        //navigation barのタイトル
+        NB_title.title = areaText
+        
+
+         }
     
     //セクション数を指定
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -73,7 +78,7 @@ class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegat
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
                                    reuseIdentifier: "aaa\(indexPath.section)-\(indexPath.row)")
         cell.textLabel?.text = Facilities[indexPath.row]
-        cell.detailTextLabel?.text = Facilities_en[indexPath.row]
+        cell.detailTextLabel?.text = Facilities_en[indexPath.row] + "8"
         cell.detailTextLabel?.numberOfLines = 0
         
         
