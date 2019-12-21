@@ -79,7 +79,7 @@ class FacilitiesViewController: UIViewController {
             let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
             thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
         case "車いす対応トイレ":
-            buttonNode = buttonNode.childNode(withName: "MultipurposeToilet", recursively: false)
+            buttonNode = buttonNode.childNode(withName: "WAToilet", recursively: false)
             let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
             thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
             /*

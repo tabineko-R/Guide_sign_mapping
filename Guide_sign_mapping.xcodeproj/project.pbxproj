@@ -18,6 +18,7 @@
 		3923C551238CE43800D53F4A /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3923C54F238CE43800D53F4A /* DirectionsViewController.swift */; };
 		3923C553238CEBBA00D53F4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3923C552238CEBBA00D53F4A /* Podfile */; };
 		3923C554238CEBBA00D53F4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3923C552238CEBBA00D53F4A /* Podfile */; };
+		394A3F6223AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394A3F6123AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift */; };
 		39DF075D23A7771C002CD040 /* 開発の範囲について in Resources */ = {isa = PBXBuildFile; fileRef = 39DF075C23A7771C002CD040 /* 開発の範囲について */; };
 		39DF075F23A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */; };
 		39DF076023A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */; };
@@ -62,6 +63,7 @@
 		3923C54C238CE3F200D53F4A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		3923C54F238CE43800D53F4A /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		3923C552238CEBBA00D53F4A /* Podfile */ = {isa = PBXFileReference; explicitFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		394A3F6123AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLandmarksInAreaViewController.swift; sourceTree = "<group>"; };
 		39DF075C23A7771C002CD040 /* 開発の範囲について */ = {isa = PBXFileReference; lastKnownFileType = text; path = "開発の範囲について"; sourceTree = "<group>"; };
 		39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAreaViewController.swift; sourceTree = "<group>"; };
 		39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFacilitiesInAreaViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */,
 				39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */,
+				394A3F6123AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift */,
 				39DF076723A7E11E002CD040 /* FacilitiesViewController.swift */,
 			);
 			path = Area;
@@ -409,6 +412,7 @@
 				3923C550238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
 				39DF076823A7E11E002CD040 /* FacilitiesViewController.swift in Sources */,
 				39DF075F23A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */,
+				394A3F6223AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift in Sources */,
 				3917AB8223AB57F400C6AEB0 /* SelectFacilitiesViewController.swift in Sources */,
 				39DF076223A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */,
 			);

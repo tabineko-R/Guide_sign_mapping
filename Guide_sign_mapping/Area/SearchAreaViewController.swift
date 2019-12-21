@@ -52,7 +52,7 @@ class SearchAreaViewController: UIViewController, UITableViewDelegate, UITableVi
                                    reuseIdentifier: "aaa\(indexPath.section)-\(indexPath.row)")
         cell.textLabel?.text = Facilities[indexPath.row]
         cell.detailTextLabel?.text = Facilities_en[indexPath.row]
-        cell.detailTextLabel?.numberOfLines = 0
+        //cell.detailTextLabel?.numberOfLines = 0
         
         
         switch Facilities[indexPath.row]{
@@ -72,7 +72,7 @@ class SearchAreaViewController: UIViewController, UITableViewDelegate, UITableVi
             cell.imageView?.image = UIImage(named: "noimage.png")
         case "船見公園周辺":
             cell.imageView?.image = UIImage(named: "noimage.png")
-        case "函館山":
+        case "函館山周辺":
             cell.imageView?.image = UIImage(named: "noimage.png")
         default:
             break

@@ -18,19 +18,19 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
                                 "学校",
                                 "駅・電停"]
     
-    let Facilities_en: [String] = ["Search Area",
+    let Facilities_en: [String] = ["Show All",
                                    "Tourist facilities",
-                                   "Information",
+                                   "Toulist Information Center",
                                    "Parking",
                                    "Toilet",
-                                   "Multipurpose Toilet",
-                                   "郵便局",
+                                   "Toilet(Whellchair Accessible)",
+                                   "Post Office",
                                    "Hotel",
-                                   "金融機関",
-                                   "警察署・交番",
-                                   "消防署",
+                                   "Bank",
+                                   "Police Station/Box",
+                                   "Firehouse",
                                    "School",
-                                   "Station"]
+                                   "Railway Station/Streetcar Stop"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +59,7 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
                                    reuseIdentifier: "aaa\(indexPath.section)-\(indexPath.row)")
         cell.textLabel?.text = Facilities[indexPath.row]
         cell.detailTextLabel?.text = Facilities_en[indexPath.row]
-        cell.detailTextLabel?.numberOfLines = 0
+        //cell.detailTextLabel?.numberOfLines = 0
         
         switch Facilities[indexPath.row]{
         case "観光案内所":
