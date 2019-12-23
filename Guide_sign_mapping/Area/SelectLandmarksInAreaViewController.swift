@@ -4,12 +4,20 @@ class SelectLandmarksInAreaViewController: UIViewController, UITableViewDelegate
    
     @IBOutlet var TableView: UITableView!
     
-   //prepareで使うためのワンクッション
+    @IBOutlet weak var NB_title: UINavigationItem!
+    //prepareで使うためのワンクッション
    var selectText:String?
     var areaText:String?
    
    //配列landmarksを設定
-   var landmarks: [String] = []
+    var Genres:[String] = [
+    "歴史的建造物（一般入場可能）",
+   "歴史的建造物（外観見学のみ）",
+   "教会・寺院",
+   "資料館",
+   "記念碑",
+   "体験・アクティビティー",
+   "閉館"]
    
    //    //landmarksと数を一致させる let photos = ["russian","tachikawa","","","",""]
    
@@ -25,29 +33,10 @@ class SelectLandmarksInAreaViewController: UIViewController, UITableViewDelegate
        TableView.estimatedRowHeight = 100
        TableView.rowHeight = UITableView.automaticDimension
     
+    NB_title.title = areaText
     
-    switch areaText {
-    case "周辺施設":
-        landmarks = [""]
-    case "函館公園周辺":
-        landmarks = [""]
-    case "ロープウェイ山麓駅周辺":
-        landmarks = [""]
-    case "元町公園周辺":
-        landmarks = [""]
-    case "赤レンガ倉庫周辺":
-        landmarks = [""]
-    case "函館駅周辺":
-        landmarks = [""]
-    case "函館山周辺":
-        landmarks = [""]
-    case "船見公園周辺":
-        landmarks = [""]
-    case "立待岬周辺":
-        landmarks = [""]
-    default:
-        break
-    }
+    
+
 
 
    }
@@ -68,7 +57,7 @@ class SelectLandmarksInAreaViewController: UIViewController, UITableViewDelegate
    }
    
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return landmarks.count
+       return Genres.count
    }
    
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,7 +69,7 @@ class SelectLandmarksInAreaViewController: UIViewController, UITableViewDelegate
        switch indexPath.section {
        case 0:
            // セルに表示する値を設定する
-           cell.textLabel!.text = landmarks[indexPath.row]
+           cell.textLabel!.text = Genres[indexPath.row]
            //cell.imageView?.image = UIImage(named: photos[indexPath.row])
            
        default:
@@ -94,23 +83,24 @@ class SelectLandmarksInAreaViewController: UIViewController, UITableViewDelegate
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
        // タップされたセルの行番号を出力
-       print("\(landmarks[indexPath.row])番目の行が選択されました。")
+       print("\(Genres[indexPath.row])番目の行が選択されました。")
        // セルの選択を解除
        tableView.deselectRow(at: indexPath, animated: true)
        
 
-       selectText = landmarks[indexPath.row]
+       selectText = Genres[indexPath.row]
 
        
        // 別の画面に遷移
-       performSegue(withIdentifier: "toLandmarkViewController", sender: nil)
+       performSegue(withIdentifier: "toSLIGIAVC", sender: nil)
    }
    
    
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       if (segue.identifier == "toLandmarkViewController") {
-           let nextVC: LandmarkViewController = (segue.destination as? LandmarkViewController)!
-           nextVC.landmarkText = selectText!
+       if (segue.identifier == "toSLIGIAVC") {
+           let nextVC: SelectLandmarkInGenreInAreaViewController = (segue.destination as? SelectLandmarkInGenreInAreaViewController)!
+           nextVC.genreText = selectText!
+        nextVC.areaText = areaText!
            //switch文も使用可能
        }
    }

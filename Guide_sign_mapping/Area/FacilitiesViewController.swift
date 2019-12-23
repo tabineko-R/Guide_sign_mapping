@@ -103,8 +103,8 @@ class FacilitiesViewController: UIViewController {
         }
         
         //施設の数をカウントする. これ実装できたのすごく嬉しい
-        let facilities_num:Int = buttonNode.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
-        print(facilities_num)
+        //let facilities_num:Int = buttonNode.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
+        //print(facilities_num)
 
     }
     

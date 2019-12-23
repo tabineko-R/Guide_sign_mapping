@@ -102,7 +102,7 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
         if Facilities[indexPath.row] == "エリア別で探す" {
         performSegue(withIdentifier: "toSearchAreaVC", sender: nil)
         }else if Facilities[indexPath.row] == "観光施設" {
-        performSegue(withIdentifier: "toSelectLandmarksVC", sender: nil)
+        performSegue(withIdentifier: "toSelectGenreVC", sender: nil)
         }else{
         performSegue(withIdentifier: "toPictgramsViewController", sender: nil)
         }

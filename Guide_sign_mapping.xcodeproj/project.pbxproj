@@ -10,7 +10,7 @@
 		316E660CEF847AAF9B3C14B2 /* libPods-Guide_sign_mapping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D1F39209250EEDB64B3575 /* libPods-Guide_sign_mapping.a */; };
 		3917AB8123AB57F400C6AEB0 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3917AB7E23AB57F400C6AEB0 /* LandmarkViewController.swift */; };
 		3917AB8223AB57F400C6AEB0 /* SelectFacilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3917AB7F23AB57F400C6AEB0 /* SelectFacilitiesViewController.swift */; };
-		3917AB8323AB57F400C6AEB0 /* SelectLandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3917AB8023AB57F400C6AEB0 /* SelectLandmarkViewController.swift */; };
+		3917AB8323AB57F400C6AEB0 /* SelectGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3917AB8023AB57F400C6AEB0 /* SelectGenreViewController.swift */; };
 		391F8A8E237C02C1008EA052 /* 未使用のコード in Resources */ = {isa = PBXBuildFile; fileRef = 391F8A8D237C02C1008EA052 /* 未使用のコード */; };
 		3923C54D238CE3F200D53F4A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3923C54C238CE3F200D53F4A /* DetailsViewController.swift */; };
 		3923C54E238CE3F200D53F4A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3923C54C238CE3F200D53F4A /* DetailsViewController.swift */; };
@@ -19,6 +19,9 @@
 		3923C553238CEBBA00D53F4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3923C552238CEBBA00D53F4A /* Podfile */; };
 		3923C554238CEBBA00D53F4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3923C552238CEBBA00D53F4A /* Podfile */; };
 		394A3F6223AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394A3F6123AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift */; };
+		394A3F6423AEB0BE007E5E02 /* SelectLandmarkInGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394A3F6323AEB0BE007E5E02 /* SelectLandmarkInGenreViewController.swift */; };
+		394A3F6623AEB7CA007E5E02 /* Genre.txt in Resources */ = {isa = PBXBuildFile; fileRef = 394A3F6523AEB7CA007E5E02 /* Genre.txt */; };
+		394A3F6823B135E6007E5E02 /* SelectLandmarkInGenreInAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394A3F6723B135E6007E5E02 /* SelectLandmarkInGenreInAreaViewController.swift */; };
 		39DF075D23A7771C002CD040 /* 開発の範囲について in Resources */ = {isa = PBXBuildFile; fileRef = 39DF075C23A7771C002CD040 /* 開発の範囲について */; };
 		39DF075F23A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */; };
 		39DF076023A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */; };
@@ -58,12 +61,15 @@
 /* Begin PBXFileReference section */
 		3917AB7E23AB57F400C6AEB0 /* LandmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkViewController.swift; sourceTree = "<group>"; };
 		3917AB7F23AB57F400C6AEB0 /* SelectFacilitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectFacilitiesViewController.swift; path = Landmark/SelectFacilitiesViewController.swift; sourceTree = "<group>"; };
-		3917AB8023AB57F400C6AEB0 /* SelectLandmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectLandmarkViewController.swift; sourceTree = "<group>"; };
+		3917AB8023AB57F400C6AEB0 /* SelectGenreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGenreViewController.swift; sourceTree = "<group>"; };
 		391F8A8D237C02C1008EA052 /* 未使用のコード */ = {isa = PBXFileReference; lastKnownFileType = text; path = "未使用のコード"; sourceTree = "<group>"; };
 		3923C54C238CE3F200D53F4A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		3923C54F238CE43800D53F4A /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		3923C552238CEBBA00D53F4A /* Podfile */ = {isa = PBXFileReference; explicitFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		394A3F6123AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLandmarksInAreaViewController.swift; sourceTree = "<group>"; };
+		394A3F6323AEB0BE007E5E02 /* SelectLandmarkInGenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLandmarkInGenreViewController.swift; sourceTree = "<group>"; };
+		394A3F6523AEB7CA007E5E02 /* Genre.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Genre.txt; sourceTree = "<group>"; };
+		394A3F6723B135E6007E5E02 /* SelectLandmarkInGenreInAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLandmarkInGenreInAreaViewController.swift; sourceTree = "<group>"; };
 		39DF075C23A7771C002CD040 /* 開発の範囲について */ = {isa = PBXFileReference; lastKnownFileType = text; path = "開発の範囲について"; sourceTree = "<group>"; };
 		39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAreaViewController.swift; sourceTree = "<group>"; };
 		39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFacilitiesInAreaViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +130,8 @@
 		3917AB7D23AB57F400C6AEB0 /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
-				3917AB8023AB57F400C6AEB0 /* SelectLandmarkViewController.swift */,
+				3917AB8023AB57F400C6AEB0 /* SelectGenreViewController.swift */,
+				394A3F6323AEB0BE007E5E02 /* SelectLandmarkInGenreViewController.swift */,
 				3917AB7E23AB57F400C6AEB0 /* LandmarkViewController.swift */,
 			);
 			path = Landmark;
@@ -170,6 +177,7 @@
 				39E935362379E5FF008167E4 /* Info.plist */,
 				391F8A8D237C02C1008EA052 /* 未使用のコード */,
 				39DF075C23A7771C002CD040 /* 開発の範囲について */,
+				394A3F6523AEB7CA007E5E02 /* Genre.txt */,
 			);
 			path = Guide_sign_mapping;
 			sourceTree = "<group>";
@@ -206,6 +214,7 @@
 				39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */,
 				39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */,
 				394A3F6123AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift */,
+				394A3F6723B135E6007E5E02 /* SelectLandmarkInGenreInAreaViewController.swift */,
 				39DF076723A7E11E002CD040 /* FacilitiesViewController.swift */,
 			);
 			path = Area;
@@ -329,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				394A3F6623AEB7CA007E5E02 /* Genre.txt in Resources */,
 				39E9352B2379E5FE008167E4 /* art.scnassets in Resources */,
 				39E935352379E5FF008167E4 /* LaunchScreen.storyboard in Resources */,
 				39E935322379E5FF008167E4 /* Assets.xcassets in Resources */,
@@ -404,9 +414,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3917AB8323AB57F400C6AEB0 /* SelectLandmarkViewController.swift in Sources */,
+				3917AB8323AB57F400C6AEB0 /* SelectGenreViewController.swift in Sources */,
+				394A3F6423AEB0BE007E5E02 /* SelectLandmarkInGenreViewController.swift in Sources */,
 				3917AB8123AB57F400C6AEB0 /* LandmarkViewController.swift in Sources */,
 				39FE26052398AA7200422B82 /* PictgramsViewController.swift in Sources */,
+				394A3F6823B135E6007E5E02 /* SelectLandmarkInGenreInAreaViewController.swift in Sources */,
 				39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */,
 				3923C54D238CE3F200D53F4A /* DetailsViewController.swift in Sources */,
 				3923C550238CE43800D53F4A /* DirectionsViewController.swift in Sources */,

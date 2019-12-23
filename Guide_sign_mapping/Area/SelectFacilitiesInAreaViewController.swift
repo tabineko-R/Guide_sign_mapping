@@ -25,7 +25,6 @@ class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegat
     var Parking_num:Int = 1003
     var Toilet_num:Int = 1004
     var WAToilet_num:Int = 1005
-    var list:[SCNNode] = []
 
     let Facilities: [String] = ["すべて表示する",
                                 "観光施設",
@@ -96,9 +95,6 @@ class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegat
          Parking_num = buttonNode.childNode(withName: "Parking", recursively: false)?.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
          Toilet_num = buttonNode.childNode(withName: "Toilet", recursively: false)?.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
          WAToilet_num = buttonNode.childNode(withName: "WAToilet", recursively: false)?.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
-        
-        
-        list = buttonNode.childNode(withName: "Landmark", recursively: false)?.childNodes ?? []
         
         
         //....//
