@@ -13,7 +13,7 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
     
     //配列landmarksを設定
     var landmarks: [String] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,46 +25,245 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
         
         NB_title.title = String(areaText) + "(\(genreText))"
         
-        
-        switch genreText {
-        case "歴史的建造物（一般入場可能）":
-            landmarks = [
-                "函館明治館（旧函館郵便局）",
-                "旧北海道庁 函館支庁庁舎・旧開拓使書籍庫(観光案内所・写真歴史館)",
-                "旧イギリス領事館（開港記念館）"]
-        case "歴史的建造物（外観見学のみ）":
-            landmarks = [
-                "中華会館",
-                "旧ロシア領事館",
-                "太刀川家住宅（重要文化財）",
-                "旧函館区公会堂（重要文化財）"]
-        case "教会・寺院":
-            landmarks = [
-                "ハリストス正教会（重要文化財）",
-                "東本願寺函館別院（重要文化財）",
-                "日本基督教団函館教会",
-                "カトリック元町教会",
-                "聖ヨハネ教会"]
-        case "資料館":
-            landmarks = [
-                "北方歴史資料館",
-                "函館高田屋嘉兵衛資料館",
-                "北方民族資料館",
-                "郷土資料館（旧金森洋物店）",
-                "函館市文学館"]
-        case "記念碑":
-            landmarks = [
-                "新島襄海外渡航の地碑",
-                "北海道第一歩の地碑",
-                "ペリー提督来航記念碑"]
-        case "体験・アクティビティー":
-            landmarks = ["遊覧船のりば"]
-        case "閉館":
-            landmarks = ["金森美術館（バカラコレクション）"]
+        switch areaText {
+        case "周辺施設":
+            switch genreText {
+            case "歴史的建造物（一般入場可能）":
+                landmarks = [
+                    "函館明治館（旧函館郵便局）",
+                    "旧イギリス領事館（開港記念館）"]
+            case "歴史的建造物（外観見学のみ）":
+                landmarks = []
+            case "教会・寺院":
+                landmarks = [
+                    "ハリストス正教会（重要文化財）",
+                    "東本願寺函館別院（重要文化財）",
+                    "日本基督教団函館教会",
+                    "カトリック元町教会",
+                    "聖ヨハネ教会"]
+            case "資料館":
+                landmarks = [
+                    "北方歴史資料館",
+                    "函館高田屋嘉兵衛資料館",
+                    "北方民族資料館",
+                    "郷土資料館（旧金森洋物店）",
+                    "函館市文学館"]
+            case "記念碑":
+                landmarks = ["北海道第一歩の地碑",]
+            case "体験・アクティビティー":
+                landmarks = ["遊覧船のりば"]
+            case "閉館":
+                landmarks = ["金森美術館（バカラコレクション）"]
+            default:
+                break
+            }
+            
+        case "函館公園周辺":
+            switch genreText {
+            case "歴史的建造物（一般入場可能）":
+                landmarks = []
+            case "歴史的建造物（外観見学のみ）":
+                landmarks = []
+            case "教会・寺院":
+                landmarks = []
+            case "資料館":
+                landmarks = []
+            case "記念碑":
+                landmarks = []
+            case "体験・アクティビティー":
+                landmarks = []
+            case "閉館":
+                landmarks = []
+            default:
+                break
+            }
+            
+        case "ロープウェイ山麓駅周辺":
+            switch genreText {
+            case "歴史的建造物（一般入場可能）":
+                landmarks = []
+            case "歴史的建造物（外観見学のみ）":
+                landmarks = []
+            case "教会・寺院":
+                landmarks = [
+                    "ハリストス正教会（重要文化財）",
+                    "東本願寺函館別院（重要文化財）",
+                    "日本基督教団函館教会",
+                    "カトリック元町教会",
+                    "聖ヨハネ教会"]
+            case "資料館":
+                landmarks = [
+                    "北方歴史資料館",
+                    "郷土資料館（旧金森洋物店）",
+                    "函館市文学館"]
+            case "記念碑":
+                landmarks = []
+            case "体験・アクティビティー":
+                landmarks = ["遊覧船のりば"]
+            case "閉館":
+                landmarks = ["金森美術館（バカラコレクション）"]
+            default:
+                break
+            }
+            
+            
+        case "元町公園周辺":
+            switch genreText {
+            case "歴史的建造物（一般入場可能）":
+                landmarks = [
+                    "旧北海道庁 函館支庁庁舎・旧開拓使書籍庫(観光案内所・写真歴史館)",
+                    "旧イギリス領事館（開港記念館）"]
+            case "歴史的建造物（外観見学のみ）":
+                landmarks = [
+                    "中華会館",
+                    "太刀川家住宅（重要文化財）",
+                    "旧函館区公会堂（重要文化財）"]
+            case "教会・寺院":
+                landmarks = [
+                    "ハリストス正教会（重要文化財）",
+                    "東本願寺函館別院（重要文化財）",
+                    "日本基督教団函館教会",
+                    "カトリック元町教会",
+                    "聖ヨハネ教会"]
+            case "資料館":
+                landmarks = [
+                    "北方歴史資料館",
+                    "函館高田屋嘉兵衛資料館",
+                    "北方民族資料館",
+                    "郷土資料館（旧金森洋物店）",
+                    "函館市文学館"]
+            case "記念碑":
+                landmarks = [
+                    "新島襄海外渡航の地碑",
+                    "北海道第一歩の地碑",
+                    "ペリー提督来航記念碑"]
+            case "体験・アクティビティー":
+                landmarks = ["遊覧船のりば"]
+            case "閉館":
+                landmarks = ["金森美術館（バカラコレクション）"]
+            default:
+                break
+            }
+            
+        case "赤レンガ倉庫周辺":
+            switch genreText {
+            case "歴史的建造物（一般入場可能）":
+                landmarks = [
+                    "函館明治館（旧函館郵便局）",
+                    "旧イギリス領事館（開港記念館）"]
+            case "歴史的建造物（外観見学のみ）":
+                landmarks = ["中華会館"]
+            case "教会・寺院":
+                landmarks = [
+                    "東本願寺函館別院（重要文化財）",
+                    "日本基督教団函館教会"]
+            case "資料館":
+                landmarks = [
+                    "北方歴史資料館",
+                    "函館高田屋嘉兵衛資料館",
+                    "北方民族資料館",
+                    "郷土資料館（旧金森洋物店）",
+                    "函館市文学館"]
+            case "記念碑":
+                landmarks = [
+                    "新島襄海外渡航の地碑",
+                    "北海道第一歩の地碑",
+                    "ペリー提督来航記念碑"]
+            case "体験・アクティビティー":
+                landmarks = ["遊覧船のりば"]
+            case "閉館":
+                landmarks = ["金森美術館（バカラコレクション）"]
+            default:
+                break
+            }
+            
+            
+        case "函館駅周辺":
+            switch genreText {
+            case "歴史的建造物（一般入場可能）":
+                landmarks = []
+            case "歴史的建造物（外観見学のみ）":
+                landmarks = []
+            case "教会・寺院":
+                landmarks = []
+            case "資料館":
+                landmarks = []
+            case "記念碑":
+                landmarks = []
+            case "体験・アクティビティー":
+                landmarks = []
+            case "閉館":
+                landmarks = []
+            default:
+                break
+            }
+            
+        case "函館山周辺":
+            switch genreText {
+            case "歴史的建造物（一般入場可能）":
+                landmarks = []
+            case "歴史的建造物（外観見学のみ）":
+                landmarks = []
+            case "教会・寺院":
+                landmarks = []
+            case "資料館":
+                landmarks = []
+            case "記念碑":
+                landmarks = []
+            case "体験・アクティビティー":
+                landmarks = []
+            case "閉館":
+                landmarks = []
+            default:
+                break
+            }
+            
+        case "船見公園周辺":
+            switch genreText {
+            case "歴史的建造物（一般入場可能）":
+                landmarks = []
+            case "歴史的建造物（外観見学のみ）":
+                landmarks = [
+                    "中華会館",
+                    "旧ロシア領事館",
+                    "太刀川家住宅（重要文化財）",
+                ]
+            case "教会・寺院":
+                landmarks = []
+            case "資料館":
+                landmarks = []
+            case "記念碑":
+                landmarks = [ "新島襄海外渡航の地碑"]
+            case "体験・アクティビティー":
+                landmarks = []
+            case "閉館":
+                landmarks = []
+            default:
+                break
+            }
+            
+        case "立待岬周辺":
+            switch genreText {
+            case "歴史的建造物（一般入場可能）":
+                landmarks = []
+            case "歴史的建造物（外観見学のみ）":
+                landmarks = []
+            case "教会・寺院":
+                landmarks = []
+            case "資料館":
+                landmarks = []
+            case "記念碑":
+                landmarks = []
+            case "体験・アクティビティー":
+                landmarks = []
+            case "閉館":
+                landmarks = []
+            default:
+                break
+            }
         default:
             break
-        }
-        
+        }        
     }
     
     //セクション数を指定

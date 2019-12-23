@@ -18,6 +18,8 @@ class SelectLandmarksInAreaViewController: UIViewController, UITableViewDelegate
    "記念碑",
    "体験・アクティビティー",
    "閉館"]
+    
+        var Landmarks_num:[Int] = []
    
    //    //landmarksと数を一致させる let photos = ["russian","tachikawa","","","",""]
    
@@ -35,7 +37,28 @@ class SelectLandmarksInAreaViewController: UIViewController, UITableViewDelegate
     
     NB_title.title = areaText
     
-    
+    switch areaText{
+    case "船見公園周辺":
+        Landmarks_num = [0,3,0,0,1,0,0]
+    case "函館山周辺":
+        Landmarks_num = [0,0,0,0,0,0,0]
+    case "函館公園周辺":
+        Landmarks_num = [0,0,0,0,0,0,0]
+    case "函館駅周辺":
+        Landmarks_num = [0,0,0,0,0,0,0]
+    case "元町公園周辺":
+         Landmarks_num = [2,3,5,5,3,1,1]
+    case "周辺施設":
+         Landmarks_num = [2,0,5,5,1,1,1]
+    case "赤レンガ倉庫周辺":
+        Landmarks_num = [2,1,2,5,3,1,1]
+    case "ロープウェイ山麓駅周辺":
+        Landmarks_num = [0,0,5,3,0,1,1]
+    case "立待岬":
+        Landmarks_num = [0,0,0,0,0,0,0]
+    default:
+        break
+    }
 
 
 
@@ -69,7 +92,11 @@ class SelectLandmarksInAreaViewController: UIViewController, UITableViewDelegate
        switch indexPath.section {
        case 0:
            // セルに表示する値を設定する
-           cell.textLabel!.text = Genres[indexPath.row]
+           cell.textLabel!.text = Genres[indexPath.row] + " : " + String(Landmarks_num[indexPath.row]) + "施設あります"
+           
+           if Landmarks_num[indexPath.row] == 0{
+           cell.textLabel!.text = Genres[indexPath.row] + " : 施設はありません"
+           }
            //cell.imageView?.image = UIImage(named: photos[indexPath.row])
            
        default:
