@@ -4,8 +4,7 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
     
     var myTableView1: UITableView!
     var selectText:String?
-    let Facilities: [String] = ["エリア別で探す",
-                                "観光施設",
+    let Facilities: [String] = ["観光施設",
                                 "観光案内所",
                                 "駐車場",
                                 "トイレ",
@@ -18,8 +17,7 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
                                 "学校",
                                 "駅・電停"]
     
-    let Facilities_en: [String] = ["Show All",
-                                   "Tourist facilities",
+    let Facilities_en: [String] = ["Tourist facilities",
                                    "Toulist Information Center",
                                    "Parking",
                                    "Toilet",
@@ -31,6 +29,9 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
                                    "Firehouse",
                                    "School",
                                    "Railway Station/Streetcar Stop"]
+    
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,27 +63,29 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
         //cell.detailTextLabel?.numberOfLines = 0
         
         switch Facilities[indexPath.row]{
-        case "観光案内所":
+        case Facilities[0]:
             cell.imageView?.image = UIImage(named: "noimage.png")
-        case "駐車場":
+        case Facilities[1]:
             cell.imageView?.image = UIImage(named: "noimage.png")
-        case "トイレ":
+        case Facilities[2]:
             cell.imageView?.image = UIImage(named: "noimage.png")
-        case "車いす対応トイレ":
+        case Facilities[3]:
             cell.imageView?.image = UIImage(named: "noimage.png")
-        case "郵便局":
+        case Facilities[4]:
             cell.imageView?.image = UIImage(named: "noimage.png")
-        case "ホテル":
+        case Facilities[5]:
             cell.imageView?.image = UIImage(named: "noimage.png")
-        case "金融機関":
+        case Facilities[6]:
             cell.imageView?.image = UIImage(named: "noimage.png")
-        case "警察署・交番":
+        case Facilities[7]:
             cell.imageView?.image = UIImage(named: "noimage.png")
-        case "消防署":
+        case Facilities[8]:
             cell.imageView?.image = UIImage(named: "noimage.png")
-        case "学校":
+        case Facilities[9]:
             cell.imageView?.image = UIImage(named: "noimage.png")
-        case "駅・電停":
+        case Facilities[10]:
+            cell.imageView?.image = UIImage(named: "noimage.png")
+        case Facilities[11]:
             cell.imageView?.image = UIImage(named: "noimage.png")
         default:
             break
@@ -99,13 +102,12 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
         tableView.deselectRow(at: indexPath, animated: true)
         selectText = Facilities[indexPath.row]
         // 別の画面に遷移
-        if Facilities[indexPath.row] == "エリア別で探す" {
-        performSegue(withIdentifier: "toSearchAreaVC", sender: nil)
-        }else if Facilities[indexPath.row] == "観光施設" {
-        performSegue(withIdentifier: "toSelectGenreVC", sender: nil)
-        }else{
-        performSegue(withIdentifier: "toPictgramsViewController", sender: nil)
+
+        if(Facilities[indexPath.row] == "観光施設"){
+            performSegue(withIdentifier: "toSelectGenreViewController", sender: nil)
         }
+        performSegue(withIdentifier: "toPictgramsViewController", sender: nil)
+        
     }
     
     

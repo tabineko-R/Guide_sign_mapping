@@ -22,9 +22,8 @@
 		394A3F6423AEB0BE007E5E02 /* SelectLandmarkInGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394A3F6323AEB0BE007E5E02 /* SelectLandmarkInGenreViewController.swift */; };
 		394A3F6623AEB7CA007E5E02 /* Genre.txt in Resources */ = {isa = PBXBuildFile; fileRef = 394A3F6523AEB7CA007E5E02 /* Genre.txt */; };
 		394A3F6823B135E6007E5E02 /* SelectLandmarkInGenreInAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394A3F6723B135E6007E5E02 /* SelectLandmarkInGenreInAreaViewController.swift */; };
+		3973677E23B331A0003A0189 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3973677D23B331A0003A0189 /* FirstScreenViewController.swift */; };
 		39DF075D23A7771C002CD040 /* 開発の範囲について in Resources */ = {isa = PBXBuildFile; fileRef = 39DF075C23A7771C002CD040 /* 開発の範囲について */; };
-		39DF075F23A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */; };
-		39DF076023A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */; };
 		39DF076223A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */; };
 		39DF076323A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */; };
 		39DF076823A7E11E002CD040 /* FacilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076723A7E11E002CD040 /* FacilitiesViewController.swift */; };
@@ -60,7 +59,7 @@
 
 /* Begin PBXFileReference section */
 		3917AB7E23AB57F400C6AEB0 /* LandmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkViewController.swift; sourceTree = "<group>"; };
-		3917AB7F23AB57F400C6AEB0 /* SelectFacilitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectFacilitiesViewController.swift; path = Landmark/SelectFacilitiesViewController.swift; sourceTree = "<group>"; };
+		3917AB7F23AB57F400C6AEB0 /* SelectFacilitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFacilitiesViewController.swift; sourceTree = "<group>"; };
 		3917AB8023AB57F400C6AEB0 /* SelectGenreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGenreViewController.swift; sourceTree = "<group>"; };
 		391F8A8D237C02C1008EA052 /* 未使用のコード */ = {isa = PBXFileReference; lastKnownFileType = text; path = "未使用のコード"; sourceTree = "<group>"; };
 		3923C54C238CE3F200D53F4A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -70,8 +69,8 @@
 		394A3F6323AEB0BE007E5E02 /* SelectLandmarkInGenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLandmarkInGenreViewController.swift; sourceTree = "<group>"; };
 		394A3F6523AEB7CA007E5E02 /* Genre.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Genre.txt; sourceTree = "<group>"; };
 		394A3F6723B135E6007E5E02 /* SelectLandmarkInGenreInAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLandmarkInGenreInAreaViewController.swift; sourceTree = "<group>"; };
+		3973677D23B331A0003A0189 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstScreenViewController.swift; path = Guide_sign_mapping/FirstScreenViewController.swift; sourceTree = SOURCE_ROOT; };
 		39DF075C23A7771C002CD040 /* 開発の範囲について */ = {isa = PBXFileReference; lastKnownFileType = text; path = "開発の範囲について"; sourceTree = "<group>"; };
-		39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAreaViewController.swift; sourceTree = "<group>"; };
 		39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFacilitiesInAreaViewController.swift; sourceTree = "<group>"; };
 		39DF076723A7E11E002CD040 /* FacilitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesViewController.swift; sourceTree = "<group>"; };
 		39E935252379E5FE008167E4 /* Guide_sign_mapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guide_sign_mapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,10 +164,10 @@
 			children = (
 				39E935282379E5FE008167E4 /* AppDelegate.swift */,
 				39E9352A2379E5FE008167E4 /* art.scnassets */,
-				3917AB7F23AB57F400C6AEB0 /* SelectFacilitiesViewController.swift */,
-				39F8F03023AB15100088F322 /* Area */,
+				3973677D23B331A0003A0189 /* FirstScreenViewController.swift */,
 				3917AB7D23AB57F400C6AEB0 /* Landmark */,
 				39E9356E237BFCF4008167E4 /* Pictgram */,
+				39F8F03023AB15100088F322 /* Area */,
 				3923C54C238CE3F200D53F4A /* DetailsViewController.swift */,
 				3923C54F238CE43800D53F4A /* DirectionsViewController.swift */,
 				39E9352E2379E5FE008167E4 /* Main.storyboard */,
@@ -203,6 +202,7 @@
 		39E9356E237BFCF4008167E4 /* Pictgram */ = {
 			isa = PBXGroup;
 			children = (
+				3917AB7F23AB57F400C6AEB0 /* SelectFacilitiesViewController.swift */,
 				39FE26042398AA7200422B82 /* PictgramsViewController.swift */,
 			);
 			path = Pictgram;
@@ -211,7 +211,6 @@
 		39F8F03023AB15100088F322 /* Area */ = {
 			isa = PBXGroup;
 			children = (
-				39DF075E23A7D2B7002CD040 /* SearchAreaViewController.swift */,
 				39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */,
 				394A3F6123AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift */,
 				394A3F6723B135E6007E5E02 /* SelectLandmarkInGenreInAreaViewController.swift */,
@@ -423,8 +422,8 @@
 				3923C54D238CE3F200D53F4A /* DetailsViewController.swift in Sources */,
 				3923C550238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
 				39DF076823A7E11E002CD040 /* FacilitiesViewController.swift in Sources */,
-				39DF075F23A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */,
 				394A3F6223AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift in Sources */,
+				3973677E23B331A0003A0189 /* FirstScreenViewController.swift in Sources */,
 				3917AB8223AB57F400C6AEB0 /* SelectFacilitiesViewController.swift in Sources */,
 				39DF076223A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */,
 			);
@@ -440,7 +439,6 @@
 				39DF076923A7E11E002CD040 /* FacilitiesViewController.swift in Sources */,
 				3923C551238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
 				39E935402379E5FF008167E4 /* Guide_sign_mappingTests.swift in Sources */,
-				39DF076023A7D2B7002CD040 /* SearchAreaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

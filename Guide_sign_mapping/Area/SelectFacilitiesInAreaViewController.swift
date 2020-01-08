@@ -16,8 +16,9 @@ class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegat
     
     private var buttonNode: SCNNode!
     
-    var selectText:String?
-    var areaText:String?
+    var selectText:String = ""
+    var areaText:String = ""
+    var areaText_ja:String = ""
     
     var All_num:Int = 1000
     var TF_num:Int = 1001
@@ -25,7 +26,7 @@ class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegat
     var Parking_num:Int = 1003
     var Toilet_num:Int = 1004
     var WAToilet_num:Int = 1005
-
+    
     let Facilities: [String] = ["すべて表示する",
                                 "観光施設",
                                 "観光案内所",
@@ -39,7 +40,7 @@ class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegat
                                 "消防署",
                                 "学校",
                                 "駅・電停"]
- 
+    
     let Facilities_en: [String] = ["Show All",
                                    "Tourist Facilities",
                                    "Toulist Information Center",
@@ -58,6 +59,8 @@ class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("エリア：\(areaText)")
+        
         myTableView1 = UITableView(frame: self.view.frame, style: UITableView.Style.grouped)
         myTableView1.delegate = self
         myTableView1.dataSource = self
@@ -65,41 +68,39 @@ class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegat
         myTableView1.rowHeight = UITableView.automaticDimension
         //self.view.addSubview(myTableView1)
         //navigation barのタイトル
-        NB_title.title = areaText
+        NB_title.title = areaText_ja
         
         switch areaText{
-        case "船見公園周辺":
+        case "Funami_park":
+            buttonNode = SCNScene(named: "art.scnassets/sign01/Funami_park.scn")!.rootNode
+        case "Hakodate_mountain":
+            buttonNode = SCNScene(named: "art.scnassets/sign01/Hakodate_mountain.scn")!.rootNode
+        case "Hakodate_park":
             buttonNode = SCNScene(named: "art.scnassets/sign01/Hakodate_park.scn")!.rootNode
-        case "函館山周辺":
-            buttonNode = SCNScene(named: "art.scnassets/sign01/Hakodate_park.scn")!.rootNode
-        case "函館公園周辺":
-            buttonNode = SCNScene(named: "art.scnassets/sign01/Hakodate_park.scn")!.rootNode
-        case "函館駅周辺":
+        case "Hakodate_station":
             buttonNode = SCNScene(named: "art.scnassets/sign01/Hakodate_Station.scn")!.rootNode
-        case "元町公園周辺":
+        case "Motomachi_park":
             buttonNode = SCNScene(named: "art.scnassets/sign01/Motomachi_park.scn")!.rootNode
-        case "周辺施設":
+        case "Nearby_facilities":
             buttonNode = SCNScene(named: "art.scnassets/sign01/Nearby_Facilities.scn")!.rootNode
-        case "赤レンガ倉庫周辺":
+        case "Red_brick_warehouse":
             buttonNode = SCNScene(named: "art.scnassets/sign01/Red_brick_warehouse.scn")!.rootNode
-        case "ロープウェイ山麓駅周辺":
+        case "Roopway_station":
             buttonNode = SCNScene(named: "art.scnassets/sign01/Roopway_station.scn")!.rootNode
-        case "立待岬":
-            buttonNode = SCNScene(named: "art.scnassets/sign01/Roopway_station.scn")!.rootNode
+        case "Tachimachi_misaki":
+            buttonNode = SCNScene(named: "art.scnassets/sign01/Tachimachi_misaki.scn")!.rootNode
         default:
             break
         }
-    
-         TF_num = buttonNode.childNode(withName: "Landmark", recursively: false)?.childNodes.count ?? 0
-         //TIC_num = buttonNode.childNode(withName: "Parking", recursively: false)?.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
-         Parking_num = buttonNode.childNode(withName: "Parking", recursively: false)?.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
-         Toilet_num = buttonNode.childNode(withName: "Toilet", recursively: false)?.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
-         WAToilet_num = buttonNode.childNode(withName: "WAToilet", recursively: false)?.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
         
-        
+        TF_num = (buttonNode.childNode(withName: "Landmark", recursively: false)?.childNodes.count ?? 0) - 1
+        //TIC_num = buttonNode.childNode(withName: "Parking", recursively: false)?.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
+        Parking_num = buttonNode.childNode(withName: "Parking", recursively: false)?.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
+        Toilet_num = buttonNode.childNode(withName: "Toilet", recursively: false)?.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
+        WAToilet_num = buttonNode.childNode(withName: "WAToilet", recursively: false)?.childNode(withName: "pins", recursively: false)?.childNodes.count ?? 0
         //....//
         
-         All_num = TF_num + Parking_num + Toilet_num + WAToilet_num
+        All_num = TF_num + Parking_num + Toilet_num + WAToilet_num
     }
     
     //セクション数を指定
@@ -143,25 +144,25 @@ class SelectFacilitiesInAreaViewController: UIViewController ,UITableViewDelegat
             cell.textLabel?.text = Facilities[indexPath.row] + " : \(WAToilet_num) 施設あります"
         case "郵便局":
             cell.imageView?.image = UIImage(named: "noimage.png")
-      cell.textLabel?.text = Facilities[indexPath.row]
+            cell.textLabel?.text = Facilities[indexPath.row]
         case "ホテル":
             cell.imageView?.image = UIImage(named: "noimage.png")
-  cell.textLabel?.text = Facilities[indexPath.row]
+            cell.textLabel?.text = Facilities[indexPath.row]
         case "金融機関":
             cell.imageView?.image = UIImage(named: "noimage.png")
-cell.textLabel?.text = Facilities[indexPath.row]
+            cell.textLabel?.text = Facilities[indexPath.row]
         case "警察署・交番":
             cell.imageView?.image = UIImage(named: "noimage.png")
-    cell.textLabel?.text = Facilities[indexPath.row]
+            cell.textLabel?.text = Facilities[indexPath.row]
         case "消防署":
             cell.imageView?.image = UIImage(named: "noimage.png")
-    cell.textLabel?.text = Facilities[indexPath.row]
+            cell.textLabel?.text = Facilities[indexPath.row]
         case "学校":
             cell.imageView?.image = UIImage(named: "noimage.png")
- cell.textLabel?.text = Facilities[indexPath.row]
+            cell.textLabel?.text = Facilities[indexPath.row]
         case "駅・電停":
             cell.imageView?.image = UIImage(named: "noimage.png")
-cell.textLabel?.text = Facilities[indexPath.row]
+            cell.textLabel?.text = Facilities[indexPath.row]
         default:
             break
         }
@@ -178,9 +179,9 @@ cell.textLabel?.text = Facilities[indexPath.row]
         selectText = Facilities[indexPath.row]
         
         if Facilities[indexPath.row] == "観光施設" {
-        performSegue(withIdentifier: "toSelectLandmarksInAreaVC", sender: nil)
+            performSegue(withIdentifier: "toSelectLandmarksInAreaVC", sender: nil)
         }else{
-        performSegue(withIdentifier: "toFacilitiesVC", sender: nil)
+            performSegue(withIdentifier: "toFacilitiesVC", sender: nil)
         }
         
     }
@@ -189,13 +190,14 @@ cell.textLabel?.text = Facilities[indexPath.row]
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toFacilitiesVC") {
             let nextVC: FacilitiesViewController = (segue.destination as? FacilitiesViewController)!
-            nextVC.facilitiesText = selectText!
-            nextVC.areaText = areaText!
-            //switch文も使用可能
+            nextVC.facilitiesText = selectText
+            nextVC.areaText = areaText
         }else if (segue.identifier == "toSelectLandmarksInAreaVC") {
             let nextVC: SelectLandmarksInAreaViewController = (segue.destination as? SelectLandmarksInAreaViewController)!
-            nextVC.areaText = areaText!
-            //switch文も使用可能
+            nextVC.facilitiesText = selectText
+            nextVC.areaText = areaText
+            nextVC.areaText_ja = areaText_ja
+            
         }
     }
     

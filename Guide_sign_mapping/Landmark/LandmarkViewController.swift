@@ -43,7 +43,7 @@ class LandmarkViewController: UIViewController {
         switch landmarkText{
         case "旧ロシア領事館":
         buttonNode = buttonNode?.childNode(withName: "旧ロシア領事館", recursively: false)
-        let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
+        let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "image", recursively: false)
         thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
         case "太刀川家住宅（重要文化財）":
         buttonNode = buttonNode?.childNode(withName: "太刀川家住宅（重要文化財）", recursively: false)
@@ -111,7 +111,8 @@ class LandmarkViewController: UIViewController {
         let toDetails = storyboard.instantiateViewController(withIdentifier: "details") as! DetailsViewController
         
         toDetails.landmarkText = landmarkText
-        self.present(toDetails, animated: true, completion: nil)
+        self.navigationController?.pushViewController(toDetails, animated: true)
+        //self.present(toDetails, animated: true, completion: nil)
 
     }
     

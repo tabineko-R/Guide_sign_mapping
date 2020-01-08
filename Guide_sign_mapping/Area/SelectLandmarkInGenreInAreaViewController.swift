@@ -5,11 +5,14 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
     @IBOutlet var TableView: UITableView!
     @IBOutlet weak var NB_title: UINavigationItem!
     //prepareで使うためのワンクッション
-    var selectText:String?
+    var selectText:String = ""
     
     //前のVCの値
     var areaText:String = ""
     var genreText:String = ""
+    var facilitiesText:String = ""
+    var landmarkText:String = ""
+    var photos:[String] = []
     
     //配列landmarksを設定
     var landmarks: [String] = []
@@ -23,15 +26,16 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
         TableView.estimatedRowHeight = 100
         TableView.rowHeight = UITableView.automaticDimension
         
-        NB_title.title = String(areaText) + "(\(genreText))"
+        NB_title.title = "\(genreText)"
         
         switch areaText {
-        case "周辺施設":
+        case "Nearby_Facilities":
             switch genreText {
             case "歴史的建造物（一般入場可能）":
                 landmarks = [
                     "函館明治館（旧函館郵便局）",
                     "旧イギリス領事館（開港記念館）"]
+                photos = ["meiji_kan",""]
             case "歴史的建造物（外観見学のみ）":
                 landmarks = []
             case "教会・寺院":
@@ -58,7 +62,7 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
                 break
             }
             
-        case "函館公園周辺":
+        case "Hakodate_park":
             switch genreText {
             case "歴史的建造物（一般入場可能）":
                 landmarks = []
@@ -107,7 +111,7 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
             }
             
             
-        case "元町公園周辺":
+        case "Motomachi_park":
             switch genreText {
             case "歴史的建造物（一般入場可能）":
                 landmarks = [
@@ -145,7 +149,7 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
                 break
             }
             
-        case "赤レンガ倉庫周辺":
+        case "Red_brick_warehouse":
             switch genreText {
             case "歴史的建造物（一般入場可能）":
                 landmarks = [
@@ -178,7 +182,7 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
             }
             
             
-        case "函館駅周辺":
+        case "Hakodate_station":
             switch genreText {
             case "歴史的建造物（一般入場可能）":
                 landmarks = []
@@ -198,7 +202,7 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
                 break
             }
             
-        case "函館山周辺":
+        case "Hakodate_mountain":
             switch genreText {
             case "歴史的建造物（一般入場可能）":
                 landmarks = []
@@ -218,7 +222,7 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
                 break
             }
             
-        case "船見公園周辺":
+        case "Funami_park":
             switch genreText {
             case "歴史的建造物（一般入場可能）":
                 landmarks = []
@@ -242,7 +246,7 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
                 break
             }
             
-        case "立待岬周辺":
+        case "Tachimachi_misaki":
             switch genreText {
             case "歴史的建造物（一般入場可能）":
                 landmarks = []
@@ -263,7 +267,7 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
             }
         default:
             break
-        }        
+        }
     }
     
     //セクション数を指定
@@ -295,7 +299,9 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
         case 0:
             // セルに表示する値を設定する
             cell.textLabel!.text = landmarks[indexPath.row]
+             cell.detailTextLabel?.text = ""
             //cell.imageView?.image = UIImage(named: photos[indexPath.row])
+            cell.detailTextLabel?.numberOfLines = 0
             
         default:
             break
@@ -322,7 +328,9 @@ class SelectLandmarkInGenreInAreaViewController: UIViewController, UITableViewDe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toFacilitiesVC") {
             let nextVC: FacilitiesViewController = (segue.destination as? FacilitiesViewController)!
-            nextVC.facilitiesText = selectText!
+            nextVC.landmarkText = selectText
+            nextVC.facilitiesText = facilitiesText
+            nextVC.areaText = areaText
             //switch文も使用可能
         }
     }

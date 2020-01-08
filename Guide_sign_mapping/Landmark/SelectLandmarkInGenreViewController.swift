@@ -7,15 +7,10 @@ class SelectLandmarkInGenreViewController: UIViewController, UITableViewDelegate
     //prepareで使うためのワンクッション
     var selectText:String?
     var genreText:String?
-    
     //配列landmarksを設定
     var landmarks: [String] = []
     
     //    //landmarksと数を一致させる let photos = ["russian","tachikawa","","","",""]
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,15 +66,6 @@ class SelectLandmarkInGenreViewController: UIViewController, UITableViewDelegate
         return 1
         
     }
-    //セクションタイトルを指定
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section{
-        case 0:
-            return "函館"
-        default:
-            return nil
-        }
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return landmarks.count
@@ -96,7 +82,6 @@ class SelectLandmarkInGenreViewController: UIViewController, UITableViewDelegate
             // セルに表示する値を設定する
             cell.textLabel!.text = landmarks[indexPath.row]
             //cell.imageView?.image = UIImage(named: photos[indexPath.row])
-            
         default:
             break
         }
@@ -109,11 +94,7 @@ class SelectLandmarkInGenreViewController: UIViewController, UITableViewDelegate
         print("\(landmarks[indexPath.row])番目の行が選択されました。")
         // セルの選択を解除
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        
         selectText = landmarks[indexPath.row]
-        
-        
         // 別の画面に遷移
         performSegue(withIdentifier: "toLandmarkVC", sender: nil)
     }
@@ -128,6 +109,3 @@ class SelectLandmarkInGenreViewController: UIViewController, UITableViewDelegate
     }
     
 }
-
-
-

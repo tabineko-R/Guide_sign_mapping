@@ -99,7 +99,8 @@ class PictgramsViewController: UIViewController {
         let toDetails = storyboard.instantiateViewController(withIdentifier: "details") as! DetailsViewController
         
         toDetails.landmarkText = node.name!
-        self.present(toDetails, animated: true, completion: nil)
+        self.navigationController?.pushViewController(toDetails, animated: true)
+        //self.present(toDetails, animated: true, completion: nil)
         
         print(node.name!)
         
