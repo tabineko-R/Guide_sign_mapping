@@ -632,20 +632,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8F-KA-2Nq">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8F-KA-2Nq">
+                                            <rect key="frame" x="0.0" y="32" width="50" height="18"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <color key="textColor" red="0.41176470590000003" green="0.40000000000000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="ajA-8f-ly9">
+                                            <rect key="frame" x="8" y="0.0" width="34" height="35"/>
+                                        </imageView>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="b8F-KA-2Nq" secondAttribute="bottom" id="0WL-7l-1hQ"/>
-                                    <constraint firstItem="b8F-KA-2Nq" firstAttribute="top" secondItem="CNb-gQ-OvB" secondAttribute="top" id="PO2-Qg-wqF"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="ajA-8f-ly9" secondAttribute="bottom" constant="7" id="1ia-kx-5U0"/>
+                                    <constraint firstItem="ajA-8f-ly9" firstAttribute="leading" secondItem="CNb-gQ-OvB" secondAttribute="leadingMargin" id="WCK-Xc-6PA"/>
                                     <constraint firstItem="b8F-KA-2Nq" firstAttribute="leading" secondItem="CNb-gQ-OvB" secondAttribute="leading" id="fGn-Sv-z9V"/>
                                     <constraint firstAttribute="trailing" secondItem="b8F-KA-2Nq" secondAttribute="trailing" id="lKB-LY-mek"/>
+                                    <constraint firstItem="ajA-8f-ly9" firstAttribute="centerX" secondItem="CNb-gQ-OvB" secondAttribute="centerX" id="mp8-NI-9Gz"/>
+                                    <constraint firstItem="ajA-8f-ly9" firstAttribute="top" secondItem="CNb-gQ-OvB" secondAttribute="topMargin" constant="-8" id="rDt-Xe-2Ci"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="label" destination="b8F-KA-2Nq" id="XeS-Ru-cip"/>
@@ -675,7 +681,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4IN-ml-8PK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2999" y="-458"/>
+            <point key="canvasLocation" x="-3000.0000000000005" y="-458.03571428571428"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -7,7 +7,7 @@ final class FlowLayout: UICollectionViewFlowLayout {
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         guard let collectionView = collectionView else { return proposedContentOffset }
         guard let targetAttributes = layoutAttributesForPaging else { return proposedContentOffset }
-
+        
         let nextAttributes: UICollectionViewLayoutAttributes?
         if velocity.x == 0 {
             // スワイプせずに指を離した場合は、画面中央から一番近い要素を取得する
