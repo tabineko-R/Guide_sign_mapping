@@ -4,6 +4,7 @@ import ARKit
 class FirstScreenViewController: UIViewController {
     
     @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     // NOTE: The imageConfiguration is better for tracking images,
     // but it has less features,
@@ -49,7 +50,10 @@ class FirstScreenViewController: UIViewController {
         
         //scn読み込み
         buttonNode = SCNScene(named: "art.scnassets/sign01/Areas.scn")!.rootNode.childNode(withName: "Name", recursively: false)
+        
+        
     }
+    
     
     //画面遷移の関数
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -1,30 +1,52 @@
-//
-//  AViewController.swift
-//  Guide_sign_mapping
-//
-//  Created by yuya on 2020/01/08.
-//  Copyright © 2020 yuya. All rights reserved.
-//
-
 import UIKit
 
-class AViewController: UIViewController {
+final class ViewController: UICollectionViewController {
+    private var cellSize: CGSize {
+        let width = collectionView.bounds.width * 0.8
+        let height = width * Cell.aspectRatio
+        return CGSize(width: width, height: height)
+    }
+
+    private var headerSize: CGSize {
+        let width = collectionView.bounds.width * 0.6
+        return CGSize(width: width, height: 0)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        collectionView.decelerationRate = .fast
+
+        let flowLayout = collectionViewLayout as! FlowLayout
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.itemSize = cellSize
+        flowLayout.minimumInteritemSpacing = collectionView.bounds.height
+        flowLayout.minimumLineSpacing = 20
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 40)
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
+        return 5
     }
-    */
 
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! Cell
+        cell.label.text = "\(indexPath.row)"
+        return cell
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind _: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        return collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header", for: indexPath)
+    }
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        let collectionView = scrollView as! UICollectionView
+        (collectionView.collectionViewLayout as! FlowLayout).prepareForPaging()
+    }
+
+    func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, referenceSizeForHeaderInSection _: Int) -> CGSize {
+        return headerSize
+    }
 }
