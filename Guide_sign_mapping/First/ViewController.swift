@@ -31,9 +31,7 @@ final class ViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        
+ 
         //tab
         collectionView.decelerationRate = .fast
         
@@ -43,15 +41,35 @@ final class ViewController: UICollectionViewController {
         flowLayout.minimumInteritemSpacing = collectionView.bounds.height
         flowLayout.minimumLineSpacing = 20
         flowLayout.sectionInset = UIEdgeInsets(top: 500, left: 40, bottom: 0, right: 40)
+        
+        switch facilitiesText {
+        case Facilities[0]:
+            print(Facilities[0])
+        default:
+            break
+        }
+        
     }
     
     //tabbar
-    //collectionの初期位置
+    //collectionの位置
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let indexPath = IndexPath(item: 1, section: 0)
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
-    }
+        
+        //初期位置
+         let indexPath = IndexPath(item: 1, section: 0)
+             collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+         
+        //サイドバー選択後の位置
+        for selectFacilities in 0 ..< Facilities.count{
+             if(facilitiesText == Facilities[selectFacilities]){
+                 collectionView.scrollToItem(at: IndexPath(item: selectFacilities, section: 0), at: .centeredHorizontally, animated: false)
+                 print(facilitiesText)
+                 
+             }
+        }
+
+        }
     
     override func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         return Facilities.count
@@ -82,15 +100,6 @@ final class ViewController: UICollectionViewController {
         
         //タップしたらセルの移動
         collectionView.scrollToItem(at: IndexPath(item: (indexPath.row), section: 0), at: .centeredHorizontally, animated: true)
-
-        
-        for selectFacilities in 0 ..< Facilities.count{
-            if(facilitiesText == Facilities[selectFacilities]){
-                collectionView.scrollToItem(at: IndexPath(item: selectFacilities, section: 0), at: .centeredHorizontally, animated: true)
-            }
-        }
-        
-         print(facilitiesText)
         
     }
     

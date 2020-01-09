@@ -46,14 +46,19 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    var Genres:[String] = [
-        "歴史的建造物（一般入場可能）",
-        "歴史的建造物（外観見学のみ）",
-        "教会・寺院",
-        "資料館",
-        "記念碑",
-        "体験・アクティビティー",
-        "閉館"]
+    let Facilities: [String] = ["すべて表示する",
+                                "観光施設",
+                                "観光案内所",
+                                "駐車場",
+                                "トイレ",
+                                "車いす対応トイレ",
+                                "郵便局",
+                                "ホテル",
+                                "金融機関",
+                                "警察署・交番",
+                                "消防署",
+                                "学校",
+                                "駅・電停"]
     
     //table
     override func viewDidLoad() {
@@ -73,7 +78,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Genres.count
+        return Facilities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,7 +86,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
                                    reuseIdentifier:"cell")
             // セルに表示する値を設定する
-        cell.textLabel!.text = Genres[indexPath.row] 
+        cell.textLabel!.text = Facilities[indexPath.row]
         //cell.imageView?.image = UIImage(named: photos[indexPath.row])
         return cell
     }
@@ -90,13 +95,17 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // タップされたセルの行番号を出力
-        print("\(Genres[indexPath.row])番目の行が選択されました。")
+        print("\(Facilities[indexPath.row])番目の行が選択されました。")
         // セルの選択を解除
         tableView.deselectRow(at: indexPath, animated: true)
         
         let toFirst = storyboard?.instantiateViewController(withIdentifier: "First") as! ViewController
         
-        toFirst.facilitiesText = Genres[indexPath.row]
+        toFirst.facilitiesText = Facilities[indexPath.row]
+        
+        toFirst.loadView()
+        toFirst.viewDidLoad()
+        toFirst.viewDidAppear(true)
         
         UIView.animate(
             withDuration: 0.2,
