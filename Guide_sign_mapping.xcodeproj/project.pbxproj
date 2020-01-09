@@ -26,7 +26,7 @@
 		39903CBC23C6075100632D18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39903CBB23C6075100632D18 /* ViewController.swift */; };
 		39903CBE23C6075800632D18 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39903CBD23C6075800632D18 /* FlowLayout.swift */; };
 		39903CC023C6075F00632D18 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39903CBF23C6075F00632D18 /* Cell.swift */; };
-		39903CC223C63D9400632D18 /* SidemenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39903CC123C63D9400632D18 /* SidemenuViewController.swift */; };
+		39903CC423C6A7BD00632D18 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39903CC323C6A7BD00632D18 /* MenuViewController.swift */; };
 		39DF075D23A7771C002CD040 /* 開発の範囲について in Resources */ = {isa = PBXBuildFile; fileRef = 39DF075C23A7771C002CD040 /* 開発の範囲について */; };
 		39DF076223A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */; };
 		39DF076323A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */; };
@@ -78,7 +78,7 @@
 		39903CBB23C6075100632D18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39903CBD23C6075800632D18 /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 		39903CBF23C6075F00632D18 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		39903CC123C63D9400632D18 /* SidemenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidemenuViewController.swift; sourceTree = "<group>"; };
+		39903CC323C6A7BD00632D18 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		39DF075C23A7771C002CD040 /* 開発の範囲について */ = {isa = PBXFileReference; lastKnownFileType = text; path = "開発の範囲について"; sourceTree = "<group>"; };
 		39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFacilitiesInAreaViewController.swift; sourceTree = "<group>"; };
 		39DF076723A7E11E002CD040 /* FacilitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesViewController.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 				39903CBB23C6075100632D18 /* ViewController.swift */,
 				39903CBD23C6075800632D18 /* FlowLayout.swift */,
 				39903CBF23C6075F00632D18 /* Cell.swift */,
-				39903CC123C63D9400632D18 /* SidemenuViewController.swift */,
+				39903CC323C6A7BD00632D18 /* MenuViewController.swift */,
 			);
 			path = First;
 			sourceTree = "<group>";
@@ -426,8 +426,8 @@
 				3923C54D238CE3F200D53F4A /* DetailsViewController.swift in Sources */,
 				3923C550238CE43800D53F4A /* DirectionsViewController.swift in Sources */,
 				39DF076823A7E11E002CD040 /* FacilitiesViewController.swift in Sources */,
+				39903CC423C6A7BD00632D18 /* MenuViewController.swift in Sources */,
 				394A3F6223AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift in Sources */,
-				39903CC223C63D9400632D18 /* SidemenuViewController.swift in Sources */,
 				3973677E23B331A0003A0189 /* FirstScreenViewController.swift in Sources */,
 				3917AB8223AB57F400C6AEB0 /* SelectFacilitiesViewController.swift in Sources */,
 				39903CBC23C6075100632D18 /* ViewController.swift in Sources */,
