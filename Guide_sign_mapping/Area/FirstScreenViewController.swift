@@ -4,7 +4,6 @@ import ARKit
 class FirstScreenViewController: UIViewController {
     
     @IBOutlet weak var sceneView: ARSCNView!
-    @IBOutlet weak var scrollView: UIScrollView!
     
     // NOTE: The imageConfiguration is better for tracking images,
     // but it has less features,
@@ -73,10 +72,6 @@ class FirstScreenViewController: UIViewController {
 
         
         switch node.name {
-        case "Facilities":
-            //通常の画面遷移 //self.present(toLandmarks, animated: true, completion: nil)
-            //Navigation Barを維持しての画面遷移
-            self.navigationController?.pushViewController(toFacilities, animated: true)
         case "\(Landmarks[0][1])":
             toAreas.areaText = Landmarks[0][1]
             toAreas.areaText_ja = Landmarks[0][0]
