@@ -49,8 +49,6 @@ class FirstScreenViewController: UIViewController {
         
         //scn読み込み
         buttonNode = SCNScene(named: "art.scnassets/sign01/Areas.scn")!.rootNode.childNode(withName: "Name", recursively: false)
-        
-        
     }
     
     
@@ -62,14 +60,9 @@ class FirstScreenViewController: UIViewController {
         }
         
         let node = result.node //switch文用
-        
-        // ①storyboardのインスタンス取得
-        let storyboard: UIStoryboard = self.storyboard!
-        // ②遷移先ViewControllerのインスタンス取得(identifierの名前を間違うとフリーズ起こす)
-        let toFacilities = storyboard.instantiateViewController(withIdentifier: "facilities") as! SelectFacilitiesViewController
-        let toAreas = storyboard.instantiateViewController(withIdentifier: "areas") as! SelectFacilitiesInAreaViewController
-        
 
+        let storyboard: UIStoryboard = self.storyboard!
+        let toAreas = storyboard.instantiateViewController(withIdentifier: "areas") as! SelectFacilitiesInAreaViewController
         
         switch node.name {
         case "\(Landmarks[0][1])":

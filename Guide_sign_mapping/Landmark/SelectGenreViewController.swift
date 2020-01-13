@@ -28,6 +28,7 @@ class SelectGenreViewController: UIViewController, UITableViewDelegate, UITableV
         TableView.dataSource = self
         TableView.estimatedRowHeight = 100
         TableView.rowHeight = UITableView.automaticDimension
+        
     }
     
     //セクション数を指定

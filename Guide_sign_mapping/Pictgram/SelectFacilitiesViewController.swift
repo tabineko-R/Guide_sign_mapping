@@ -4,6 +4,7 @@ class SelectFacilitiesViewController: UIViewController, UITableViewDelegate, UIT
     
     var myTableView1: UITableView!
     var selectText:String?
+    let Facilitiess: [[String]] = [[]]
     let Facilities: [String] = ["観光施設",
                                 "観光案内所",
                                 "駐車場",

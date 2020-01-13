@@ -41,24 +41,26 @@ class MenuViewControllerReload: UIViewController, UITableViewDelegate, UITableVi
                         self.dismiss(animated: true, completion: nil)
                 }
                 )
+            performSegue(withIdentifier: "toViewControllerFromMenuReload", sender: nil)
             }
         }
     }
     
+    var selectText:String = ""
     
-    let Facilities: [String] = ["すべて表示する",
-                                "観光施設",
-                                "観光案内所",
-                                "駐車場",
-                                "トイレ",
-                                "車いす対応トイレ",
-                                "郵便局",
-                                "ホテル",
-                                "金融機関",
-                                "警察署・交番",
-                                "消防署",
-                                "学校",
-                                "駅・電停"]
+    let Facilities: [[String]] = [["エリア別表示","Area","Area"],
+                                  ["観光施設","Tourist Facilities","Landmark"],
+                                  ["観光案内所", "Toulist Information Center","TIC"],
+                                  ["駐車場","Parking","Parking"],
+                                  ["トイレ",  "Toilet","Toilet"],
+                                  ["車いす対応トイレ", "Toilet(Whellchair Accessible)","WAToilet"],
+                                  ["郵便局",  "Post Office","Post_Office"],
+                                  ["ホテル",  "Hotel",  "Hotel"],
+                                  ["金融機関", "Bank", "Bank"],
+                                  ["警察署・交番", "Police Station/Box", "Police"],
+                                  ["消防署","Firehouse","Firehouse"],
+                                  ["学校", "School","School"],
+                                  ["駅・電停",  "Railway Station/Streetcar Stop" ,"Station"]]
     
     //table
     override func viewDidLoad() {
@@ -86,26 +88,31 @@ class MenuViewControllerReload: UIViewController, UITableViewDelegate, UITableVi
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
                                    reuseIdentifier:"cell")
             // セルに表示する値を設定する
-        cell.textLabel!.text = Facilities[indexPath.row]
-        //cell.imageView?.image = UIImage(named: photos[indexPath.row])
+        cell.textLabel!.text = Facilities[indexPath.row][0]
+        cell.imageView?.image = UIImage(named: Facilities[indexPath.row][2])
         return cell
     }
     
     //タップされた時
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        // タップされたセルの行番号を出力
-        print("\(Facilities[indexPath.row])番目の行が選択されました。")
         // セルの選択を解除
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let toFirst = storyboard?.instantiateViewController(withIdentifier: "First") as! ViewController
+        selectText = Facilities[indexPath.row][2]
+
+        if(Facilities[indexPath.row][2] == Facilities[0][2]){
+            let storyboard: UIStoryboard = self.storyboard!
+            let toSelectArea = storyboard.instantiateViewController(withIdentifier: "selectArea") as! FirstScreenViewController
+            self.navigationController?.pushViewController(toSelectArea, animated: true)
+        }else if(Facilities[indexPath.row][2] == Facilities[1][2]){
+            let storyboard: UIStoryboard = self.storyboard!
+            let toLandmarks = storyboard.instantiateViewController(withIdentifier: "selectGenre") as! SelectGenreViewController
+            self.navigationController?.pushViewController(toLandmarks, animated: true)
+        }else{
+            performSegue(withIdentifier: "toViewControllerFromMenuReload", sender: nil)
+        }
         
-        toFirst.facilitiesText = Facilities[indexPath.row]
-        
-        toFirst.loadView()
-        toFirst.viewDidLoad()
-        toFirst.viewDidAppear(true)
+       
         
         UIView.animate(
             withDuration: 0.2,
@@ -120,6 +127,13 @@ class MenuViewControllerReload: UIViewController, UITableViewDelegate, UITableVi
         )
         
        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let VC: ViewController = (segue.destination as? ViewController)!
+            VC.facilitiesText = selectText
+        }
+
+    
  
 
 }

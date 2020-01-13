@@ -36,6 +36,20 @@ class FacilitiesViewController: UIViewController {
     private var buttonNode: SCNNode!
     private let feedback = UIImpactFeedbackGenerator()
     
+    let Facilities: [[String]] = [["エリア別表示","Area","Area"],
+                                      ["観光施設","Tourist Facilities","Landmark"],
+                                      ["観光案内所", "Toulist Information Center","TIC"],
+                                      ["駐車場","Parking","Parking"],
+                                      ["トイレ",  "Toilet","Toilet"],
+                                      ["車いす対応トイレ", "Toilet(Whellchair Accessible)","WAToilet"],
+                                      ["郵便局",  "Post Office","Post_Office"],
+                                      ["ホテル",  "Hotel",  "Hotel"],
+                                      ["金融機関", "Bank", "Bank"],
+                                      ["警察署・交番", "Police Station/Box", "Police"],
+                                      ["消防署","Firehouse","Firehouse"],
+                                      ["学校", "School","School"],
+                                      ["駅・電停",  "Railway Station/Streetcar Stop" ,"Station"]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
@@ -128,15 +142,15 @@ class FacilitiesViewController: UIViewController {
         case "駐車場":
             buttonNode = buttonNode.childNode(withName: "Parking", recursively: false)
             let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
-            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
+            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  UIImage(named: Facilities[3][2])
         case "トイレ":
             buttonNode = buttonNode.childNode(withName: "Toilet", recursively: false)
             let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
-            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
+            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  UIImage(named: Facilities[4][2])
         case "車いす対応トイレ":
             buttonNode = buttonNode.childNode(withName: "WAToilet", recursively: false)
             let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
-            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
+            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  UIImage(named: Facilities[4][2])
             /*
              case "郵便局":
              

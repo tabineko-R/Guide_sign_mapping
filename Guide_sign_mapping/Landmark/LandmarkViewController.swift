@@ -7,6 +7,7 @@ class LandmarkViewController: UIViewController {
     
     // ①引数宣言　前画面の値
        var landmarkText:String = ""
+    var sendText:String = ""
     
     // NOTE: The imageConfiguration is better for tracking images,
     // but it has less features,
@@ -33,12 +34,16 @@ class LandmarkViewController: UIViewController {
     private var buttonNode: SCNNode!
     private let feedback = UIImpactFeedbackGenerator()
     
+    @IBOutlet weak var navItem: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
         //scn読み込み
         //最初にscnの読み込みを指定（テスト）
         buttonNode = SCNScene(named: "art.scnassets/sign01/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "Landmark", recursively: false)
+        
+        navItem.title = landmarkText
         
         switch landmarkText{
         case "旧ロシア領事館":
@@ -129,9 +134,16 @@ class LandmarkViewController: UIViewController {
         sceneView.session.pause()
     }
     
+    @IBAction func toDetail(_ sender: Any) {
+
+        let storyboard: UIStoryboard = self.storyboard!
+        let toDetails = storyboard.instantiateViewController(withIdentifier: "details") as! DetailsViewController
+        toDetails.landmarkText = landmarkText
+        self.navigationController?.pushViewController(toDetails, animated: true)
+
+    }
+    
 }
-
-
 
 
 extension LandmarkViewController: ARSCNViewDelegate {
@@ -147,7 +159,7 @@ extension LandmarkViewController: ARSCNViewDelegate {
             DispatchQueue.main.async {
                 self.feedback.impactOccurred()
             }
-            return buttonNode
+        return buttonNode
             
         default:
             return nil

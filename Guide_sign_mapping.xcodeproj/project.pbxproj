@@ -27,6 +27,8 @@
 		39903CBE23C6075800632D18 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39903CBD23C6075800632D18 /* FlowLayout.swift */; };
 		39903CC023C6075F00632D18 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39903CBF23C6075F00632D18 /* Cell.swift */; };
 		39903CC423C6A7BD00632D18 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39903CC323C6A7BD00632D18 /* MenuViewController.swift */; };
+		39903CC623C7215500632D18 /* ViewControllerReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39903CC523C7215500632D18 /* ViewControllerReload.swift */; };
+		39903CC823C723D300632D18 /* MenuViewControllerReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39903CC723C723D300632D18 /* MenuViewControllerReload.swift */; };
 		39DF075D23A7771C002CD040 /* 開発の範囲について in Resources */ = {isa = PBXBuildFile; fileRef = 39DF075C23A7771C002CD040 /* 開発の範囲について */; };
 		39DF076223A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */; };
 		39DF076323A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */; };
@@ -74,11 +76,13 @@
 		394A3F6323AEB0BE007E5E02 /* SelectLandmarkInGenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLandmarkInGenreViewController.swift; sourceTree = "<group>"; };
 		394A3F6523AEB7CA007E5E02 /* Genre.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Genre.txt; sourceTree = "<group>"; };
 		394A3F6723B135E6007E5E02 /* SelectLandmarkInGenreInAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLandmarkInGenreInAreaViewController.swift; sourceTree = "<group>"; };
-		3973677D23B331A0003A0189 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstScreenViewController.swift; path = Guide_sign_mapping/FirstScreenViewController.swift; sourceTree = SOURCE_ROOT; };
+		3973677D23B331A0003A0189 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstScreenViewController.swift; path = Guide_sign_mapping/Area/FirstScreenViewController.swift; sourceTree = SOURCE_ROOT; };
 		39903CBB23C6075100632D18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39903CBD23C6075800632D18 /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 		39903CBF23C6075F00632D18 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		39903CC323C6A7BD00632D18 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		39903CC523C7215500632D18 /* ViewControllerReload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerReload.swift; sourceTree = "<group>"; };
+		39903CC723C723D300632D18 /* MenuViewControllerReload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControllerReload.swift; sourceTree = "<group>"; };
 		39DF075C23A7771C002CD040 /* 開発の範囲について */ = {isa = PBXFileReference; lastKnownFileType = text; path = "開発の範囲について"; sourceTree = "<group>"; };
 		39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFacilitiesInAreaViewController.swift; sourceTree = "<group>"; };
 		39DF076723A7E11E002CD040 /* FacilitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesViewController.swift; sourceTree = "<group>"; };
@@ -148,9 +152,11 @@
 			isa = PBXGroup;
 			children = (
 				39903CBB23C6075100632D18 /* ViewController.swift */,
+				39903CC523C7215500632D18 /* ViewControllerReload.swift */,
 				39903CBD23C6075800632D18 /* FlowLayout.swift */,
 				39903CBF23C6075F00632D18 /* Cell.swift */,
 				39903CC323C6A7BD00632D18 /* MenuViewController.swift */,
+				39903CC723C723D300632D18 /* MenuViewControllerReload.swift */,
 			);
 			path = First;
 			sourceTree = "<group>";
@@ -183,7 +189,6 @@
 			children = (
 				39E935282379E5FE008167E4 /* AppDelegate.swift */,
 				39E9352A2379E5FE008167E4 /* art.scnassets */,
-				3973677D23B331A0003A0189 /* FirstScreenViewController.swift */,
 				39903CBA23C6069500632D18 /* First */,
 				3917AB7D23AB57F400C6AEB0 /* Landmark */,
 				39E9356E237BFCF4008167E4 /* Pictgram */,
@@ -231,6 +236,7 @@
 		39F8F03023AB15100088F322 /* Area */ = {
 			isa = PBXGroup;
 			children = (
+				3973677D23B331A0003A0189 /* FirstScreenViewController.swift */,
 				39DF076123A7D891002CD040 /* SelectFacilitiesInAreaViewController.swift */,
 				394A3F6123AEA743007E5E02 /* SelectLandmarksInAreaViewController.swift */,
 				394A3F6723B135E6007E5E02 /* SelectLandmarkInGenreInAreaViewController.swift */,
@@ -419,7 +425,9 @@
 				3917AB8323AB57F400C6AEB0 /* SelectGenreViewController.swift in Sources */,
 				394A3F6423AEB0BE007E5E02 /* SelectLandmarkInGenreViewController.swift in Sources */,
 				3917AB8123AB57F400C6AEB0 /* LandmarkViewController.swift in Sources */,
+				39903CC823C723D300632D18 /* MenuViewControllerReload.swift in Sources */,
 				39FE26052398AA7200422B82 /* PictgramsViewController.swift in Sources */,
+				39903CC623C7215500632D18 /* ViewControllerReload.swift in Sources */,
 				394A3F6823B135E6007E5E02 /* SelectLandmarkInGenreInAreaViewController.swift in Sources */,
 				39903CC023C6075F00632D18 /* Cell.swift in Sources */,
 				39E935292379E5FE008167E4 /* AppDelegate.swift in Sources */,
