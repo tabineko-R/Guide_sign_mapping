@@ -25,6 +25,29 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     var landmarkText:String = ""
     var pictgramText:String = ""
     
+    let Landmarks: [[String]] = [["遊覧船のりば","",""],
+                                    ["函館明治館（旧函館郵便局）","","meiji"],
+                                    ["中華会館","",""],
+                                    ["金森美術館（バカラコレクション）","",""],
+                                    ["旧北海道庁 函館支庁庁舎・旧開拓使書籍庫(観光案内所・写真歴史館)","",""],
+                                    ["旧ロシア領事館","",""],
+                                    ["旧イギリス領事館（開港記念館）","",""],
+                                    ["太刀川家住宅（重要文化財）","",""],
+                                    ["旧函館区公会堂（重要文化財）","",""],
+                                    ["ハリストス正教会（重要文化財）","",""],
+                                    ["東本願寺函館別院（重要文化財）","",""],
+                                    ["日本基督教団函館教会","",""],
+                                    ["カトリック元町教会","",""],
+                                    ["聖ヨハネ教会","",""],
+                                    ["新島襄海外渡航の地碑","",""],
+                                    ["北海道第一歩の地碑","",""],
+                                    ["ペリー提督来航記念碑","",""],
+                                    ["北方歴史資料館","","hoppou"],
+                                    ["函館高田屋嘉兵衛資料館","",""],
+                                    ["北方民族資料館","",""],
+                                    ["郷土資料館（旧金森洋物店）","",""],
+                                    ["函館市文学館","",""]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,8 +69,20 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.textLabel?.numberOfLines=0
         
         details = ["名称 : " + landmarkText,"概要 : \n" + overviewText, "地図で確認する", "はこぶらで詳細を見る", ""]
-        //公式ページがあったら
-        details[4] = "ホームページ"
+       
+        /*
+        for i in 0 ..< Landmarks.count{
+            if(landmarkText == Landmarks[i][0]){
+                self.LandmarkImage.image = UIImage(named: Landmarks[i][2])
+                overviewText = Landmarks[i][3]
+                safariVC = SFSafariViewController(url: URL(string: Landmarks[i][4])!)
+            }else{
+         details[3] = "ホームページ
+         }
+            //公式ページがあったら
+            if(Landmarks[i][0] == "1"){details[4] = "ホームページ"}
+        }
+ */
         
         switch landmarkText{
         case "旧ロシア領事館":
@@ -84,7 +119,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             safariVC = SFSafariViewController(url: URL(string: "https://www.hakobura.jp/db/db-view/2010/09/post-131.html")!)
         case "北方民族資料館":
             overviewText = ""
-            self.LandmarkImage.image = UIImage(named: "noimage")
+            self.LandmarkImage.image = UIImage(named: "hoppou")
             safariVC = SFSafariViewController(url: URL(string: "https://www.hakobura.jp/db/db-view/2012/10/post-96.html")!)
         case "日本基督教団函館教会":
             overviewText = ""
@@ -116,7 +151,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             safariVC = SFSafariViewController(url: URL(string: "https://www.hakobura.jp/db/db-view/2009/04/post-98.html")!)
         case "函館明治館（旧函館郵便局）":
             overviewText = ""
-            self.LandmarkImage.image = UIImage(named: "noimage")
+            self.LandmarkImage.image = UIImage(named: "meiji")
             safariVC = SFSafariViewController(url: URL(string: "https://www.hakobura.jp/db/db-view/2011/04/post-55.html")!)
         case "カトリック元町教会":
             overviewText = ""
@@ -136,7 +171,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             safariVC = SFSafariViewController(url: URL(string: "https://www.hakobura.jp/db/db-view/2010/10/post-77.html")!)
         default:
             overviewText = "未設定"
-            self.LandmarkImage.image = UIImage(named: "noimage")
+            self.LandmarkImage.image = UIImage(named: landmarkText)
             safariVC = SFSafariViewController(url: URL(string: "https://www.google.com")!)
         }
 

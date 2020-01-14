@@ -102,8 +102,10 @@ final class ViewControllerReload: UICollectionViewController {
         for i in 1 ..< Facilities.count{
             if(facilitiesText == Facilities[i][2]){
                 buttonNode = SCNScene(named: "art.scnassets/sign01/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "\(Facilities[i][2])", recursively: false)
-                 navItem.title = Facilities[i][0]
-                 navItem.tintColor = UIColor.white
+                let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin0\(i)", recursively: false)
+                thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  UIImage(named: Facilities[i][2])
+                navItem.title = Facilities[i][0]
+                navItem.tintColor = UIColor.white
             }
         }
     }
@@ -181,29 +183,14 @@ final class ViewControllerReload: UICollectionViewController {
         }
     }
     
-    func alert(title:String, message:String) {
-        alertController = UIAlertController(title: title,
-                                   message: message,
-                                   preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK",
-                                       style: .default,
-                                       handler: nil))
-        present(alertController, animated: true)
-    }
     
     @IBAction func buttonEvent(_ sender: UIBarButtonItem) {
         
-        switch facilitiesText {
-        case Facilities[0][2]:
-             let storyboard: UIStoryboard = self.storyboard!
-                        let toLandmarks = storyboard.instantiateViewController(withIdentifier: "selectGenre") as! SelectGenreViewController
-                        self.navigationController?.pushViewController(toLandmarks, animated: true)
-        default:
             let storyboard: UIStoryboard = self.storyboard!
             let toPictgrams = storyboard.instantiateViewController(withIdentifier: "pictgram") as! PictgramsViewController
             toPictgrams.pictgramText = facilitiesText
             self.navigationController?.pushViewController(toPictgrams, animated: true)
-        }
+        
         
     }
 

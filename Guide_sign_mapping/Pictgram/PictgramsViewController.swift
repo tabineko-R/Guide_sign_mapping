@@ -72,38 +72,17 @@ class PictgramsViewController: UIViewController {
         
         buttonNode = SCNScene(named: "art.scnassets/sign01/Guide_sign_mapping.scn")!.rootNode
         
-        switch pictgramText{
-        case "Parking":
-            buttonNode = buttonNode.childNode(withName: "Parking", recursively: false)
-            let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
-            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
-        case "Toilet":
-            buttonNode = buttonNode.childNode(withName: "Toilet", recursively: false)
-            let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
-            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
-        case "WAToilet":
-            buttonNode = buttonNode.childNode(withName: "WAToilet", recursively: false)
-            let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin", recursively: false)
-            thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  #imageLiteral(resourceName: "parking")
-            /*
-        case "郵便局":
-
-        case "ホテル":
-           
-        case "金融機関":
-
-        case "警察署・交番":
-
-        case "消防署":
-           
-        case "学校":
-
-        case "駅・電停":
-          
-        */
-        default:
-            break
+        for i in 0 ..< Facilities.count{
+        if pictgramText == Facilities[i][2]{
+                buttonNode = buttonNode?.childNode(withName: Facilities[i][2], recursively: false)
+            for j in 0 ..< 20{
+                let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin0\(j)", recursively: false)
+                thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  UIImage(named: Facilities[i][2])
+                }
+            }
         }
+    
+      
         
     }
     
