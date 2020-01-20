@@ -150,7 +150,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.LandmarkImage.image = UIImage(named: "noimage")
             safariVC = SFSafariViewController(url: URL(string: "https://www.hakobura.jp/db/db-view/2009/04/post-98.html")!)
         case "函館明治館（旧函館郵便局）":
-            overviewText = ""
+            overviewText = "はこだて明治館がある場所は、明治44年に函館に道内初の郵便局として建てられた旧函館郵便局である。現在では「はこだて明治館」という名でショッピングモールとして親しまれ、北海道の民芸品や硝子製品、オルゴールなどを扱っている。"
             self.LandmarkImage.image = UIImage(named: "meiji")
             safariVC = SFSafariViewController(url: URL(string: "https://www.hakobura.jp/db/db-view/2011/04/post-55.html")!)
         case "カトリック元町教会":

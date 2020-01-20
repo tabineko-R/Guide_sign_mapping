@@ -6,10 +6,10 @@ class DirectionsViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     //緯度経度はDouble型で記述
-    var present_latitude = 0.0 //緯度
-    var present_longitude = 0.0 //経度
-    var destination_latitude = 41.7676953
-    var destination_longtude = 140.7016394
+    var present_latitude = 41.7641347 //緯度
+    var present_longitude = 140.7160165//経度
+    var destination_latitude = 0.0
+    var destination_longtude = 0.0
     
     var number = 0
     var landmarkText:String = ""
@@ -72,8 +72,8 @@ class DirectionsViewController: UIViewController {
                 destination_latitude = 0.0
                 destination_longtude = 0.0
             case "函館明治館（旧函館郵便局）":
-                destination_latitude = 0.0
-                destination_longtude = 0.0
+                destination_latitude = 41.7664518
+                destination_longtude = 140.718831
             case "カトリック元町教会":
                 destination_latitude = 0.0
                 destination_longtude = 0.0
@@ -95,8 +95,10 @@ class DirectionsViewController: UIViewController {
         }
         
         print(landmarkText)
+        
+        
     
-        let coordinate = CLLocationCoordinate2DMake(41.764183, 140.716228)
+        let coordinate = CLLocationCoordinate2DMake(destination_latitude, destination_longtude)
         
         let span = MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04)
         
@@ -104,8 +106,16 @@ class DirectionsViewController: UIViewController {
         
         
         //地図にピンを立てる。
+        let present = MKPointAnnotation()
+        present.coordinate = CLLocationCoordinate2DMake(present_latitude, present_longitude)
+        present.title = "現在地"
+        mapView.addAnnotation(present)
+        
+        
+        
+        //地図にピンを立てる。
         let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2DMake(41.7676953, 140.7016394)
+        annotation.coordinate = CLLocationCoordinate2DMake(destination_latitude, destination_longtude)
         annotation.title = landmarkText
         annotation.subtitle = landmarkText
         mapView.addAnnotation(annotation)

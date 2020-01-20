@@ -72,7 +72,7 @@ class LandmarkViewController: UIViewController {
         for i in 0 ..< Landmarks.count{
             if landmarkText == Landmarks[i][0]{
                     buttonNode = buttonNode?.childNode(withName: Landmarks[i][0], recursively: false)
-                    let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "image", recursively: false)
+                    let thumbnailNode = buttonNode.childNode(withName: "image", recursively: false)
                     thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  UIImage(named: Landmarks[i][2])
                 }
                 }

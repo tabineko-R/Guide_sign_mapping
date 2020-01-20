@@ -93,9 +93,6 @@ final class ViewController: UICollectionViewController {
         
         //ARオブジェクト配置
         //初期表示
-        buttonNode = SCNScene(named: "art.scnassets/sign01/Guide_sign_mapping.scn")!.rootNode.childNode(withName: "\(Facilities[2][2])", recursively: false)
-        let thumbnailNode = buttonNode.childNode(withName: "pins", recursively: false)?.childNode(withName: "pin01", recursively: false)
-        thumbnailNode?.geometry?.firstMaterial?.diffuse.contents =  UIImage(named: Facilities[2][2])
         
         if(facilitiesText == Facilities[0][2]){
              buttonNode = SCNScene(named: "art.scnassets/sign01/Areas.scn")!.rootNode.childNode(withName: "\(Facilities[0][2])", recursively: false)
@@ -133,8 +130,7 @@ final class ViewController: UICollectionViewController {
         super.viewDidAppear(animated)
         
         //初期位置
-        let indexPath = IndexPath(item: 2, section: 0)
-        
+        let indexPath = IndexPath(item: 1, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
         
         for i in 0 ..< Facilities.count{
@@ -204,7 +200,7 @@ final class ViewController: UICollectionViewController {
         let storyboard: UIStoryboard = self.storyboard!
             let toPictgrams = storyboard.instantiateViewController(withIdentifier: "pictgram") as! PictgramsViewController
             toPictgrams.pictgramText = facilitiesText
-        if(facilitiesText == ""){toPictgrams.pictgramText = "TIC"}
+        if(facilitiesText == ""){alert(title:"施設未選択", message:"施設を選択してください")}
             self.navigationController?.pushViewController(toPictgrams, animated: true)
     }
     
